@@ -1,5 +1,4 @@
 async function like_pain(id) {
-   
     let icon  = document.querySelector(`.icon_like${id}`);
     icon.classList.toggle('active_like');
     console.log(id)
