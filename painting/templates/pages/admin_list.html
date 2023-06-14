@@ -1,0 +1,46 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block title %} 
+  Upload picture
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'admin_list.css' %}" >
+{% endblock link %}
+
+{% block content %}
+  <div class="admin_list">
+    <h2 class="title-list">Danh sách tranh</h2>
+    <table class="upload-table">
+        <tr>
+            <td class="tb-td-name">Tên tranh</td>
+            <td class="tb-td-date">Ngày đăng tranh</td>
+            <td class="tb-td-description">Mô tả</td>
+            <td class="tb-td-control" >Chức năng</td>
+        </tr>
+        {% for painting in paintings %}
+            <tr>
+                <td class="tb-td-name"><a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a></td>
+                <td class="tb-td-date"><p class="dt-ct-date">{{ painting.upload_date }}</p></td>
+                <td class="tb-td-description"><p>{{ painting.description }}</p></td>
+                <td class="tb-td-control" >
+                    <ul class="control-pictures">
+                        <li><a href="{% url 'edit_pictures' pk=painting.id %}" class="edit-picture"><i class="fa-solid fa-pen"></i>Sửa</a></li>
+                        <li><a href="{% url 'delete_pictures' pk=painting.id %}" class="delete-picture" ><i class="fa-solid fa-trash-can"></i>Xóa</a></li>
+                        {% comment %} <div class="notification-delete">
+                            <p>Bạn có chắc chắn muốn xóa?</p>
+                            <ul>
+                                <li><a href="{% url 'delete_pictures' pk=painting.id %}" class="delete-picture" >Tiếp tục xóa</a></li>
+                                <li><button class="noti-exit">Thoát</button></li>
+                            </ul>
+                        </div> {% endcomment %}
+                    </ul>
+                </td>
+            </tr>
+
+        {% endfor %}
+    </table>
+</div>
+
+{% endblock %}

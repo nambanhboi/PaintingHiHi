@@ -1,0 +1,131 @@
+#blog {
+    margin: 30px 20px;
+}
+
+#blog .blog-tiltle{
+    text-align: center;
+    font-style: italic;
+    font-size: 20px;
+    color: #8d8a8a;
+}
+
+#blog .blog-main{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+#blog .blog-main hr{
+    margin: 30px 0;
+}
+
+#blog .blog-main .blog-shared{
+    margin-top: 20px;
+
+}
+#blog .blog-main .bl-list{
+    width: 77%;
+}
+
+#blog .blog-main .bl-adver{
+    width: 20%;
+}
+
+.blog-shared img{
+    width: 100%;
+    transition-duration: 0.3s;
+}
+
+.blog-shared img:hover{
+    opacity: 0.7;
+    filter: brightness(50%);
+    cursor: pointer;
+    transform: scale(1.01);
+}
+
+.blog-shared .img-top{
+    height: 500px;
+    overflow: hidden;
+}
+
+.blog-shared .img-bottom{
+    overflow: hidden;
+    height: 300px;
+}
+
+.blog-shared .blog-content h4{
+    font-size: 25px;
+    font-style: italic;
+    padding: 10px;
+}
+
+.blog-shared .blog-content .bl-ct-date{
+    font-style: italic;
+    color: #aba6a6;
+    padding: 10px;
+}
+
+.blog-shared .blog-content .bl-ct-para{
+    padding: 10px 0 10px 10px;
+    text-align: justify;
+    font-size: 16px;
+}
+
+.blog-shared button{
+    padding: 10px 15px;
+    background-color: #ccc;
+    border: none;
+    border-radius: 2px;
+    position: relative;
+    width: 50%;
+    text-align: left;
+    margin: 10px;
+}
+
+.blog-shared button i{
+    position: absolute;
+    right: 5%;
+    line-height: 16.8px;
+    padding: 4px 8px;
+    color: #000;
+    background-color: #fff;
+    border-radius: 16px;
+    bottom: 8px;
+}
+
+.blog-shared button:hover{
+    color: #fff;
+    background-color: #000;
+    cursor: pointer;
+    transition: 1s;
+}
+
+.blog-bottom .blog-two .blog-shared{
+    display: flex;
+}
+
+.blog-two .blog-shared img{
+    width: 100%;
+    height: 300px;
+}
+
+.blog-main .bl-adver{
+    position: relative;
+}
+
+.blog-main .bl-adver li{
+    margin: 20px 0;
+    /* position: fixed; */
+}
+
+.bl-adver img{
+    width: 100%;
+    height: 300px;
+}
+
+.bl-adver img:hover{
+    filter: brightness(50%);
+    cursor: pointer;
+    transition: 1s;
+}
+

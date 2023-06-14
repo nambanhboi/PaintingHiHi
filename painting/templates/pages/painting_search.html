@@ -1,0 +1,28 @@
+{% extends "pages/base.html" %}
+{% load static %}  
+{% block title %} 
+    {{painting.name}}
+{% endblock %}
+{% block content %}
+{% block link %} 
+    <link rel="stylesheet" href="{% static 'painting_search.css' %}" > 
+{% endblock %}
+<div class="detail">
+    <p>Kết quả tìm kiếm:</p>
+    <div class="detail-search">
+    {% for painting in paintings %}
+        <div class="row list-picture row-search">
+            <div class="col col-third picture-overview search-pt">
+                <a href="{% url 'detail' pk=painting.id %}" ><img src="{{ painting.image.url }}" class="over-img" alt=""></a>
+                <div class="over-des">
+                    <p> Name: {{ painting.name }}</p>
+                    <p> Date upload: {{ painting.upload_date }}</p>
+                </div>
+            <a href="{% url 'detail' pk=painting.id %}" class="over-click">Xem chi tiết  <i class="fa-solid fa-arrow-right"></i></a>   
+            </div>
+        </div>   
+    {% endfor %}
+    </div>
+    
+</div>
+{% endblock %}

@@ -1,0 +1,86 @@
+table, tr, td{
+    border:1px solid black;
+}
+
+table{
+    border-collapse:collapse;
+}
+
+ li{
+    list-style: none;
+ }
+ 
+.admin_list{
+    padding: 20px;
+}
+
+.admin_list .upload-table{
+    width: 100%;
+}
+
+.upload-table tr .tb-td-name{
+    width: 20%;
+}
+
+.upload-table tr .tb-td-date{
+    width: 15%;
+}
+
+.upload-table tr .tb-td-control{
+    width: 10%;
+}
+
+.upload-table tr:first-child td{
+    text-align: center;
+    font-size: 18px;
+    background: #ccc;
+    padding: 10px;
+    font-weight: 600;
+}
+
+.upload-table tr td{
+    padding: 10px;
+}
+
+.upload-table .tb-td-name a{
+    color: #000;
+    font-weight: 600;
+    font-size: 16px;
+}
+
+.upload-table .tb-td-description p{
+    font-style: italic;
+    font-size: 14px;
+}
+
+.tb-td-control .control-pictures{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+.control-pictures button{
+    padding: 5px;
+}
+
+.control-pictures button i{
+    font-size: 13px;
+    padding-right: 5px;
+}
+
+.control-pictures{
+    position: relative;
+}
+
+.notification-delete{
+    position: absolute;
+    box-shadow: 0px 0px 15px 0px rgba(0, 0, 0, 0.3);
+    background-color: #fff;
+    bottom: -127px;
+    padding: 10px;
+    z-index: 15;
+}
+
+.notification-delete ul{
+    display: flex;
+}

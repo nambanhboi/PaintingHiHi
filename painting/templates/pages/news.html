@@ -1,0 +1,315 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %}
+Blog
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'news.css' %}" >
+{% endblock link %}
+
+{% block content %}
+<div id="blog">
+    <h1 class="section-header">TIN TỨC</h1>
+    <p class="blog-tiltle">
+        Tin tức mỗi ngày được The Art Painting cập nhật nhanh chóng
+    </p>
+    
+    <div class="blog-main">
+        <div class="bl-list">
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/news/news1.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Cách kết hợp vẽ và viết vào tạp chí nghệ thuật cá nhân sâu sắc</h4>
+                    <div class="bl-ct-date">
+                        Bởi Sara Barnes vào ngày 4 tháng 5 năm 2023
+                    </div>
+                    <div class="bl-ct-para">
+                        Bạn có thể đã nghe nói rằng viết nhật ký là một cách tuyệt vời để ghi lại những suy nghĩ và thấu hiểu cảm xúc của bạn. Viết nhật ký thông thường chỉ liên quan đến việc viết—nhưng đối với những người có khuynh hướng trực quan hơn, nhật ký nghệ thuật là một lựa chọn thay thế tuyệt vời. Và bởi vì có rất nhiều cách để thể hiện bản thân trong một tạp chí nghệ thuật, đây là một lối thoát sáng tạo tuyệt vời cho cả người mới bắt đầu và những người sáng tạo có kinh nghiệm hơn. Tạp chí nghệ thuật là gì?
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news2.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Họa sĩ tạo ra nghệ thuật thực phẩm sống động như thật trông giống như những món ngon mà bạn có thể ăn</h4>
+                            <div class="bl-ct-date">
+                                Bởi Margherita Cole vào ngày 1 tháng 5 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Bạn đã bao giờ bắt gặp một bức ảnh chụp một bữa ăn trông ngon đến mức chảy nước miếng chưa?
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news3.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Họa sĩ làm cho phong cảnh thanh bình xuất hiện trong một nét vẽ duy nhất</h4>
+                            <div class="bl-ct-date">
+                                Bởi Margherita Cole vào ngày 27 tháng 4 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Những tia sáng của phong cảnh cắt ngang không gian đen trong các bức tranh của David Ambarzumjan.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/news/news4.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Nghệ sĩ lắp ráp 897.560 mảnh bìa cứng cắt thủ công thành một tác phẩm điêu khắc tàu lượn khổng lồ</h4>
+                    <div class="bl-ct-date">
+                        Bởi Margherita Cole vào ngày 30 tháng 4 năm 2023
+                    </div>
+                    <div class="bl-ct-para">
+                        Nghệ sĩ Daniel Agdag ở Melbourne đã tạo ra một công viên giải trí thu nhỏ hoàn toàn từ bìa cứng. Với tiêu đề Lưới, cấu trúc phức tạp này ghi lại mối liên kết đặc biệt giữa New York và Melbourne đồng thời tôn vinh tàu lượn siêu tốc như một phép ẩn dụ cho những thăng trầm của cuộc sống. Agdag đã dành hai năm để xây dựng tác phẩm điêu khắc dài 10 foot này, được ủy quyền bởi Bộ Giáo dục Thành phố New York và Nghệ thuật Công cộng của Cơ quan Xây dựng Trường học NYC cho các Trường Công lập.ối 
+                        với anh ấy.
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news5.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Bức tranh của David Hockney trị giá 35.000 đô la được phát hiện trên 'Roadshow đồ cổ' của BBC</h4>
+                            <div class="bl-ct-date">
+                                Bởi Margherita Cole vào ngày 27 tháng 4 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Là một trong những nghệ sĩ đương đại nổi tiếng nhất, David Hockney được biết đến với phong cách đặc biệt, đầy màu sắc và những miêu tả về...
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news6.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Tác phẩm điêu khắc Lollapalooza hoành tráng là một hình nón thông cao chót vót được tạo ra bằng 95 chiếc mui xe</h4>
+                            <div class="bl-ct-date">
+                                Bởi Sara Barnes vào ngày 26 tháng 4 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Trong bối cảnh thích hợp, một đối tượng hoàn toàn có thể biến thành một thứ khác.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/news/news8.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Bạn nên thử kiểu vẽ nào tiếp theo? Khám phá cửa hàng sáng tạo tiếp theo của bạn</h4>
+                    <div class="bl-ct-date">
+                        Bởi Jessica Stewart vào ngày 27 tháng 4 năm 2023
+                    </div>
+                    <div class="bl-ct-para">
+                        Cho dù bạn đã thích vẽ phác thảo hay mới bắt đầu vẽ, có rất nhiều phong cách vẽ để lựa chọn khiến bạn khó biết nên thử phong cách nào tiếp theo. Đó là nơi chúng tôi đến. Chúng tôi đã tạo bài kiểm tra tính cách này để giúp bạn khám phá kiểu vẽ nào phù hợp nhất với tính cách của bạn.
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news7.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Những bức tranh trừu tượng quyến rũ Ghi lại những khoảnh khắc thoáng qua tuyệt đẹp của thiên nhiên</h4>
+                            <div class="bl-ct-date">
+                                Bởi Sara Barnes vào ngày 26 tháng 4 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Nghệ sĩ Megan Elizabeth bị quyến rũ bởi những khoảnh khắc thoáng qua của thiên nhiên.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news9.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Phù du cổ điển được ban cho một cuộc sống thứ hai với các bản vẽ bút bi tinh tế</h4>
+                            <div class="bl-ct-date">
+                                Bởi Margherita Cole vào ngày 22 tháng 4 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Khi bắt đầu vẽ, hầu hết những người sáng tạo sẽ tự nhiên tìm kiếm một tờ giấy mới.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/news/news10.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Tác phẩm điêu khắc đầu người khổng lồ làm bằng xích xe đạp đại diện cho dây buộc hiện đại của chúng ta</h4>
+                    <div class="bl-ct-date">
+                        Bởi Margherita Cole vào ngày 25 tháng 4 năm 2023
+                    </div>
+                    <div class="bl-ct-para">
+                        Sử dụng hàng trăm sợi xích xe đạp, nghệ sĩ Hàn Quốc Young-Deok Seo đã lắp ráp những chiếc đầu người khổng lồ. Những bức chân dung ba chiều đầy mê hoặc này có kết cấu giống như câu đố độc đáo có được bằng cách gắn các liên kết kim loại nhỏ này. Và mặc dù chất liệu này thể hiện một cách khéo léo những hạn chế và quá trình công nghiệp hóa lao động, nhưng nó cũng mang lại cho những tác phẩm điêu khắc khuôn mặt bí ẩn này một chất lượng sống động như thật độc đáo. Từ những cái đầu nguyên vẹn cho đến những mảnh giống như mặt nạ, Seo có cách sử dụng thành thạo vật liệu độc đáo này.
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news11.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Nghệ sĩ dành nhiều tháng để sắp xếp các khối xây dựng của trẻ em thành kiến ​​trúc đáng kinh ngạc</h4>
+                            <div class="bl-ct-date">
+                                Bởi Margherita Cole vào ngày 23 tháng 4 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Nhiều người trong chúng ta nhớ chơi với một số loại khối xây dựng khi lớn lên.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/news/news12.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Hãy xem các sắp đặt nghệ thuật lớn của Coachella 2023</h4>
+                            <div class="bl-ct-date">
+                                Bởi Margherita Cole vào ngày 20 tháng 4 năm 2023
+                            </div>
+                            <div class="bl-ct-para">
+                                Để chuẩn bị cho Liên hoan Âm nhạc và Nghệ thuật Thung lũng Coachella năm 2023, các nghệ sĩ từ khắp nơi trên thế giới đã được chọn để biến...
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+        <div class="blog-adver">
+            <h5><i class="fa-solid fa-fire"></i>Tin tức hot trong tuần</i></h5>
+                    <ul class="news-hot-list">
+                        <li>
+                            <img src="{% static 'image/news/nhot1.jpg' %}" alt="">
+                            <h5>Có được niềm yêu thích vẽ phác suốt đời khi bạn đăng ký các lớp học vẽ trực tuyến này</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot2.jpg' %}" alt="">
+                            <h5>Tác phẩm điêu khắc kim loại tuyệt đẹp tái tạo các dạng chất lỏng của nước bắn tung tóe</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot3.jpg' %}" alt="">
+                            <h5>Tham gia Hoạt hình CGI trực quan hóa “Lý thuyết lipid” về cách cuộc sống bắt đầu</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot4.jpg' %}" alt="">
+                            <h5>Những bức tranh siêu thực đến chóng mặt Ghi lại những góc nhìn thay đổi của các thành phố nhộn nhịp</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot5.jpg' %}" alt="">
+                            <h5>Năm tác phẩm nghệ thuật của Yayoi Kusama được bán tại buổi đấu giá của Sotheby với giá gần 23 triệu USD</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot6.jpg' %}" alt="">
+                            <h5>Nghệ sĩ dựng chân dung những gương mặt nổi tiếng bằng cách xếp hàng ngàn cuốn sách</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot7.jpg' %}" alt="">
+                            <h5>Tác phẩm điêu khắc chuông gió Kinetic tạo ra 'vụ nổ lớn' từ ống kim loại rỉ sét</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot8.jpg' %}" alt="">
+                            <h5>Triển lãm đắm chìm của Tim Burton là một “mê cung” trong thiên tài sáng tạo của ông</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot9.jpg' %}" alt="">
+                            <h5>Ông Doodle trưng bày nghệ thuật đóng khung và bao phủ tất cả các bức tường trong bức vẽ nguệch ngoạc có chữ ký của ông cho Art Basel</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot10.jpg' %}" alt="">
+                            <h5>Triển lãm chấm bi mơ mộng của Yayoi Kusama khai mạc tại Miami</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot11.jpg' %}" alt="">
+                            <h5>Triển lãm kích thích tư duy khám phá “Khảo cổ học hư cấu” với các di tích thời hiện đại cho tương lai</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot12.jpg' %}" alt="">
+                            <h5>Tranh sơn dầu siêu thực Khám phá những gì chúng tôi che giấu và chia sẻ</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/news/nhot14.jpg' %}" alt="">
+                            <h5>
+                                JR tiết lộ tác phẩm sắp đặt khổng lồ của vận động viên nhảy qua giàn giáo tre ở Hồng Kông</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                    </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

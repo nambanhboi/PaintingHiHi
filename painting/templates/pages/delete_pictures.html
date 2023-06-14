@@ -1,0 +1,42 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block title %} 
+{{ paintings.name }}
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'delete_pictures.css' %}" >
+    <link rel="stylesheet" href="{% static 'painting_detail.css' %}" > 
+
+{% endblock link %}
+
+{% block content %}
+
+  <form method="post" enctype="multipart/form-data" class="upload-content">
+    {% csrf_token %}
+    {{ form.as_p }}
+    <div class="delete_pictures">
+      <div class="detail">
+        <div class="detail-content">
+                <img src="{{ paintings.image.url }}" class="detail-img" alt="">
+                <h3>{{ paintings.name }}</h3>
+                <p class="dt-ct-date">Ngày đăng tải: {{ paintings.upload_date }}</p>
+            <p> Mô tả: {{ paintings.description }}</p>
+        </div>
+      </div>
+      <div class="delete">
+        <div class="delete-question">
+          <p>Bạn có chắc muốn xóa tranh?</p>
+          <div class="delete-control">
+            <a href="{%url 'admin_list' %}">Thoát</a>
+            <button type="submit">Xóa</button>
+          </div>
+        </div>   
+      </div>
+    </div>
+
+  </form> 
+
+
+{% endblock %}

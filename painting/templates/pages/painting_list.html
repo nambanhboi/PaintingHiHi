@@ -1,0 +1,109 @@
+{% extends "pages/base.html" %}
+{% load static %}  
+{% block title %} 
+    Explore
+{% endblock %}
+
+{% block link %} 
+    <link rel="stylesheet" href="{% static 'painting_list.css' %}" > 
+{% endblock %}
+
+
+{% block content %} 
+    <h2 class="title-list">Khám phá</h2>
+    <div class="list">  
+        <!-- row 1 -->
+        <div class="list-pictures">
+            {% for painting in paintings %}
+            <div class="row ">
+                <div class="col col-third picture-overview">
+                    <div class="image-detail">
+                        <div class="img-contain">
+                            <a href="{% url 'detail' pk=painting.id %}" ><img src="{{ painting.image.url }}" class="over-img" alt=""></a>
+                        </div>
+                        <ul class="function-pictures">
+                            <li>
+                                {% if paintings_like %}
+                                    <i class="fa-solid fa-heart icon_like{{painting.id}} 
+                                        `{% for ptl in paintings_like %}          
+                                            {% if painting.id == ptl.painting.id %}
+                                                active_like
+                                            {% endif %}
+                                        {% endfor %} `" 
+                                        onclick="like_pain('{{ painting.id }}')">
+                                    </i>
+                                {% else %}
+                                    <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                                {% endif %}
+                            </li>
+                            <li><i class="fa-regular fa-comment"></i></li>
+                            <li><i class="fa-solid fa-share"></i></li>
+                        </ul>
+                    </div>
+
+                    <div class="over-des">
+                        <p> Name: {{ painting.name }}</p>
+                        <p> Date upload: {{ painting.upload_date }}</p>
+                    </div>
+                    <a href="{% url 'detail' pk=painting.id %}" class="over-click">Xem chi tiết<i class="fa-solid fa-caret-right"></i></a>   
+                </div>
+            </div>
+            {% endfor %}
+        </div>
+        
+
+        <div class="list-news">
+            <ul class="list-news-add">
+                <li>
+                    <div class="news-img">
+                        <img src="{% static 'image/list/new1.jpg' %}" alt="">
+                    </div>
+                    <h5>Những bức ảnh về nấm sống động Ghi lại vẻ đẹp của thiên nhiên và những ký ức hoài cổ về việc tìm kiếm nấm</h5>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </li>
+                <hr>
+                <li>
+                    <div class="news-img">
+                        <img src="{% static 'image/list/new2.jpg' %}" alt="">
+                    </div>
+                    <h5>Bạn có thể phát hiện ra con sư tử núi ẩn nấp trong tầm nhìn rõ ràng khi nó rình rập một con nai sừng tấm không?</h5>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </li>
+                <hr>
+                <li>
+                    <div class="news-img">
+                        <img src="{% static 'image/list/new3.jpg' %}" alt="">
+                    </div>
+                    <h5>“GigaMoon” tuyệt vời được tạo thành từ 280.000 bức ảnh chụp chi tiết bề mặt của mặt trăng</h5>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </li>
+                <hr>
+                <li>
+                    <div class="news-img">
+                        <img src="{% static 'image/list/new4.jpg' %}" alt="">
+                    </div>
+                    <h5>Chào mừng tháng chụp ảnh bằng cách tiết kiệm 10% cho khóa học chụp ảnh thú cưng trực tuyến của chúng tôi</h5>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </li>
+                <hr>
+                <li>
+                    <div class="news-img">
+                        <img src="{% static 'image/list/new5.jpg' %}" alt="">
+                    </div>
+                    <h5>Những bức tranh ánh sáng tuyệt đẹp làm nổi bật vẻ rạng rỡ của một vũ công đương đại</h5>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </li>
+
+                <hr>
+                <li>
+                    <div class="news-img">
+                        <img src="{% static 'image/list/new5.jpg' %}" alt="">
+                    </div>
+                    <h5>Những bức tranh ánh sáng tuyệt đẹp làm nổi bật vẻ rạng rỡ của một vũ công đương đại</h5>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <script src="{% static 'js/painting_list.js' %}"></script>
+{% endblock %}

@@ -1,0 +1,40 @@
+.gradient-custom-2 {
+    background: #fbc2eb;
+    
+    background: -webkit-linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1));
+    
+    background: linear-gradient(to right, rgba(251, 194, 235, 1), rgba(166, 193, 238, 1))
+}
+
+.avt_profile{
+    width: 150px;
+    text-align: center;
+    border: 1px solid white;
+    border-radius: 12px;
+    /* padding: 1.5rem 0; */
+}
+
+.img_favor{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-around;
+}
+
+.card{
+    margin-top: 1rem;
+}
+.hd-navigation{
+    margin-bottom: 0;
+    padding-left: 0;
+}
+.hd-sign-loggedIn p{
+    margin-bottom: 0;
+}
+
+.card-img-top {
+    height: 15rem;
+}
+
+.card-body {
+    overflow-x: auto;
+}

@@ -1,0 +1,92 @@
+.upload{
+    background-color:  #e3dddd;
+    padding: 20px;
+}
+
+.upload h2{
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
+    color: #aba6a6;
+    text-transform: uppercase;
+    font-size: 35px;
+}
+
+.upload .upload-a {
+    width: 1150px;
+    border: 2px solid #000;
+    display: inline-block;
+    line-height: 40px;
+    padding-left: 20px;
+    color: rgb(13, 83, 67);
+    padding-top: 10px;
+}
+
+.upload-a form .upload-content {
+    padding-left: 40px;
+}
+
+.upload-a h2{
+    text-align: center;
+}
+
+.upload-content #id_name{
+    margin-left:60px;
+    width: 800px;
+    height: 27px;
+}
+
+.upload-content #id_description{
+    width: 800px;
+    height: 290px;
+    margin-left: 73px;
+    margin-top: 10px;
+}
+
+.upload-content #id_image{
+    text-decoration: none;
+    margin-left: 58px;
+}
+
+.upload-content #id_image:hover{
+    opacity: 0.7;
+    cursor: pointer;
+}
+
+.upload-content  button{
+    padding: 10px 29px;
+    display: flex;
+    margin-left: 812px;
+    font-weight: 600;
+    background: #ccc;
+    border: 1px solid;
+    border-radius: 3px;
+    font-size: 16px;
+    margin-bottom: 30px;
+}
+
+.upload-content  button:hover{
+    background: #fff;
+    cursor: pointer;
+}
+
+.upload .list-update{
+    width: 320px;
+    margin-right: 0;
+    margin-top: 0;
+    margin-left: 20px;
+}
+
+.upload-content {
+    padding-left: 85px;
+}
+
+.upload .upload-main{
+    display: flex;
+}
+
+.list-update p{
+    FONT-SIZE: 18px;
+    text-align: center;
+    font-weight: 600;
+}

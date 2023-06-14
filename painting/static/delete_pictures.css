@@ -1,0 +1,41 @@
+.delete_pictures {
+    display: flex;
+    position: relative;
+}
+
+.delete_pictures .delete-question{
+    border: 2px solid;
+    margin: 35px 10px;
+    padding: 20px 15px;
+    background: #ccc;
+    position: fixed;
+}
+
+.delete_pictures .delete-question .delete-control{
+    display: flex;
+    justify-content: space-around;
+}
+
+
+.delete-question .delete-control a{
+    color: #000;
+    padding: 7px 10px;
+    background: #fff;
+    margin: 10px;
+    border: 1px solid #000;
+} 
+
+.delete-question .delete-control button{
+    margin: 10px;
+    border: 1px solid #000;
+    background: #fff;
+    line-height: 25.4px;
+    width: 40px;
+}
+
+.delete-question .delete-control a:hover,
+.delete-question .delete-control button:hover{
+    cursor: pointer;
+    background: #ccc;
+    transition: 1s;
+}

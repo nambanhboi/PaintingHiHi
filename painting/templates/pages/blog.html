@@ -1,0 +1,293 @@
+{% extends "pages/base.html" %}
+{% load static %}
+{% block title %}
+Blog
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'blog.css' %}" >
+{% endblock link %}
+
+{% block content %}
+<div id="blog">
+    <h1 class="section-header">BLOG</h1>
+    <p class="blog-tiltle">
+        Thưởng thức những tin tức và câu chuyện mới nhất từ The Art Painting.
+    </p>
+    <div class="blog-main">
+        <div class="bl-list">
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/blog/blog1.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Tường thuật sáng tạo và sức mạnh nữ tính</h4>
+                    <div class="bl-ct-date">
+                        Bởi Lucy Dahlsen, Người phụ trách dự án: Sức mạnh nữ tính
+                        <br>
+                        Ngày xuất bản: 22 tháng 8 năm 2022
+                    </div>
+                    <div class="bl-ct-para">
+                        Triển lãm Citi Sức mạnh nữ tính: thần thánh đối với ác quỷ (mở cửa đến ngày 25 
+                        tháng 9) mang đến cái nhìn đa văn hóa về ảnh hưởng sâu sắc của các sinh vật tâm 
+                        linh nữ trong tôn giáo và tín ngưỡng toàn cầu. Khi triển lãm bước vào những tuần
+                        cuối cùng, Lucy Dahlsen trình bày một số câu chuyện sáng tạo đầy màu sắc từ 
+                        khắp các nền văn hóa trên thế giới, nhấn mạnh rằng những sinh vật nữ tính đã 
+                        đóng một vai trò quan trọng trong một loạt các câu chuyện sáng tạo.
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog2.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Nghệ thuật Seahenge</h4>
+                            <div class="bl-ct-date">
+                                Bởi Rose Ferraby, Nghệ sĩ và Nhà khảo cổ học
+                                <br>
+                                Ngày xuất bản: 30 tháng 6 năm 2022
+                            </div>
+                            <div class="bl-ct-para">
+                                Nhà khảo cổ học và nghệ sĩ Rose Ferraby đã được Bảo tàng Anh ủy quyền tạo ra một tác
+                                phẩm nghệ thuật về Seahenge cho cuộc triển lãm The world of Stonehenge. Tại đây, cô 
+                                kể lại điều kỳ diệu khi khám phá và ghi lại những câu chuyện khảo cổ của nó.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog3.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Tường thuật sáng tạo và sức mạnh nữ tính</h4>
+                            <div class="bl-ct-date">
+                                Bởi Lucy Dahlsen, Người phụ trách dự án: Sức mạnh nữ tính
+                                <br>
+                                Ngày xuất bản: 22 tháng 8 năm 2022
+                            </div>
+                            <div class="bl-ct-para">
+                                Triển lãm Citi Sức mạnh nữ tính: thần thánh đối với ác quỷ (mở cửa đến ngày 25 
+                                tháng 9) mang đến cái nhìn đa văn hóa về ảnh hưởng sâu sắc của các sinh vật tâm 
+                                linh nữ trong tôn giáo và tín ngưỡng toàn cầu. Khi triển lãm bước vào những tuần
+                                cuối cùng, Lucy Dahlsen trình bày một số câu chuyện sáng tạo đầy màu sắc từ 
+                                khắp các nền văn hóa trên thế giới, nhấn mạnh rằng những sinh vật nữ tính đã 
+                                đóng một vai trò quan trọng trong một loạt các câu chuyện sáng tạo.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/blog/blog4.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Nghệ sĩ mới nổi Jake Grewal về tầm quan trọng của việc vẽ</h4>
+                    <div class="bl-ct-date">
+                        Bởi Isabel Seligman, Người phụ trách mảng Vẽ hiện đại và đương đại của Monument 
+                        Trust, và nghệ sĩ Jake Grewal
+                        <br>
+                        Ngày xuất bản: 22 tháng 8 năm 2022
+                    </div>
+                    <div class="bl-ct-para">
+                        Thu hút sự chú ý: các nghệ sĩ mới nổi của Anh giới thiệu một nhóm các nghệ sĩ 
+                        đương đại thú vị làm việc trên giấy. Trong tuần cuối cùng của triển lãm, người phụ 
+                        trách Isabel Seligman nói chuyện với nghệ sĩ Jake Grewal về ý nghĩa của việc vẽ đối 
+                        với anh ấy.
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog5.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">ssam Kourbaj: Dark Water, Burning World</h4>
+                            <div class="bl-ct-date">
+                                Bởi Venetia Porter, Người phụ trách nghệ thuật Hồi giáo và Trung Đông đương đại
+                                <br>
+                                Ngày xuất bản: 13 tháng 12 năm 2021
+                            </div>
+                            <div class="bl-ct-para">
+                                Venetia Porter, Người phụ trách Nghệ thuật Trung Đông đương đại và 
+                                Hồi giáo đi sâu tìm hiểu bối cảnh đằng sau tác phẩm nghệ thuật thuyền 
+                                gợi cảm của nghệ sĩ Issam Kourbaj, người sinh ra ở Syria và sống ở Vương
+                                quốc Anh.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog6.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Giới Thiệu Về Nữ Thần </h4>
+                            <div class="bl-ct-date">
+                                Bởi Janina Ramirez, học giả Oxford, người dẫn chương trình và nhà văn của BBC
+                                <br>
+                                Ngày xuất bản: 28 tháng 4 năm 2022
+                            </div>
+                            <div class="bl-ct-para">
+                                Triển lãm Citi, Sức mạnh nữ tính: Thần thánh đối với ác quỷ, mời cả gia đình 
+                                khám phá và nắm lấy sức mạnh nữ tính bên trong và bên ngoài của họ.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/blog/blog7.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Các đối tượng nổi bật của Gaverne Bennett: Dòng thời gian của các vương quốc châu Phi</h4>
+                    <div class="bl-ct-date">
+                        Tác giả Gaverne Bennett, Người tạo Dòng thời gian Lịch sử Da đen của The Guardian và Dòng thời gian Văn học Da đen của Thư viện Anh
+                        <br>
+                        Ngày xuất bản: 29 tháng 10 năm 2021
+                    </div>
+                    <div class="bl-ct-para">
+                        Khám phá dòng thời gian của các vương quốc châu Phi mới của chúng tôi với Gaverne Bennett, 
+                        người đã chọn một loạt đồ vật hấp dẫn để xem xét kỹ hơn.
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog8.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Tại sao họ di chuyển xương của Thomas Becket?</h4>
+                            <div class="bl-ct-date">
+                                Bởi Tiến sĩ John Jenkins, Trợ lý Giám đốc Trung tâm Nghiên cứu Hành hương, Đại học York
+                                <br>
+                                Ngày xuất bản: 7 tháng 7 năm 2021
+                            </div>
+                            <div class="bl-ct-para">
+                                Vào ngày kỷ niệm bản dịch của Thomas Becket, Tiến sĩ John Jenkins từ Trung tâm Nghiên 
+                                cứu Hành hương tại Đại học York giải thích lý do tại sao việc di chuyển xương của Becket
+                                đến một ngôi đền mới vào ngày 7 tháng 7 năm 1220 lại có ý nghĩa quan trọng như vậy.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog9.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Thomas Becket và Magna Carta</h4>
+                            <div class="bl-ct-date">
+                                Bởi Nicholas Vincent FBA, Giáo sư Lịch sử Trung cổ tại Đại học East Anglia
+                                <br>
+                                Ngày xuất bản: 21 tháng 5 năm 2021
+                            </div>
+                            <div class="bl-ct-para">
+                                Nicholas Vincent, Giáo sư Lịch sử Trung cổ tại Đại học East Anglia, tiết 
+                                lộ mối liên hệ đáng ngạc nhiên giữa Thomas Becket và việc tái bản năm 
+                                1225 của Magna Carta. 
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+            <div class="blog-shared">
+                <div class="bl-img img-top">
+                    <img src="{% static 'image/blog/blog10.jpg' %}" alt="">
+                </div>
+                <div class="blog-content">
+                    <h4 class="bl-ct-name">Ai đã giết Thomas Becket?</h4>
+                    <div class="bl-ct-date">
+                        Bởi Naomi Speakman, Người phụ trách Châu Âu Hậu Trung Cổ
+                        <br>
+                        Ngày xuất bản: 22 tháng 4 năm 2021
+                    </div>
+                    <div class="bl-ct-para">
+                        Vụ giết người gây chấn động vào ngày 29 tháng 12 năm 1170 của Thomas Becket, Tổng giám mục 
+                        Canterbury và là cái gai bên cạnh Vua Henry II, nằm ở trung tâm của cuộc triển lãm mới thú 
+                        vị của Bảo tàng Thomas Becket: vụ giết người và phong thánh.
+                    </div>
+                    <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                </div>
+            </div>
+            <hr>
+            <div class="blog-bottom">
+                <ul class="blog-two">
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog11.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">Một sự tái cấu trúc của người bản địa về sự sụp đổ của đế chế Aztec</h4>
+                            <div class="bl-ct-date">
+                                Bởi Rose Ferraby, Nghệ sĩ và Nhà khảo cổ học
+                                <br>
+                                Ngày xuất bản: 18 tháng 6 năm 2021
+                            </div>
+                            <div class="bl-ct-para">
+                                Vào dịp kỷ niệm 500 năm thủ đô Tenochtitlán của Aztec sụp đổ, Laura Osorio Sunnucks và 
+                                María Mercedes Martínez Milantchi giải thích tầm quan trọng của việc tập trung vào tiếng 
+                                nói của Người bản địa khi nghiên cứu phần lịch sử này.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                    <li class="blog-shared">
+                        <div class="bl-img img-bottom" style="width: 40%">
+                            <img src="{% static 'image/blog/blog12.jpg' %}" alt="">
+                        </div>
+                        <div class="blog-content" style="width: 60%">
+                            <h4 class="bl-ct-name">10 trò chơi hội đồng lịch sử hàng đầu</h4>
+                            <div class="bl-ct-date">
+                                Ngày xuất bản: 26 tháng 2 năm 2021
+                            </div>
+                            <div class="bl-ct-para">
+                                Hãy thử sức với mười trò chơi trải dài hơn 5.000 năm lịch sử - bao gồm các trò chơi cờ cổ
+                                xưa vẫn được chơi cho đến ngày nay, như Trò chơi Ur, senet, warri, mạt chược và cờ vua.
+                            </div>
+                            <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                        </div>
+                    </li>
+                    <hr>
+                </ul>
+            </div>
+        </div>
+        <div class="bl-adver">
+            <span>Advertisement</span>     
+            <ul>
+                <li class="bl-adver-img">
+                    <img src="{% static 'image/blog/adver2.png' %}" alt="">
+                </li>
+                <li>
+                    <img src="{% static 'image/blog/adver3.png' %}" alt="">
+                </li>
+            </ul>
+        </div>
+    </div>
+</div>
+{% endblock %}

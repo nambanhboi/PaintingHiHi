@@ -1,0 +1,56 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block title %} 
+{{ painting.name }}
+{% endblock %}
+
+{% block link %}
+    <link rel="stylesheet" href="{% static 'edit_pictures.css' %}" >
+    <link rel="stylesheet" href="{% static 'upload.css' %}" > 
+{% endblock link %}
+
+{% block content %}
+  <div class="upload">
+    <h2>Chỉnh sửa</h2>
+    <div class="upload-main">
+      <div class="upload-a">
+        <form method="post" enctype="multipart/form-data" class="upload-content" action="http://127.0.0.1:8000/painting/update_pictures/{{painting.id}}/">
+          {% csrf_token %}
+          <p>
+            <label for="id_name">Tên tranh:</label>
+            <input type="text" name="name" maxlength="50" required="" id="id_name" value="{{ painting.name }}">
+            </p>
+          <p>
+            <label for="id_description">Mô tả:</label>
+            <textarea name="description" cols="40" rows="10" required="" id="id_description">{{ painting.description }}</textarea>
+            </p>
+          <p>
+            <label for="id_image">Ảnh tranh:</label>
+            {% if painting.image%}
+              <img src="{{ painting.image.url }}" alt="" class ="edit_pictures">
+            {% endif %}
+            <input type="file" name="image" accept="image/*" required="" id="id_image" value="{{ painting.image.url }}">
+          </p>
+          <p>
+            <label for="id_image">Ảnh liên quan:</label>
+            {% if painting.image%}
+              <img src="{{ painting.imagelq.url }}" alt="" class ="edit_pictureslq">
+            {% endif %}
+            <input type="file"  multiple name="image" accept="image/*" required="" id="id_image" value="{{ painting.image.url }}">
+          </p>
+          <button type="submit">Cập nhật</button>
+        </form>
+      </div>   
+      <div class="list-update">
+        <p class="list-title">Danh sách tranh</p>
+        <hr>
+        <div class="list-update-content">
+          {% for painting in paintings %}
+          <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a> <br>
+          {% endfor %}
+        </div>
+      </div> 
+    </div>
+  </div>
+{% endblock %}

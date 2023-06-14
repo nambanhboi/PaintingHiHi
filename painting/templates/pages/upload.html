@@ -1,0 +1,58 @@
+{% extends "pages/base.html" %}
+{% load static %}
+
+{% block title %} 
+  Upload picture
+{% endblock %}
+{% block link %} 
+    <link rel="stylesheet" href="{% static 'upload.css' %}" > 
+{% endblock %}
+{% block content %}
+
+  <div class="upload">
+    <h2>Đăng tranh</h2>
+    <div class="upload-main">
+      <div class="upload-a">
+        <form method="post" enctype="multipart/form-data" class="upload-content" >
+          {% csrf_token %}
+
+          <p>
+            <label for="id_name">Tên tranh:</label>
+            <input type="text" name="name" maxlength="50" required="" id="id_name">
+          </p>
+          <p>
+            <label for="id_description">Bài viết:</label>
+            <textarea name="description" cols="40" rows="10" required="" id="id_description"></textarea>
+          </p>
+          <p> 
+            <label for="id_image">Ảnh tranh:</label>
+            {% if painting.image%}
+              <img src="{{ painting.image.url }}" alt="">
+            {% endif %}
+            <input type="file" name="image" accept="image/*" required="" id="id_image">
+          </p>
+          <p> 
+            <label for="id_image">Ảnh tranh liên quan:</label>
+            {% if painting.image%}
+              <img src="{{ painting.imagelq.url }}" alt="">
+            {% endif %}
+            <input type="file"  multiple name="imagelq" accept="image/*" required="" id="id_image" multiple>
+          </p>
+          <button type="submit">Tạo mới</button>
+        </form>
+      </div>   
+      <div class="list-update">
+        <p class="list-title">Danh sách tranh</p>
+        <hr>
+        <div class="list-update-content">
+        {% for painting in paintings %}
+        <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a> <br>
+        {% endfor %}
+        </div>
+      </div>
+    </div>  
+  </div>
+  <script>
+    CKEDITOR.replace('id_description');
+</script>
+{% endblock %}

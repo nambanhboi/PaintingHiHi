@@ -1,0 +1,474 @@
+{% extends "pages/base.html" %}
+{% load static %}  
+{% block title %} 
+    Home
+{% endblock %}
+
+{% block link %} 
+  <link rel="stylesheet" href="{% static 'home.css' %}">
+{% endblock %}
+
+{% block content %} 
+    <div class="home">
+        
+        <div class="home-slides">
+            <a class="slide_truoc" onclick="next()"><i class="fa-solid fa-chevron-left"></i></i></a>
+            <a class="slide_sau" onclick="prev()"><i class="fa-solid fa-chevron-right"></i></a>
+            <div class="slide">
+                <img src="{% static 'image/slider1.jpg' %}" alt="">
+                <div class="slide-content">
+                    <h3>Triển lãm "nhóm Tháng 11 và các bạn"</h3>
+                    <span>Hội Mỹ thuật TP.HCM (quận 3)</span>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'image/slider2.jpg' %}" alt="">
+                <div class="slide-content">
+                    <h3>Triển lãm tranh lụa “Kén”</h3>
+                    <span>Hội Mỹ thuật TP.HCM (quận 3)</span>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'image/slider3.jpg' %}" alt="">
+                <div class="slide-content">
+                    <h3>Triển lãm tranh “Mây”</h3>
+                    <span>Bảo tàng Mỹ thuật Việt Nam
+                        66 Nguyễn Thái Học, Ba Đình, Hà Nội</span>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'image/slider4.jpg' %}" alt="">
+                <div class="slide-content">
+                    <h3>Triển lãm tranh "Ngẫu nhiên"</h3>
+                    <span> Nhà triển lãm Mỹ thuật Việt Nam, phố Ngô Quyền, quận Hoàn Kiếm, Hà Nội</span>
+                </div>
+            </div>
+            <div class="slide">
+                <img src="{% static 'image/slider5.png' %}" alt="">
+                <div class="slide-content">
+                    <h3>Hanoi Studio Gallery </h3>
+                    <span>Phố Mạc Đĩnh Chi, Ba Đình, Hà Nội</span>
+                </div>
+            </div>
+        </div>
+        <div class="home-artists">
+            <h2>NHÀ NGHỆ THUẬT NỔI TIẾNG</h2>
+            <ul class="art-list">
+                <li>
+                    <div class="art-img">
+                        <img src="{% static 'image/home/Vincent.webp' %}" alt="">
+                    </div>
+                    <div class="art-infor">
+                        <h3>Vincent van Gogh</h3>
+                        <p class="art-content">
+                            Vincent Willem Van Gogh (Tiếng Hà Lan: [ˈvɪnsənt ˈʋɪləm vɑŋ ˈɣɔx];
+                            [a] 30 tháng 3 năm 1853 – 29 tháng 7 năm 1890) là một họa sĩ hậu ấn tượng 
+                            người Hà Lan,[5] được đánh giá là một trong những nhân vật nổi tiếng và có 
+                            ảnh hưởng nhất trong lịch sử nghệ thuật phương Tây. Trong một thập kỷ, ông đã 
+                            sáng tạo ra khoảng 2.100 tác phẩm nghệ thuật, bao gồm khoảng 860 bức tranh sơn 
+                            dầu, hầu hết đều được vẽ trong khoảng thời gian hai năm cuối đời. Chúng bao gồm 
+                            tranh phong cảnh, tĩnh vật, chân dung và chân dung tự họa, đặc trưng bởi tông 
+                            màu đậm và nét vẽ ấn tượng, bốc đồng và biểu cảm đã góp phần tạo nên nền tảng 
+                            của nghệ thuật hiện đại. Van Gogh không thành công về mặt thương mại, và việc 
+                            ông tự sát ở tuổi 37 diễn ra sau nhiều năm vật lộn với trầm cảm và nghèo đói.<br>
+                            Sinh ra trong một gia đình trung lưu, Van Gogh từ nhỏ đã bắt đầu học vẽ, ông vốn nghiêm túc, ít nói 
+                            và hay suy nghĩ. Khi còn trẻ, ông làm việc như một nhà kinh doanh nghệ thuật, thường xuyên di chuyển 
+                            khắp nơi, nhưng đã bị trầm cảm sau khi chuyển đến London. Ông dành thời gian làm nhà truyền giáo Tin 
+                            lành ở miền nam nước Bỉ. Ông sống trong tình trạng sức khỏe tồi tệ và cô độc trước khi bắt đầu vẽ 
+                            tranh vào năm 1881, sau khi trở về nhà với cha mẹ. Người em trai Theo đã hỗ trợ ông về mặt tài chính,
+                             và hai người liên lạc với nhau bằng thư từ. Các tác phẩm ban đầu của ông, chủ yếu là tranh tĩnh vật 
+                             và mô tả những người nông dân lao động, có rất ít dấu hiệu về màu sắc sặc sỡ giúp phân biệt với tác 
+                             phẩm sau này của ông. Năm 1886, ông chuyển đến Paris, tại đây ông được gặp nhiều danh họa Hậu ấn 
+                             tượng khác, bao gồm Émile Bernard và Paul Gauguin. Khi công việc phát triển, ông đã tạo ra một cách 
+                             tiếp cận mới đối với tranh tĩnh vật và cảnh quan địa phương. Các bức họa của Van Gogh ngày càng trở 
+                             nên tươi sáng hơn khi ông phát triển một phong cách đã được hiện thực hóa hoàn toàn trong thời gian 
+                             ở Arles, miền nam nước Pháp vào năm 1888. Trong giai đoạn này, ông mở rộng chủ đề bao gồm cây ô liu, 
+                             cánh đồng lúa mì và hoa hướng dương.
+                        </p>
+                    </div>    
+                </li>
+                <hr>
+                <li>   
+                    <div class="art-infor">
+                        <h3>Rembrandt</h3>
+                        <p class="art-content">
+                            Rembrandt Harmenszoon van Rijn (15 tháng 7 năm 1606 - 4 tháng 10 năm 1669), thường được biết tới với tên Rembrandt hay Rembrandt van Rijn, là một họa sĩ và nghệ sĩ khắc bản in nổi tiếng người Hà Lan. Ông thường được coi là một trong những họa sĩ vĩ đại nhất trong lịch sử hội họa châu Âu nói chung và Hà Lan nói riêng[1]. Các tác phẩm của Rembrandt đã đóng góp quan trọng vào Thời đại hoàng kim của Hà Lan thế kỉ 17.<br>
+                            Ngay từ khi còn trẻ Rembrandt đã đạt được thành công lớn với các bức tranh chân dung, tuy những năm sau đó ông gặp nhiều bi kịch cá nhân hay những khó khăn về tài chính, họa sĩ vẫn được coi là một trong những người Hà Lan nổi tiếng nhất thời đó[2] và ông là thầy dạy cho gần như tất cả các họa sĩ Hà Lan hàng đầu thế kỉ 17[3].<br>
+                            Năm 2004, trong Danh sách những người Hà Lan vĩ đại nhất trong lịch sử (De Grootste Nederlander) do đài KRO tổ chức, Rembrandt là nghệ sĩ có vị trí cao nhất trong danh sách (thứ 9)[4].<br>
+                            Trong một lá thư gửi cho Huyghens, Rembrandt đã tiết lộ điều ông tìm kiếm trong nghệ thuật, đó là "chuyển động (hay cảm xúc) tự nhiên nhất và tuyệt vời nhất" ("die meeste ende di naetuereelste beweechgelickheijt" - từ "beweechgelickhijt" vừa có nghĩa là "cảm xúc", vừa có nghĩa là "chuyển động")[25]. Ba đề tài chính trong suốt sự nghiệp sáng tác của Rembrandt là tranh chân dung, tranh phong cảnh và tranh minh họa. Với giới nghệ thuật và tôn giáo đương thời, ông được coi là bậc thầy của các bức tranh minh họa Kinh Thánh trong việc miêu tả cảm xúc và các chi tiết[26]. Phong cách vẽ của ông chuyển từ những nét mềm mại, trơn nhẵn ở giai đoạn đầu sang những nét thô ráp để mô tả đạt hơn cảm xúc của mẫu vật[27]. Bên cạnh sự phát triển về kĩ thuật hội họa, Rembrandt cũng có những bước tiến trong kĩ thuật khắc bản in và in ấn. Trong các bản khắc giai đoạn sau, đặc biệt là từ thập niên 1640 trở đi, sự tự do và phóng khoáng được thể hiện rõ rệt.
+                        </p>
+                    </div>
+                    <div class="art-img">
+                        <img src="{% static 'image/home/rembrandt.jpg' %}" alt="">
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <div class="art-img">
+                        <img src="{% static 'image/home/edgar.jpg' %}" alt="">
+                    </div>
+                    <div class="art-infor">
+                        <h3>Edgar Degas </h3>
+                        <p class="art-content">
+                            Edgar Degas sinh năm 1834 tại Paris, mất năm 1917. Khác với phần 
+                            lớn các họa sĩ nổi tiếng cùng thời khác luôn phải sống trong nghèo 
+                            túng, Degas là con cả trong một gia đình của một ông chủ nhà băng 
+                            giàu có. Chịu ảnh hưởng phong cách biểu cảm của Ingres và lối sử 
+                            dụng màu sắc của Delacroix, ông là một trong những trụ cột nổi 
+                            tiếng của trường phái ấn tượng, người đồng thời với Vincent phong 
+                            cách hội họa Van Gogh và Edouard Manet. Degas cũng chịu ảnh 
+                            hưởng rất nhiều bởi phương Đông, đặc biệt là các tranh khắc gỗ vào 
+                            kỹ thuật đồ họa Nhật Bản.<br>
+                            Degas cũng sản xuất các tác phẩm điêu khắc , bản in và bản vẽ bằng đồng. Degas đặc biệt gắn bó với chủ đề khiêu vũ; hơn một nửa tác phẩm của ông miêu tả các vũ công. [3] Mặc dù Degas được coi là một trong những người sáng lập ra trường phái Ấn tượng , nhưng ông bác bỏ thuật ngữ này, thích được gọi là một người theo trường phái hiện thực hơn , [4] và không vẽ tranh ngoài trời như nhiều người theo trường phái Ấn tượng đã làm.<br>
+                            Degas là một người vẽ phác thảo xuất sắc , và đặc biệt thành thạo trong việc miêu tả chuyển động, như có thể thấy trong bản trình diễn vũ công và phụ nữ khỏa thân đang tắm của ông . Ngoài các vũ công ba lê và phụ nữ tắm, Degas còn vẽ ngựa đua và nài ngựa đua, cũng như các bức chân dung. Những bức chân dung của anh ấy đáng chú ý vì sự phức tạp về tâm lý và sự miêu tả sự cô lập của con người. <br>
+                            Khi bắt đầu sự nghiệp của mình, Degas muốn trở thành một họa sĩ lịch sử , một lời kêu gọi mà anh ấy đã chuẩn bị kỹ lưỡng bằng quá trình đào tạo học thuật nghiêm ngặt và nghiên cứu kỹ lưỡng về nghệ thuật cổ điển. Ở tuổi ba mươi, ông thay đổi hướng đi, và bằng cách áp dụng các phương pháp truyền thống của một họa sĩ lịch sử vào các chủ đề đương đại, ông trở thành một họa sĩ cổ điển của cuộc sống hiện đại. <br>
+                        </p>
+                    </div>
+                </li>
+                <hr>
+                <li>
+                    <div class="art-infor">
+                        <h3>Leonardo da Vinci</h3>
+                        <p class="art-content">
+                            Leonardo da Vinci (sinh ngày 15/4/1452, mất ngày 2/5/1519). Ông  
+                            là một họa sĩ, nhà điêu khắc, kiến trúc sư, nhạc sĩ, bác sĩ, kỹ sư, nhà 
+                            giải phẫu, nhà sáng tạo và triết học tự nhiên. Trong lĩnh vực hội họa, 
+                            ông đã để lại cho đời những kiệt tác bằng bức bích học Bữa ăn tối   
+                            cuối cùng tại Tu viện Saint Maria delle Grazie (Milan – Ý), bức chân  
+                            dung phụ nữ La Gioconda hay Mona Lisa với nụ cười bí ẩn,… <br>
+                            Ông là người có những ý tưởng vượt trước thời đại của mình, đặc biệt là khái niệm về máy bay trực thăng, xe tăng, dù nhảy, sử dụng năng lượng Mặt Trời, máy tính, sơ thảo lý thuyết kiến tạo địa hình, tàu đáy kép, cùng nhiều sáng chế khác. Một vài thiết kế của ông đã được thực hiện và khả thi trong lúc ông còn sống. Ứng dụng khoa học trong chế biến kim loại và trong kỹ thuật ở thời đại Phục Hưng còn đang ở trong thời kỳ trứng nước. Thêm vào đó, ông có đóng góp rất lớn vào kiến thức và sự hiểu biết trong giải phẫu học, thiên văn học, xây dựng dân dụng, quang học và nghiên cứu về thủy lực. Những sản phẩm lưu lại trong cuộc đời ông chỉ còn lại vài bức hoạ, cùng với một vài quyển sổ nháp tay (rơi vãi trong nhiều bộ sưu tập khác nhau các sáng tác của ông), bên trong chứa đựng các ký hoạ, minh hoạ về khoa học và bút ký.<br>
+                            Leonardo là người thuận cả hai tay trái và phải, trong cuốn sổ tay của mình ông luôn viết ngược, nghĩa là sử dụng tay trái viết từ phải qua trái, người ta muốn đọc thì phải sử dụng gương để phản chiếu lại theo chiều thuận, ông làm vậy có thể là do ông không muốn người khác đọc được những gì trong sổ tay.<br>
+                            Trong các cuốn sổ tay của ông có ghi lại các hình ảnh về giải phẫu, kiến trúc, các ý tưởng về thiết bị bay thử nghiệm, mô tả hoạt động bay của chim, nghiên cứu các hệ thống cấp nước, thiết kế tượng đài, thủy lực học, các phác họa cho bức Bữa tối cuối cùng, các nghiên cứu hình học cho bài toán cầu phương hình tròn, thiết kế nhà thờ hình bát giác và các đoạn viết tay theo kiểu chữ gương.
+                        </p>
+                    </div>  
+                    <div class="art-img">
+                        <img src="{% static 'image/home/leonardo.jpeg' %}" alt="">
+                    </div>   
+                </li>
+
+            </ul>
+        </div>
+        <div class="home-pictures">
+            <h2>NHỮNG BỨC TRANH ĐẠT TOP DOANH THU</h2>
+            <ul class="list-top">
+                <li class="top3 top-pic">
+                    <img src="{% static 'image/home/tranh_chap.jpg' %}" alt="">
+                    <div class="top-show">
+                        <p>Bán được 300+ trong tháng đầu</p>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </li>
+                <li class="top2 top-pic">
+                    <img src="{% static 'image/home/thieu_nu_ben_hoa_hue.jpg' %}" alt="">
+                    <div class="top-show">
+                        <p>Đã bán được 500+ trong tháng đầu tiên</p>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </li>
+                <li class="top1 top-pic">
+                    <img src="{% static 'image/home/dem_day_sao.jpg' %}" alt="">
+                    <div class="top-show">
+                        <p>Đã bán được 1000+ trong tháng đầu tiên</p>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </li>
+                <li class="top2 top-pic">
+                    <img src="{% static 'image/home/monalisa.webp' %}" alt="">
+                    <div class="top-show">
+                        <p>Đã bán được 500+ trong tháng đầu tiên</p>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </li>
+                <li class="top3 top-pic">
+                    <img src="{% static 'image/home/top3.jpg' %}" alt="">
+                    <div class="top-show">
+                        <p>Bán được 300+ trong tháng đầu </p>
+                        <button>Xem chi tiết</button>
+                    </div>
+                </li>
+            </ul>
+        </div>
+        <div class="home-news">
+            <h2>Tin tức</h2>
+            <div class="news-content">
+                <div class="news-new">
+                    <h5><i class="fa-solid fa-users"></i>Tin tức mới nhất</h5>
+                    <ul>
+                        <li style="width: 100%;" class="new-detail">
+                            <div class="news-dt-img">
+                                <img src="{% static 'image/home/news/new1.jpg' %}" alt="" width="100%">
+                            </div>       
+                            <h4>Bức tranh tường tuyệt đẹp ở Belfast kể câu chuyện tái sinh</h4>
+                            <p style="width: 100%;">Bộ đôi người Hà Lan Studio Giftig đã lên đường đến Belfast để tham 
+                                dự lễ hội nghệ thuật đường phố Hit the North hàng năm và để lại một màn 
+                                trình diễn tuyệt vời về tài năng của họ. Niels van Swaemen và Kaspar van 
+                                Leek đã làm việc cùng nhau trên một tác phẩm bày tỏ lòng kính trọng đối với 
+                                lịch sử của tòa nhà mà nó được vẽ trên đó.
+                            </p>
+                            <button>Đọc thêm</button>
+                            <span>Bởi Jessica Stewart vào ngày 17 tháng 5 năm 2023</span>
+                        </li>
+                        <hr>
+                        <li style="width: 100%;" class="new-detail">
+                            <div class="news-dt-img">
+                                <img src="{% static 'image/home/news/new2.jpg' %}" alt="" width="100%">
+                            </div> 
+                            <h4>Nghệ sĩ biến chiếc đồng hồ ông nội tiết kiệm bằng cách vẽ hoàn toàn nó thành một tác phẩm vũ trụ</h4>
+                            <p style="width: 100%;">Tìm thấy cửa hàng tiết kiệm có đầy đủ các khả năng. 
+                                Đối với một số người, họ cung cấp một bổ sung mới cho tủ quần áo của họ. 
+                                Nhưng đối với những người khác, đó chỉ là khởi đầu của một dự án đáng kinh ngạc. 
+                                Nghệ sĩ Gavin Gerundo gần đây đã chia sẻ những bức ảnh về chiếc đồng hồ quả lắc mà 
+                                anh ấy đã mua ở cửa hàng đồ cũ và cách anh ấy mô phỏng lại hoàn toàn bề mặt của nó 
+                                như một vẻ ngoài năng động. Sử dụng bột màu xanh lam và xanh lá cây, anh ấy đã vẽ một 
+                                thiết kế hình học trên mỗi inch của chiếc đồng hồ thẳng đứng.
+                            </p>
+                            <button>Đọc thêm</button>
+                            <span>Bởi Sara Barnes vào ngày 15 tháng 5 năm 2023</span>
+                        </li>
+                        <hr>
+                        <li style="width: 100%;" class="new-detail">
+                            <div class="news-dt-img">
+                                <img src="{% static 'image/home/news/new3.jpg' %}" alt="" width="100%">
+                            </div> 
+                            <h4>Bản vẽ kiến ​​trúc tinh tế nắm bắt những ngóc ngách đặc biệt của thành phố và thị trấn</h4>
+                            <p style="width: 100%;">Khi đi bộ qua một thị trấn, có nhiều chi tiết không 
+                                được chú ý. Tuy nhiên, nghệ sĩ Stéphane Le Lagadec đã tìm kiếm những 
+                                ngóc ngách bị bỏ qua này và biến chúng thành bất tử trong các bản vẽ 
+                                kiến ​​trúc tinh xảo. Sử dụng một loạt bút liner tốt, anh chụp những góc 
+                                phố yên tĩnh, những ô cửa đẹp như tranh vẽ và những ngôi nhà ẩn mình với
+                                sự khéo léo bậc thầy. Le Lagadec có kiến ​​thức nền tảng về thiết kế và 
+                                kiến ​​trúc; anh ấy hiện đang dạy nghệ thuật hàng ngày và tiếp tục loạt 
+                                tranh minh họa của mình ở bên cạnh.
+                            </p>
+                            <button>Đọc thêm</button>
+                            <span>Bởi Margherita Cole vào ngày 14 tháng 5 năm 2023</span>
+                        </li>
+                        <hr>
+                        <li style="width: 100%;" class="new-detail">
+                            <div class="news-dt-img">
+                                <img src="{% static 'image/home/news/new4.jpg' %}" alt="" width="100%">
+                            </div> 
+                            <h4>Nghệ sĩ tạo áo giáp kim loại phức tạp cho mèo và chuột lấy cảm hứng từ lịch sử thế giới</h4>
+                            <p style="width: 100%;">Sự cạnh tranh giữa mèo và chuột xưa như thời gian. Bạn có thể hình dung
+                                 việc nhìn thấy các hiện vật lịch sử liên quan đến mối thù của họ, giống như bạn làm trong 
+                                 viện bảo tàng không? Tác phẩm của một nghệ sĩ người Canada khá gần với điều đó. Jeff de Boer 
+                                 tạo ra áo giáp kim loại chi tiết tinh xảo cho mèo và chuột lấy cảm hứng từ các nền văn hóa 
+                                 và thời kỳ lịch sử cổ đại.
+                            </p>
+                            <button>Đọc thêm</button>
+                            <span>Bởi Regina Sienra vào ngày 13 tháng 5 năm 2023</span>
+                        </li>
+                        <hr>
+                        <li style="width: 100%;" class="new-detail">
+                            <div class="news-dt-img">
+                                <img src="{% static 'image/home/news/new5.jpg' %}" alt="" width="100%">
+                            </div> 
+                            <h4>Nghệ thuật đường phố thanh tao của một người phụ nữ đội vương miện hoa xuất hiện ở đường hầm London</h4>
+                            <p style="width: 100%;">Sau hai năm tạm dừng sáng tạo tác phẩm ngoài trời ở Vương quốc Anh, bộ đôi 
+                                nghệ thuật đường phố người Anh SNIK đã trở lại. Trong khi World Decays là tiêu đề của bức tranh 
+                                tường này, nằm trong một đường hầm ở Đông Nam London. Được tổ chức bởi London Calling Blog, bức 
+                                chân dung của một người phụ nữ đội vương miện hoa được thực hiện bằng cách sử dụng giấy nến theo 
+                                phong cách bán sắc của họ.
+                            </p>
+                            <button>Đọc thêm</button>
+                            <span>Bởi Jessica Stewart vào ngày 10 tháng 5 năm 2023</span>
+                        </li>
+                    </ul>
+                </div>
+                <div class="news-hot">
+                    <h5><i class="fa-solid fa-fire"></i>Tin tức hot trong tuần</i></h5>
+                    <ul class="news-hot-list">
+                        <li>
+                            <img src="{% static 'image/home/news/hot1.jpg' %}" alt="">
+                            <h5>Ghé thăm Studio BE ở New Orleans để xem Văn hóa và Nghệ thuật Da đen một cách dễ dàng</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/home/news/hot2.jpg' %}" alt="">
+                            <h5>Đây là một trong những lớp học trực tuyến tốt nhất để học vẽ tranh trừu tượng, theo các sinh viên</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/home/news/hot3.jpg' %}" alt="">
+                            <h5>Xem 'Joker' của Heath Ledger trở nên sống động như một nhân vật hành động siêu thực</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/home/news/hot4.jpg' %}" alt="">
+                            <h5>Những Nhân Vật Theo Phong Cách Graffiti Với Đôi Mắt To Biểu Cảm Khám Phá Con Người Bên Trong.</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/home/news/hot5.jpg' %}" alt="">
+                            <h5>Tất cả các hình minh họa gốc từ tiểu thuyết của Charles Dickens đều có sẵn để xem trực tuyến</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/home/news/hot6.jpg' %}" alt="">
+                            <h5>Những chiếc bình gốm lấy cảm hứng từ cổ điển được trang trí bằng những câu chuyện 360 độ</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                        <hr>
+                        <li>
+                            <img src="{% static 'image/home/news/hot7.jpg' %}" alt="">
+                            <h5>Nghệ sĩ mô phỏng lại con gián Met Gala khét tiếng ăn mặc như một người tham dự tuyệt vời</h5>
+                            <button>Đọc thêm</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+        <div class="home-blog">
+            <h2>Blog</h2>
+            <div class="blog-content">
+                <div class="blog-main">
+                    <div class="main-img">
+                        <img src="{% static 'image/home/blog/main.png' %}" alt="">
+                    </div>
+                    <div class="blog-main-content">
+                        <span>Ngày xuất bản: 17 tháng 5 năm 2023</span>
+                        <h5>Hổ bùa hộ mệnh của Trung Quốc</h5>
+                        <p>Trong văn hóa truyền thống của Trung Quốc, hình ảnh của một con hổ được sử 
+                            dụng như một biểu tượng để đại diện cho lòng dũng cảm. Hình ảnh của nó cũng 
+                            hoạt động như một lá bùa hộ mệnh.
+                            <br>
+                            Đã chọn hầu hết các loại vải cho triển lãm từ những hình ảnh kỹ thuật số nhỏ trong những năm xảy ra đại 
+                            dịch COVID, giờ đây chúng tôi đang học được nhiều điều hơn từ việc nhìn thấy các đồ vật thực khi 
+                            chúng đến triển lãm. Khi chúng tôi chuẩn bị hàng dệt để trưng bày với các chuyên gia bảo quản và 
+                            chuyên gia trưng bày hàng dệt, đây là cơ hội tuyệt vời để xem xét các đặc điểm chi tiết của từng bộ 
+                            trang phục. Ví dụ, trong đường viền rộng của chiếc áo choàng màu hồng tươi sáng của người phụ nữ, 
+                            được trang trí bằng những cảnh trong những câu chuyện nổi tiếng, chúng ta có thể thấy một con hổ với 
+                            cái đuôi dựng đứng ở mép dưới của mặt sau của trang phục, cùng với các biểu tượng tốt lành khác bao 
+                            gồm cả những nút thắt vô tận. và một con công đẹp khoe bộ lông của nó. 
+                        </p>
+                        <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                    </div>
+                </div>
+                <div class="blog-add">
+                    <div class="blog-row ">
+                        <div class="blog-col">
+                            <div class="add-img">
+                                <img src="{% static 'image/home/blog/blog-add1.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-main-content">
+                                <span>Ngày xuất bản: 3 tháng 5 năm 2023</span>
+                                <h5>Vua… muôn năm! Nghi thức gia nhập ở Ba Tư cổ đại</h5>
+                                <p>Khi chúng ta hướng tới lễ đăng quang sẽ diễn ra tại Tu viện Westminster vào Thứ Bảy, 
+                                    ngày 6 tháng 5, Giáo sư Lloyd Llewellyn-Jones xem xét các vị vua khác trong lịch sử 
+                                    đã được sắc phong như thế nào và khám phá các nghi thức đăng quang của Ba Tư cổ đại. 
+                                </p>
+                                <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="blog-col">
+                            <div class="add-img">
+                                <img src="{% static 'image/home/blog/blog-add2.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-main-content">
+                                <span>Ngày xuất bản: 28 tháng 2 năm 2023</span>
+                                <h5>Giới thiệu về Trung Quốc thế kỷ 19</h5>
+                                <p>Làm thế nào mà sự sáng tạo văn hóa của Trung Quốc thể hiện khả năng phục hồi khi đối 
+                                    mặt với mức độ bạo lực chưa từng có trong thế kỷ 19 dài?
+                                </p>
+                                <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="blog-col">
+                            <div class="add-img">
+                                <img src="{% static 'image/home/blog/blog-add3.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-main-content">
+                                <span>Ngày xuất bản: 19 tháng 1 năm 2023</span>
+                                <h5>Công cụ lật trang: văn học ở Ai Cập cổ đại</h5>
+                                <p>Khám phá những câu chuyện giả tưởng và những câu châm biếm chua cay khi Ilona Regulski 
+                                    giới thiệu chúng ta với thế giới đa dạng của văn học Ai Cập cổ đại.
+                                </p>
+                                <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="blog-row">
+                        <div class="blog-col">
+                            <div class="add-img">
+                                <img src="{% static 'image/home/blog/blog-add4.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-main-content">
+                                <span>Ngày xuất bản: 12 tháng 1 năm 2023</span>
+                                <h5>Giới thiệu về Nghệ thuật trên giấy từ năm 1960</h5>
+                                <p>Màn hình miễn phí này kỷ niệm món quà mà Bảo tàng nhận được vào năm 2020 bởi nhà 
+                                    sưu tập nghệ thuật Hamish Parker ở London. Blog này, của người phụ trách Catherine 
+                                    Daunt, nêu bật sáu tác phẩm từ chương trình.
+                                </p>
+                                <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="blog-col">
+                            <div class="add-img">
+                                <img src="{% static 'image/home/blog/blog-add5.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-main-content">
+                                <span>Ngày xuất bản: 11 tháng 10 năm 2022</span>
+                                <h5>Eureka! Đi tìm chìa khóa của Ai Cập cổ đại</h5>
+                                <p>
+                                Người phụ trách Ilona Regulski xem xét kỹ hơn khoảnh khắc đột phá khi chữ tượng hình 
+                                được giải mã và khám phá cách điều này thay đổi mãi mãi hiểu biết của chúng ta về Ai Cập cổ đại. 
+                                </p>
+                                <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                        <div class="blog-col">
+                            <div class="add-img">
+                                <img src="{% static 'image/home/blog/blog-add6.jpg' %}" alt="">
+                            </div>
+                            <div class="blog-main-content">
+                                <span>Ngày xuất bản: 4 tháng 11 năm 2022</span>
+                                <h5>Kỷ niệm niềm tự hào với tập thể thanh niên</h5>
+                                <p>Lắng nghe các thành viên của Tập thể Thanh niên của Bảo tàng Anh khi họ phản ánh về 
+                                    sự kiện theo chủ đề LGBTQ mới nhất của họ và xem xét ý nghĩa của Niềm tự hào đối với họ. 
+                                </p>
+                                <button>Đọc thêm<i class="fa-solid fa-caret-right"></i></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="home-shop">
+            <h2>Chào mừng bạn đến với The Art Painting</h2>
+            <h5>Với rất nhiều thể loại tranh khác nhau</h5>
+            <div class="shop-main">
+                <img src="{% static 'image/home/shop/backfround.webp' %}" alt="" class="shop-back">
+                <div class="shop-content">
+                    <button>Khám phá tất cả <i class="fa-solid fa-arrow-right"></i></button>
+                    <ul class="shop-row">
+                        <li class="shop-col">
+                            <img src="{% static 'image/home/shop/chandung.jpg' %}" alt="">
+                            <p class="content-detail">Tranh chân dung</p>
+                        </li>
+                        <li class="shop-col">
+                            <img src="{% static 'image/home/shop/dangian.jpg' %}" alt="">
+                            <p class="content-detail">Tranh dân gian</p>
+                        </li>
+                        <li class="shop-col">
+                            <img src="{% static 'image/home/shop/phongcanh.jpeg' %}" alt="">
+                            <p class="content-detail">Tranh phong cảnh</p>
+                        </li>
+                        <li class="shop-col">
+                            <img src="{% static 'image/home/shop/tinhvat.jpg' %}" alt="">
+                            <p class="content-detail">Tranh tĩnh vật</p>
+                        </li>
+                        <li class="shop-col">
+                            <img src="{% static 'image/home/shop/tongiao.jpg' %}" alt="">
+                            <p class="content-detail">Tranh tôn giáo</p>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </div>
+{% endblock %}

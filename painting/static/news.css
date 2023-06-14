@@ -1,0 +1,41 @@
+.blog-main .blog-adver{
+    width: 20%;
+}
+
+.blog-adver .news-hot-list{
+    padding: 10px;
+    border: 1px solid #8d8a8a;
+    overflow: hidden;
+}
+
+.blog-adver .news-hot-list img{
+    width: 274px;
+    transition-duration: 0.3s;
+}
+
+.blog-adver .news-hot-list img:hover{
+    opacity: 0.5;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.blog-adver  h5{
+    font-size: 16px;
+    padding-top: 20px;
+    padding-bottom: 10px;
+    text-transform: uppercase;
+}
+
+.blog-adver  button{
+    padding: 7px 12px;
+    border: none;
+    border-radius: 2px;
+    background-color: #8d8a8a;
+    color: #fff;
+}
+
+.blog-adver  button:hover{
+    text-decoration: underline;
+    background-color: #ccc;
+    cursor: pointer;
+}
