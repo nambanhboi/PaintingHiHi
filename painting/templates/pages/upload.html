@@ -5,7 +5,9 @@
   Upload picture
 {% endblock %}
 {% block link %} 
-    <link rel="stylesheet" href="{% static 'upload.css' %}" > 
+    <link rel="stylesheet" href="{% static 'upload.css' %}" >
+    <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
+    <script>CKEDITOR.replace('id_description');</script> 
 {% endblock %}
 {% block content %}
 

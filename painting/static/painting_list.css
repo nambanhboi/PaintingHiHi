@@ -7,7 +7,7 @@ ul{
     margin-right: -8px;
     display: flex;
     padding-top: 36px;
-    height: 400px;
+    height: 475px;
     color: #8d8a8a;
     color: #edeaea;
 }
@@ -19,10 +19,10 @@ ul{
 }
 
 .col-third{
-    width: 350px;
+    width: 462px;
     border-radius: 3px;
     margin: 0 20px;
-    height: 360px;
+    height: 400px;
 }
 
 .list{
@@ -45,11 +45,11 @@ ul{
     display: flex;
     flex-wrap: wrap;
     align-content: flex-start;
-    width: 80%;
+    width: 100%;
 }
 
 .img-contain{
-    height: 250px;
+    height: 350px;
     overflow: hidden;
 }
 
@@ -74,7 +74,7 @@ ul{
 
 .picture-overview .over-img{
     width: 100%;
-    height: 250px;
+    height: 350px;
     transition-duration: 0.3s;
 }
 
@@ -115,7 +115,7 @@ ul{
 
 .picture-overview .over-click i{
     font-size: 14px;
-    margin-left: 165px;
+    margin-left: 325px;
     padding: 4px 8px;
     color: #000;
     background-color: #fff;
@@ -126,13 +126,7 @@ ul{
     background-color: #8d8a8a;
     transition: 1s;
 }
-
-.list .list-news {
-    width: 21%;
-    margin-top: 20px;
-    margin-right: 20px;
-}
-
+/* 
 .list-news .list-news-add li{
     border: 1px solid #ccc;
 }
@@ -186,4 +180,4 @@ ul{
 
 .active_like {
     color: red;
-}
+} */

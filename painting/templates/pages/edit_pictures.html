@@ -8,6 +8,8 @@
 {% block link %}
     <link rel="stylesheet" href="{% static 'edit_pictures.css' %}" >
     <link rel="stylesheet" href="{% static 'upload.css' %}" > 
+    <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
+    <script>CKEDITOR.replace('id_description');</script> 
 {% endblock link %}
 
 {% block content %}
@@ -53,4 +55,7 @@
       </div> 
     </div>
   </div>
+    <script>
+    CKEDITOR.replace('id_description');
+</script>
 {% endblock %}

@@ -55,16 +55,9 @@
         </div>  
     </div>
     <div class="list-update">
-        <p class="list-title">Danh sách tranh</p>
-        <hr>
-        <div class="list-update-content">
-        {% for painting in paintings %}
-        <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a> <br>
-        {% endfor %}
-        </div>
         <div class="painting_lq" >
             {% for painting_item in paintinglq %}
-                <img src="{{ painting_item.image.url }}" alt="" width=100%>
+                <img src="{{ painting_item.image.url}}" alt="" width=100%>
             {% endfor %}
         </div>
     </div>
