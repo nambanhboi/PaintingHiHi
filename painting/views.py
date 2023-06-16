@@ -68,10 +68,11 @@ def painting_detail(request,pk):
     painting = get_object_or_404(Painting,pk=pk)
     comments = reversed(Comment.objects.all())
     paintings = Painting.objects.all()
+    paintinglq = PaintingLq.objects.all()
     if request.user.is_authenticated:
         is_user = request.user
-        return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'is_user': is_user})
-    return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments})
+        return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'is_user': is_user, 'paintinglq': paintinglq })
+    return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
 
 @login_required
 @user_passes_test(lambda u: u.is_staff)
