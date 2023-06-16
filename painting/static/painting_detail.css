@@ -84,6 +84,22 @@
     display: flex;
 }
 
+.input-group {
+    display: flex;
+}
+
+.input-group input {
+    padding-left: 10px;
+    width: 80%;
+}
+
+.input-group button {
+    width: 10%;
+}
+
+.comments h2 {
+    margin: 1rem 0;
+}
 
 .user-image {
     width: 40px;
@@ -112,4 +128,8 @@
 
 .cmt-add span:first-child {
     margin-left: 40px;
+}
+
+.active_like {
+    color: red;
 }
