@@ -26,6 +26,7 @@
                 <button onclick="commentNoUser()" class="btn btn-outline-secondary" type="button" id="button-addon2">Bình luận</button>
             {% endif %}
         </div>
+        
 
         <div class="comments">
             <h2>Các bình luận</h2>
@@ -61,6 +62,11 @@
         {% for painting in paintings %}
         <a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a> <br>
         {% endfor %}
+        </div>
+        <div class="painting_lq" >
+            {% for painting_item in paintinglq %}
+                <img src="{{ painting_item.image.url }}" alt="" width=100%>
+            {% endfor %}
         </div>
     </div>
 </div>
