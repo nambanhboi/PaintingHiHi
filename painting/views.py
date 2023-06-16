@@ -1,5 +1,5 @@
 from django.shortcuts import render, get_object_or_404,redirect
-from .models import Painting, CreateUserForm, Like, Comment,avatar
+from .models import Painting, CreateUserForm, Like, Comment,avatar, PaintingLq
 from django.contrib.auth.decorators import login_required, user_passes_test
 from .forms import PaintingUploadForm
 from .forms import PaintingUpdateForm, avatar_user
@@ -78,14 +78,20 @@ def painting_detail(request,pk):
 def upload_painting(request):
     paintings = Painting.objects.all()
     if request.method == 'POST':
-        form = PaintingUploadForm(request.POST,request.FILES) 
+        form = PaintingUploadForm(request.POST, request.FILES)
         if form.is_valid():
-            form.save()
+            painting = form.save()  # Lưu ảnh gốc vào model Painting và nhận lại đối tượng đã lưu
+
+            imagelqs = request.FILES.getlist('imagelq')  # Lấy danh sách các tệp tin ảnh liên quan từ trường 'imagelq'
+
+            for imagelq in imagelqs:
+                PaintingLq.objects.create(painting=painting, image=imagelq)  # Lưu từng ảnh liên quan với painting đã lưu
+
             return redirect('list')
     else:
         form = PaintingUploadForm()
     
-    return render(request,'pages/upload.html',{'form':form,'paintings':paintings})
+    return render(request, 'pages/upload.html', {'form': form, 'paintings': paintings})
 
 @login_required
 def upload_avt(request):
