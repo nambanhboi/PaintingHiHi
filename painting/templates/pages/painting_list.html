@@ -23,7 +23,7 @@
                         </div>
                         <ul class="function-pictures">
                             <li>
-                                {% if paintings_like %}
+                                {% if user %}
                                     <i class="fa-solid fa-heart icon_like{{painting.id}} 
                                         `{% for ptl in paintings_like %}          
                                             {% if painting.id == ptl.painting.id %}
