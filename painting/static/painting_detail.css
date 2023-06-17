@@ -21,6 +21,7 @@
     display: inline-block;
     width: 98.5%;
     padding-top: 10px;
+    max-height: 1600px;
 }
 
 .detail-content h3{
@@ -45,7 +46,7 @@
     float: right;
     right: 30px;
     background-color: #ccc;
-    width: 250px;
+    width: 300px;
     margin-right: 22px;
     margin-top: 4px;
     color: #000;

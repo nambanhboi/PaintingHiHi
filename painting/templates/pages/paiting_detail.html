@@ -12,26 +12,26 @@
 <div class="detail">
     <div class="detail-content">
             <img src="{{ painting.image.url }}" class="detail-img" alt="">
+            <ul class="function-pictures">
+                <li>
+                    {% if is_user %}
+                        <i class="fa-solid fa-heart icon_like{{painting.id}} 
+                            `{% if painting_like %} 
+                                active_like
+                            {% endif %}`"
+                            onclick="like_pain(`{{ painting.id }}`)"
+                        ></i>
+                    {% else %}
+                    <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                    {% endif %}
+                </li>
+            </ul>
             <h3>{{ painting.name }}</h3>
             <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
         
         <p> Mô tả: {{ painting.description }}</p>
 
-        <ul class="function-pictures">
-            <li>
-                {% if is_user %}
-                    <i class="fa-solid fa-heart icon_like{{painting.id}} 
-                        `{% if painting_like %} 
-                            active_like
-                        {% endif %}`"
-                        onclick="like_pain(`{{ painting.id }}`)"
-                    ></i>
-                {% else %}
-                <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
-                {% endif %}
-            </li>
-
-        </ul>
+        
 
         <div class="input-group mb-3">
             <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
