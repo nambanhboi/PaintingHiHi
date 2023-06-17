@@ -184,6 +184,7 @@ def profile(request):
     avatars = avatar.objects.filter(user_painting=request.user)
     return render(request, 'pages/profile_user.html', {'painting_likes':painting_likes, 'avatars' :  avatars})  
 
+@login_required
 def like(request, pk):
     pain = get_object_or_404(Painting, pk=pk)
     like = Like(user=request.user, painting=pain)
