@@ -89,6 +89,18 @@
     display: flex;
 }
 
+<<<<<<< HEAD
+.input-group input {
+    padding-left: 10px;
+    width: 80%;
+}
+
+.input-group button {
+    width: 10%;
+}
+
+=======
+>>>>>>> 2d7b906a1c70e8320ce369ffd06916a15f9b9e16
 .comments h2 {
     margin: 1rem 0;
 }
@@ -121,6 +133,11 @@
     margin-left: 40px;
 }
 
+<<<<<<< HEAD
+.active_like {
+    color: red;
+}
+=======
 .content{
     width:100% ;
     background-color:  #fff;
@@ -188,3 +205,4 @@
     width: 11%;
     margin-right: 5px;
 }
+>>>>>>> 2d7b906a1c70e8320ce369ffd06916a15f9b9e16

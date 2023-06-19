@@ -44,6 +44,22 @@
         {% endif %}
         <hr>
 
+        <ul class="function-pictures">
+            <li>
+                {% if is_user %}
+                    <i class="fa-solid fa-heart icon_like{{painting.id}} 
+                        `{% if painting_like %} 
+                            active_like
+                        {% endif %}`"
+                        onclick="like_pain(`{{ painting.id }}`)"
+                    ></i>
+                {% else %}
+                <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                {% endif %}
+            </li>
+
+        </ul>
+
         <div class="input-group mb-3">
             <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
             <input id="comment" type="text" class="form-control" placeholder="Nhập bình luận" aria-label="Recipient's username" aria-describedby="button-addon2">
