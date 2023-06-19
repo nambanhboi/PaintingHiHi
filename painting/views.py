@@ -42,13 +42,13 @@ def admin_list(request):
     paintings = Painting.objects.all()
     return render(request,'pages/admin_list.html',{'paintings':paintings})
 
-
 def delete_pictures(request,pk):
     paintings = get_object_or_404(Painting,pk=pk)
-    paintinglq = PaintingLq.objects.filter(paintings=paintings)
     if request.method == 'POST':
         paintings.delete()
-    return render(request,'pages/painting_list.html',{'paintings':paintings, 'paintinglq': paintinglq})
+        return render(request,'pages/admin_list.html',{'paintings':paintings})
+    else:
+        return render(request,'pages/delete_pictures.html',{'paintings':paintings})
 
 
 def edit_pictures(request,pk):
