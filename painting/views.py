@@ -45,24 +45,27 @@ def admin_list(request):
 
 def delete_pictures(request,pk):
     paintings = get_object_or_404(Painting,pk=pk)
+    paintinglq = PaintingLq.objects.filter(paintings=paintings)
     if request.method == 'POST':
         paintings.delete()
-    return render(request,'pages/delete_pictures.html',{'paintings':paintings})
+    return render(request,'pages/painting_list.html',{'paintings':paintings, 'paintinglq': paintinglq})
 
 
 def edit_pictures(request,pk):
     painting = get_object_or_404(Painting,pk=pk)
     paintings = Painting.objects.all()
-    return render(request,'pages/edit_pictures.html',{'painting':painting, 'paintings':paintings})
+    paintinglq = PaintingLq.objects.filter(painting=painting)
+    return render(request,'pages/edit_pictures.html',{'painting':painting, 'paintings':paintings, 'paintinglq': paintinglq})
 
 def update_pictures(request,pk):
     painting = get_object_or_404(Painting,pk=pk)
+    paintinglq = PaintingLq.objects.filter(painting=painting)
     form = PaintingUpdateForm(request.POST,instance=painting)
     if form.is_valid:
         form.save()
         messages.success(request,"Sửa thành công")
         return redirect('list')
-    return render(request,'pages/edit_pictures.html',{ 'painting':painting})
+    return render(request,'pages/edit_pictures.html',{ 'painting':painting, 'paintinglq': paintinglq})
 
 
 def painting_detail(request,pk):
@@ -184,6 +187,7 @@ def profile(request):
     avatars = avatar.objects.filter(user_painting=request.user)
     return render(request, 'pages/profile_user.html', {'painting_likes':painting_likes, 'avatars' :  avatars})  
 
+@login_required
 def like(request, pk):
     pain = get_object_or_404(Painting, pk=pk)
     like = Like(user=request.user, painting=pain)

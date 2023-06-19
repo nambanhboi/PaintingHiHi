@@ -1,4 +1,4 @@
-.detail{
+/* .detail{
     background-color:  #fff;
     margin-left: 20px;
     min-height: 560px;
@@ -21,6 +21,7 @@
     display: inline-block;
     width: 98.5%;
     padding-top: 10px;
+    max-height: 1600px;
 }
 
 .detail-content h3{
@@ -45,9 +46,9 @@
     float: right;
     right: 30px;
     background-color: #ccc;
-    width: 250px;
+    width: 300px;
     margin-right: 22px;
-    margin-top: 4px;
+    margin-top: 0px;
     color: #000;
 }
 
@@ -74,20 +75,21 @@
     text-decoration: underline;
 }
 
-
-/* comment */
+} */
 
 .cmt {
     margin-bottom: 20px;
 }
 .cmt-par {
     display: flex;
+    margin-bottom: 1rem;
 }
 
 .input-group {
     display: flex;
 }
 
+<<<<<<< HEAD
 .input-group input {
     padding-left: 10px;
     width: 80%;
@@ -97,13 +99,15 @@
     width: 10%;
 }
 
+=======
+>>>>>>> 2d7b906a1c70e8320ce369ffd06916a15f9b9e16
 .comments h2 {
     margin: 1rem 0;
 }
 
 .user-image {
     width: 40px;
-    height: 40px;
+    height: auto;
     border-radius: 50%;
 }
 
@@ -111,10 +115,9 @@
     background-color: white;
     border-radius: 20px;
     padding: 10px;
-    min-width: 500px;
+    min-width: 400px;
     min-height: 80px;
     height: 80px;
-    width: 300px;
 }
 
 .cmt-detail p {
@@ -130,6 +133,76 @@
     margin-left: 40px;
 }
 
+<<<<<<< HEAD
 .active_like {
     color: red;
 }
+=======
+.content{
+    width:100% ;
+    background-color:  #fff;
+    /* margin-left: 20px; */
+    min-height: 560px;
+    padding-top: 20px;
+    display: flex;
+}
+
+.content_left{
+    width: 68%;
+    background-color:  #e3e1e1;
+    padding-bottom: 1rem;
+
+}
+.content_right{
+    width: 31.5%;
+    margin-left: 0.5%;
+    background-color:  #e3e1e1;
+    padding-bottom: 1rem;
+    padding: 10px;
+}
+
+.content_right h3{
+    text-transform: uppercase;
+    font-size: 25px;
+}
+.description_text{
+    width: 98%; 
+    margin-left: 1%;
+    margin-top: 1rem;
+    /* background-image: url("../static/image/background_detail.jpg"); */
+}
+.icon_like,.fa-heart{
+    font-size: 2rem;
+    margin: 5px 5px;
+}
+
+.input-group{
+    display: flex;
+    margin: 1rem 0;
+}
+ .cmt-par .user-image {
+    width: 10%;
+    height: 50px;
+    border-radius: 50%;
+}
+
+#comment{
+    width: 75%;
+}
+.active_like {
+    color: red;
+    /* background-color: red; */
+}
+
+.painting_lqs{
+    margin-top: 2px;
+    display: flex;
+    width: 98%;
+    margin-left: 1%;
+    justify-content: center;
+}
+.painting_lq{
+    width: 11%;
+    margin-right: 5px;
+}
+>>>>>>> 2d7b906a1c70e8320ce369ffd06916a15f9b9e16
