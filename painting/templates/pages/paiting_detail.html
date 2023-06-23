@@ -44,7 +44,7 @@
         {% endif %}
         <hr>
 
-        <ul class="function-pictures">
+        {% comment %} <ul class="function-pictures">
             <li>
                 {% if is_user %}
                     <i class="fa-solid fa-heart icon_like{{painting.id}} 
@@ -53,10 +53,9 @@
                         {% endif %}`"
                         onclick="like_pain(`{{ painting.id }}`)"
                     ></i>
-                {% else %}
-                <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                
                 {% endif %}
-            </li>
+            </li> {% endcomment %}
 
         </ul>
 
@@ -75,27 +74,26 @@
             <ul class="list-group">
                 <li class="cmt cmt_tam"></li>
                 {% for comment in comments %}
-                    {% if comment.painting.id == painting.id %}
-                        <li class="cmt">
-                            <div class="cmt-par">
-                                <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
-                                <div class="cmt-detail">
-                                    <h4>{{ comment.user }}</h4> 
-                                    <p>{{ comment.cmt }}</p>
-                                </div>
-                                <i class="bi bi-three-dots-vertical"></i>
+                    {% if comment.painting.id == painting.id %}<li class="cmt">
+                        <div class="cmt-par">
+                            <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
+                            <div class="cmt-detail">
+                                <h4>{{ comment.user }}</h4> 
+                                <p>{{ comment.cmt }}</p>
                             </div>
-                            <div class="cmt-add">
-                                <span>Thích</span>
-                                <span>Trả lời</span>
-                                <span>5 giờ</span>
-                            </div>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>  
-    </div>
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="cmt-add">
+                            <span>Thích</span>
+                            <span>Trả lời</span>
+                            <span>5 giờ</span>
+                        </div>
+                    </li>
+                {% endif %}
+            {% endfor %}
+        </ul>
+    </div>  
+</div>
 </div>
 
 <script src="{% static 'js/painting_detail.js' %}"></script>

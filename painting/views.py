@@ -42,13 +42,6 @@ def admin_list(request):
     paintings = Painting.objects.all()
     return render(request,'pages/admin_list.html',{'paintings':paintings})
 
-def delete_pictures(request,pk):
-    paintings = get_object_or_404(Painting,pk=pk)
-    if request.method == 'POST':
-        paintings.delete()
-        return render(request,'pages/admin_list.html',{'paintings':paintings})
-    else:
-        return render(request,'pages/delete_pictures.html',{'paintings':paintings})
 
 
 def edit_pictures(request,pk):
@@ -79,6 +72,17 @@ def painting_detail(request,pk):
         return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'is_user': is_user, 'paintinglq': paintinglq, 'painting_like': painting_like })
     return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
 
+
+def delete_pictures(request,pk):
+    painting = get_object_or_404(Painting,pk=pk)
+    comments = reversed(Comment.objects.all())
+    paintings = Painting.objects.all()
+    paintinglq = PaintingLq.objects.filter(painting=painting)
+    if request.method == 'POST':
+        painting.delete()
+        return render(request,'pages/admin_list.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
+    else:
+        return render(request,'pages/delete_pictures.html',{'painting':painting,'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
 @login_required
 @user_passes_test(lambda u: u.is_staff)
 def upload_painting(request):
