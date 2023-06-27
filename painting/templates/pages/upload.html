@@ -6,14 +6,6 @@
 {% endblock %}
 {% block link %} 
     <link rel="stylesheet" href="{% static 'upload.css' %}" >
-    <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
-    <script>CKEDITOR.replace('id_description');
-      CKEDITOR.config.ForceSimpleAmpersand = true;
-      config.htmlEncodeOutput = false;
-      CKEDITOR.config.ProcessHTMLEntities = false;
-      CKEDITOR.config.entities = false;
-      CKEDITOR.config.entities_latin = false;
-    </script> 
 {% endblock %}
 {% block content %}
 
@@ -23,8 +15,18 @@
       <div class="upload-a">
         <form method="post" enctype="multipart/form-data" class="upload-content" >
           {% csrf_token %}
+          {{form.media}}
+          {{form.as_p}}
+          <p> 
+            <label for="id_image">Ảnh tranh liên quan:</label>
+            {% if painting.image%}
+              <img src="{{ painting.imagelq.url }}" alt="">
+            {% endif %}
+            <input type="file" multiple name="imagelq" accept="image/*" required="" id="id_image" class="image_pictures_lq" multiple>
+          </p>
+          {% comment %} {{post.body|safe}} {% endcomment %}
 
-          <p>
+          {% comment %} {% comment %} <p>
             <label for="id_name">Tên tranh:</label>
             <input type="text" name="name" maxlength="50" required="" id="id_name">
           </p>
@@ -37,16 +39,18 @@
             {% if painting.image%}
               <img src="{{ painting.image.url }}" alt="">
             {% endif %}
-            <input type="file" name="image" accept="image/*" required="" id="id_image">
+            <input type="file" name="image" accept="image/*" required="" id="id_image" class="image_pictures">
           </p>
           <p> 
             <label for="id_image">Ảnh tranh liên quan:</label>
             {% if painting.image%}
               <img src="{{ painting.imagelq.url }}" alt="">
             {% endif %}
-            <input type="file" multiple name="imagelq" accept="image/*" required="" id="id_image" multiple>
-          </p>
+            <input type="file" multiple name="imagelq" accept="image/*" required="" id="id_image" class="image_pictures_lq" multiple>
+          </p> {% endcomment %} 
           <button type="submit">Tạo mới</button>
+           {% comment %} {{post.body|safe}} {% endcomment %}
+
         </form>
       </div>   
       <div class="list-update">
@@ -60,7 +64,5 @@
       </div>
     </div>  
   </div>
-  <script>
-    CKEDITOR.replace('id_description');
-</script>
+
 {% endblock %}

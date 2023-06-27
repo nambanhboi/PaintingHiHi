@@ -26,8 +26,9 @@
                   {% endfor %}
               </div>
           </div>
-          <p class="description_text"> <span style="font-size: 140%; font-weight: bold;">Mô tả:</span> {{ painting.description }}</p> 
-  
+          <p class="description_text"> <span style="font-size: 140%; font-weight: bold;">Mô tả:</span> 
+            <div class="description-detail">{{ painting.description|safe }}</div>
+                </p>   
           
       </div>
   

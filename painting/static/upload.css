@@ -43,9 +43,13 @@
     margin-top: 10px;
 }
 
-.upload-content #id_image{
+.upload-content .image_pictures{
     text-decoration: none;
-    margin-left: 58px;
+    margin-left: 80px;
+}
+
+.upload-content .image_pictures_lq{
+    margin-left: 20px;
 }
 
 .upload-content #id_image:hover{
