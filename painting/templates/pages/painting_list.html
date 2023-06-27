@@ -14,49 +14,6 @@
     <div class="container">
         <h2 class="title-list">Khám phá</h2>
     <hr>
-    {% comment %} <div class="list-content">
-        <div class="list_left">
-            {% for painting in paintings  %}
-                <div class="row">
-                    <div class="list-img">
-                            <a href="{% url 'detail' pk=painting.id %}" ><img src="{{ painting.image.url }}" class="over-img" alt="" width=100%></a>
-                    </div>
-                    <div class="img-description">
-                        <div class="img-des1">
-                            <p><b>Name: </b> {{ painting.name }}</p>
-                            <p><b>Upload date: </b> {{ painting.upload_date }}</p>
-                        </div>
-                        <div class="img-des2">
-                            <div class="img-like">
-                                {% if user.is_authenticated %}
-                                    <i class="fa-solid fa-heart icon_like{{painting.id}} 
-                                        `{% for ptl in paintings_like %}          
-                                            {% if painting.id == ptl.painting.id %}
-                                                active_like
-                                            {% endif %}
-                                        {% endfor %} `" 
-                                        onclick="like_pain('{{ painting.id }}')">
-                                    </i>
-                                {% else %}
-                                        <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
-                                {% endif %}                            
-                            </div>
-                            <div class="img-detail">
-                                <a href="{% url 'detail' pk=painting.id %}" class="over-click">Chi tiết</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            {% endfor %}
-        </div>
-        <div class="list_right">
-        {% for ptlq in paintinglqs %}
-                <div class="rowlq">
-                    <a href=""><img src="{{ ptlq.image.url }}" alt="" width=100%></a>
-                </div>
-        {% endfor %}
-        </div>
-    </div> {% endcomment %}
     <div class="list-painting">
         <h2 class="title-list-painting">TRANH VẼ</h2>
         {% for painting in paintings %}
