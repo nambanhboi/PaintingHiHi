@@ -5,6 +5,7 @@
     font-size: 14px;
     box-sizing: border-box;
 }
+
 html,body{
     margin: 0;
     padding: 0;
@@ -29,7 +30,7 @@ i{
 }
 
 #header .logo{
-    width: 14%;
+    width: 17%;
     text-align: center;
 }
 
@@ -39,6 +40,7 @@ i{
 }
 
 #header .logo h2{
+    font-family: "VNI-HLThuphap", Verdana, Tahoma;
     font-size: 18px;
     color: #000;
     font-weight: 600;

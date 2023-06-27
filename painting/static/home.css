@@ -108,6 +108,7 @@ i{
         padding: 10px;
         text-align: justify;
         line-height: 1.6;
+        font-size: 18px;
     }
 
     .home-artists .art-list hr{
@@ -120,9 +121,13 @@ i{
         display: flex;
     }
 
-    .art-list li .art-img,
+    .art-list li .art-img{
+        width: 60%;
+
+    }
+
     .art-list li .art-infor{
-        width: 50%;
+        width: 40%;
     }
 
     .art-list li img{
@@ -383,6 +388,7 @@ i{
     .blog-content .blog-main img{
         transition-duration: 0.3s;
         margin-left: 15px;
+        width: 100%;
     }
 
     .blog-content .blog-main img:hover{
@@ -597,3 +603,29 @@ i{
         cursor: pointer;
     }
 /* end: home-shop */
+
+
+/*video */
+.home_video{
+    position: fixed;
+    z-index: 1000; 
+    bottom: 10px;
+    right: 30px;
+}
+
+.home_video video {
+    width: 400px;
+}
+
+.exit_video {
+    position: absolute;
+    right: 4px;
+    top: 4px;
+    padding: 4px;
+    z-index: 20000;
+}
+
+.exit_video:hover {
+    cursor: pointer;
+    opacity: 0.7;
+}

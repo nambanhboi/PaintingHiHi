@@ -23,7 +23,9 @@
             <tr>
                 <td class="tb-td-name"><a href="{% url 'detail' pk=painting.id %}">{{ painting.name }}</a></td>
                 <td class="tb-td-date"><p class="dt-ct-date">{{ painting.upload_date }}</p></td>
-                <td class="tb-td-description"><p>{{ painting.description }}</p></td>
+                <td class="tb-td-description"><p>{{ painting.description|safe }}</p></td>
+                {{post.body|safe}}
+
                 <td class="tb-td-control" >
                     <ul class="control-pictures">
                         <li><a href="{% url 'edit_pictures' pk=painting.id %}" class="edit-picture"><i class="fa-solid fa-pen"></i>Sửa</a></li>

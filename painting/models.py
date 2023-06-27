@@ -12,7 +12,7 @@ class CreateUserForm(UserCreationForm):
 
 class Painting(models.Model):
     name = models.CharField(max_length=50)
-    description = RichTextField()
+    description = RichTextField(blank=True,null=True)
     image = models.ImageField()
     upload_date = models.DateTimeField(auto_now_add=True)
 

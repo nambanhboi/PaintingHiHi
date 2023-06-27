@@ -8,14 +8,14 @@
 {% block link %}
     <link rel="stylesheet" href="{% static 'edit_pictures.css' %}" >
     <link rel="stylesheet" href="{% static 'upload.css' %}" > 
-    <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
+    {% comment %} <script src="{% static 'ckeditor/ckeditor.js' %}"></script>
     <script>CKEDITOR.replace('id_description');
       CKEDITOR.config.ForceSimpleAmpersand = true;
       CKEDITOR.config.htmlEncodeOutput = false;
       CKEDITOR.config.ProcessHTMLEntities = false;
       CKEDITOR.config.entities = false;
       CKEDITOR.config.entities_latin = false;
-    </script> 
+    </script>  {% endcomment %}
 {% endblock link %}
 
 {% block content %}
@@ -25,12 +25,14 @@
       <div class="upload-a">
         <form method="post" enctype="multipart/form-data" class="upload-content" action="http://127.0.0.1:8000/painting/update_pictures/{{painting.id}}/">
           {% csrf_token %}
+          {{form.media}}
+          {{form.as_p}}
           <p>
             <label for="id_name">Tên tranh:</label>
             <input type="text" name="name" maxlength="50" required="" id="id_name" value="{{ painting.name }}">
             </p>
-          <p>
-            <label for="id_description">Mô tả:</label>
+          <p >
+            <label for="id_description" >Mô tả:</label>
             <textarea name="description" cols="40" rows="10" required="" id="id_description">{{ painting.description }}</textarea>
             </p>
           <p>
@@ -61,7 +63,5 @@
       </div> 
     </div>
   </div>
-    <script>
-    CKEDITOR.replace('id_description');
-</script>
+
 {% endblock %}

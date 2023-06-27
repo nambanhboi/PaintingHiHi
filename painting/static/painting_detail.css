@@ -197,6 +197,11 @@
     justify-content: center;
 }
 .painting_lq{
-    width: 11%;
+    width: 15%;
     margin-right: 5px;
+    height: 130px;
+}
+
+.description-detail{
+    padding: 0 10px;
 }

@@ -6,11 +6,17 @@
 
 {% block link %} 
   <link rel="stylesheet" href="{% static 'home.css' %}">
+  <link rel="stylesheet" href="{% static 'font_thu_phap/vnithufap.ttf' %}">
 {% endblock %}
 
 {% block content %} 
     <div class="home">
-        
+        <div class="home_video">
+            <i class="fa-solid fa-x exit_video"></i>
+            <video controls autoplay>
+                <source src="{% static 'video/vdhome.mp4' %}" type="video/mp4">
+            </video>
+        </div>
         <div class="home-slides">
             <a class="slide_truoc" onclick="next()"><i class="fa-solid fa-chevron-left"></i></i></a>
             <a class="slide_sau" onclick="prev()"><i class="fa-solid fa-chevron-right"></i></a>
@@ -52,107 +58,59 @@
             </div>
         </div>
         <div class="home-artists">
-            <h2>NHÀ NGHỆ THUẬT NỔI TIẾNG</h2>
+            <h2>TRANH NỔI BẬT</h2>
             <ul class="art-list">
                 <li>
                     <div class="art-img">
                         <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_10.jpg' %}" alt="">
                     </div>
                     <div class="art-infor">
-                        <h3>Vincent van Gogh</h3>
+                        <h3>Tranh hoa sen</h3>
                         <p class="art-content">
-                            Vincent Willem Van Gogh (Tiếng Hà Lan: [ˈvɪnsənt ˈʋɪləm vɑŋ ˈɣɔx];
-                            [a] 30 tháng 3 năm 1853 – 29 tháng 7 năm 1890) là một họa sĩ hậu ấn tượng 
-                            người Hà Lan,[5] được đánh giá là một trong những nhân vật nổi tiếng và có 
-                            ảnh hưởng nhất trong lịch sử nghệ thuật phương Tây. Trong một thập kỷ, ông đã 
-                            sáng tạo ra khoảng 2.100 tác phẩm nghệ thuật, bao gồm khoảng 860 bức tranh sơn 
-                            dầu, hầu hết đều được vẽ trong khoảng thời gian hai năm cuối đời. Chúng bao gồm 
-                            tranh phong cảnh, tĩnh vật, chân dung và chân dung tự họa, đặc trưng bởi tông 
-                            màu đậm và nét vẽ ấn tượng, bốc đồng và biểu cảm đã góp phần tạo nên nền tảng 
-                            của nghệ thuật hiện đại. Van Gogh không thành công về mặt thương mại, và việc 
-                            ông tự sát ở tuổi 37 diễn ra sau nhiều năm vật lộn với trầm cảm và nghèo đói.<br>
-                            Sinh ra trong một gia đình trung lưu, Van Gogh từ nhỏ đã bắt đầu học vẽ, ông vốn nghiêm túc, ít nói 
-                            và hay suy nghĩ. Khi còn trẻ, ông làm việc như một nhà kinh doanh nghệ thuật, thường xuyên di chuyển 
-                            khắp nơi, nhưng đã bị trầm cảm sau khi chuyển đến London. Ông dành thời gian làm nhà truyền giáo Tin 
-                            lành ở miền nam nước Bỉ. Ông sống trong tình trạng sức khỏe tồi tệ và cô độc trước khi bắt đầu vẽ 
-                            tranh vào năm 1881, sau khi trở về nhà với cha mẹ. Người em trai Theo đã hỗ trợ ông về mặt tài chính,
-                             và hai người liên lạc với nhau bằng thư từ. Các tác phẩm ban đầu của ông, chủ yếu là tranh tĩnh vật 
-                             và mô tả những người nông dân lao động, có rất ít dấu hiệu về màu sắc sặc sỡ giúp phân biệt với tác 
-                             phẩm sau này của ông. Năm 1886, ông chuyển đến Paris, tại đây ông được gặp nhiều danh họa Hậu ấn 
-                             tượng khác, bao gồm Émile Bernard và Paul Gauguin. Khi công việc phát triển, ông đã tạo ra một cách 
-                             tiếp cận mới đối với tranh tĩnh vật và cảnh quan địa phương. Các bức họa của Van Gogh ngày càng trở 
-                             nên tươi sáng hơn khi ông phát triển một phong cách đã được hiện thực hóa hoàn toàn trong thời gian 
-                             ở Arles, miền nam nước Pháp vào năm 1888. Trong giai đoạn này, ông mở rộng chủ đề bao gồm cây ô liu, 
-                             cánh đồng lúa mì và hoa hướng dương.
+                            Tranh hoa sen là một dạng nghệ thuật truyền thống đặc biệt của Việt Nam, nơi hoa sen được sử dụng làm chủ đề tạo ra các bức tranh đẹp mắt và ý nghĩa. Hoa sen là biểu tượng quan trọng trong văn hóa và tôn giáo của Việt Nam, được coi là biểu tượng của sự thuần khiết, sự tinh khiết và sự nảy nở trong bùn lầy.
+                            Trong tranh hoa sen, người họa sĩ thường sử dụng nét vẽ tinh tế và màu sắc tươi sáng để tái hiện hình ảnh của hoa sen. Tranh thường có những chi tiết tỉ mỉ, từ những cánh sen mỏng manh đến những búp sen chưa nở. Bức tranh hoa sen có thể được vẽ trên nhiều chất liệu khác nhau như giấy, vải hoặc gỗ và được sử dụng để trang trí các nơi công cộng, nhà cửa hoặc dùng làm quà biếu.
+                            Tranh hoa sen không chỉ mang ý nghĩa về mặt thẩm mỹ mà còn có ý nghĩa sâu sắc về tâm linh và tinh thần. Hoa sen thường được coi là biểu tượng của sự trường sinh, sự trỗi dậy và sự sạch sẽ trong tâm hồn. Nó cũng thể hiện sự phát triển và trưởng thành, từ việc nảy mầm từ đáy bùn lầy cho đến khi trở thành một bông hoa đẹp tuyệt vời.
                         </p>
                     </div>    
                 </li>
                 <hr>
                 <li>   
-                    <div class="art-infor">
-                        <h3>Rembrandt</h3>
-                        <p class="art-content">
-                            Rembrandt Harmenszoon van Rijn (15 tháng 7 năm 1606 - 4 tháng 10 năm 1669), thường được biết tới với tên Rembrandt hay Rembrandt van Rijn, là một họa sĩ và nghệ sĩ khắc bản in nổi tiếng người Hà Lan. Ông thường được coi là một trong những họa sĩ vĩ đại nhất trong lịch sử hội họa châu Âu nói chung và Hà Lan nói riêng[1]. Các tác phẩm của Rembrandt đã đóng góp quan trọng vào Thời đại hoàng kim của Hà Lan thế kỉ 17.<br>
-                            Ngay từ khi còn trẻ Rembrandt đã đạt được thành công lớn với các bức tranh chân dung, tuy những năm sau đó ông gặp nhiều bi kịch cá nhân hay những khó khăn về tài chính, họa sĩ vẫn được coi là một trong những người Hà Lan nổi tiếng nhất thời đó[2] và ông là thầy dạy cho gần như tất cả các họa sĩ Hà Lan hàng đầu thế kỉ 17[3].<br>
-                            Năm 2004, trong Danh sách những người Hà Lan vĩ đại nhất trong lịch sử (De Grootste Nederlander) do đài KRO tổ chức, Rembrandt là nghệ sĩ có vị trí cao nhất trong danh sách (thứ 9)[4].<br>
-                            Trong một lá thư gửi cho Huyghens, Rembrandt đã tiết lộ điều ông tìm kiếm trong nghệ thuật, đó là "chuyển động (hay cảm xúc) tự nhiên nhất và tuyệt vời nhất" ("die meeste ende di naetuereelste beweechgelickheijt" - từ "beweechgelickhijt" vừa có nghĩa là "cảm xúc", vừa có nghĩa là "chuyển động")[25]. Ba đề tài chính trong suốt sự nghiệp sáng tác của Rembrandt là tranh chân dung, tranh phong cảnh và tranh minh họa. Với giới nghệ thuật và tôn giáo đương thời, ông được coi là bậc thầy của các bức tranh minh họa Kinh Thánh trong việc miêu tả cảm xúc và các chi tiết[26]. Phong cách vẽ của ông chuyển từ những nét mềm mại, trơn nhẵn ở giai đoạn đầu sang những nét thô ráp để mô tả đạt hơn cảm xúc của mẫu vật[27]. Bên cạnh sự phát triển về kĩ thuật hội họa, Rembrandt cũng có những bước tiến trong kĩ thuật khắc bản in và in ấn. Trong các bản khắc giai đoạn sau, đặc biệt là từ thập niên 1640 trở đi, sự tự do và phóng khoáng được thể hiện rõ rệt.
-                        </p>
-                    </div>
                     <div class="art-img">
-                        <img src="{% static 'image/image_painting/phong_canh/phong_canh_02.jpg' %}" alt="">
+                        <img src="{% static 'image/image_painting/hoa_mai/hoa_mai_02.jpg' %}" alt="">
                     </div>
+                    <div class="art-infor">
+                        <h3>Tranh hoa mai</h3>
+                        <p class="art-content">
+                            
+                            Tranh hoa mai là một loại tranh truyền thống của Việt Nam, nơi hoa mai được sử dụng như một chủ đề tạo nên các tác phẩm nghệ thuật đẹp mắt và ý nghĩa. Hoa mai được coi là biểu tượng của sự phú quý, may mắn và sự thịnh vượng trong văn hóa Việt Nam.
+                            Trong tranh hoa mai, người họa sĩ thường sử dụng các nét vẽ mềm mại và sắc màu tươi sáng để tái hiện hình ảnh của hoa mai. Bức tranh thường thể hiện những bông hoa mai tỏa sáng và đầy sức sống, với những cành mai uốn cong và lá xanh mướt. Màu vàng của hoa mai thường được sử dụng để biểu thị sự giàu có và sự thịnh vượng.
+                            Tranh hoa mai không chỉ mang ý nghĩa về mặt thẩm mỹ mà còn chứa đựng ý nghĩa tâm linh và tinh thần. Hoa mai được coi là biểu tượng của sự phát triển và thịnh vượng, và thường được treo trong những dịp lễ hội hay cúng tế để mang lại may mắn và điềm lành cho gia đình.
+                        </p>
+                    </div> 
                 </li>
                 <hr>
                 <li>
                     <div class="art-img">
-                        <img src="{% static 'image/image_painting/hoa_mai/hoa_mai_01.jpg' %}" alt="">
+                        <img src="{% static 'image/image_painting/phong_canh/phong_canh_01.jpg' %}" alt="">
                     </div>
                     <div class="art-infor">
-                        <h3>Edgar Degas </h3>
+                        <h3>Tranh phong cảnh</h3>
                         <p class="art-content">
-                            Edgar Degas sinh năm 1834 tại Paris, mất năm 1917. Khác với phần 
-                            lớn các họa sĩ nổi tiếng cùng thời khác luôn phải sống trong nghèo 
-                            túng, Degas là con cả trong một gia đình của một ông chủ nhà băng 
-                            giàu có. Chịu ảnh hưởng phong cách biểu cảm của Ingres và lối sử 
-                            dụng màu sắc của Delacroix, ông là một trong những trụ cột nổi 
-                            tiếng của trường phái ấn tượng, người đồng thời với Vincent phong 
-                            cách hội họa Van Gogh và Edouard Manet. Degas cũng chịu ảnh 
-                            hưởng rất nhiều bởi phương Đông, đặc biệt là các tranh khắc gỗ vào 
-                            kỹ thuật đồ họa Nhật Bản.<br>
-                            Degas cũng sản xuất các tác phẩm điêu khắc , bản in và bản vẽ bằng đồng. Degas đặc biệt gắn bó với chủ đề khiêu vũ; hơn một nửa tác phẩm của ông miêu tả các vũ công. [3] Mặc dù Degas được coi là một trong những người sáng lập ra trường phái Ấn tượng , nhưng ông bác bỏ thuật ngữ này, thích được gọi là một người theo trường phái hiện thực hơn , [4] và không vẽ tranh ngoài trời như nhiều người theo trường phái Ấn tượng đã làm.<br>
-                            Degas là một người vẽ phác thảo xuất sắc , và đặc biệt thành thạo trong việc miêu tả chuyển động, như có thể thấy trong bản trình diễn vũ công và phụ nữ khỏa thân đang tắm của ông . Ngoài các vũ công ba lê và phụ nữ tắm, Degas còn vẽ ngựa đua và nài ngựa đua, cũng như các bức chân dung. Những bức chân dung của anh ấy đáng chú ý vì sự phức tạp về tâm lý và sự miêu tả sự cô lập của con người. <br>
-                            Khi bắt đầu sự nghiệp của mình, Degas muốn trở thành một họa sĩ lịch sử , một lời kêu gọi mà anh ấy đã chuẩn bị kỹ lưỡng bằng quá trình đào tạo học thuật nghiêm ngặt và nghiên cứu kỹ lưỡng về nghệ thuật cổ điển. Ở tuổi ba mươi, ông thay đổi hướng đi, và bằng cách áp dụng các phương pháp truyền thống của một họa sĩ lịch sử vào các chủ đề đương đại, ông trở thành một họa sĩ cổ điển của cuộc sống hiện đại. <br>
-                        </p>
-                    </div>
-                </li>
-                <hr>
-                <li>
-                    <div class="art-infor">
-                        <h3>Leonardo da Vinci</h3>
-                        <p class="art-content">
-                            Leonardo da Vinci (sinh ngày 15/4/1452, mất ngày 2/5/1519). Ông  
-                            là một họa sĩ, nhà điêu khắc, kiến trúc sư, nhạc sĩ, bác sĩ, kỹ sư, nhà 
-                            giải phẫu, nhà sáng tạo và triết học tự nhiên. Trong lĩnh vực hội họa, 
-                            ông đã để lại cho đời những kiệt tác bằng bức bích học Bữa ăn tối   
-                            cuối cùng tại Tu viện Saint Maria delle Grazie (Milan – Ý), bức chân  
-                            dung phụ nữ La Gioconda hay Mona Lisa với nụ cười bí ẩn,… <br>
-                            Ông là người có những ý tưởng vượt trước thời đại của mình, đặc biệt là khái niệm về máy bay trực thăng, xe tăng, dù nhảy, sử dụng năng lượng Mặt Trời, máy tính, sơ thảo lý thuyết kiến tạo địa hình, tàu đáy kép, cùng nhiều sáng chế khác. Một vài thiết kế của ông đã được thực hiện và khả thi trong lúc ông còn sống. Ứng dụng khoa học trong chế biến kim loại và trong kỹ thuật ở thời đại Phục Hưng còn đang ở trong thời kỳ trứng nước. Thêm vào đó, ông có đóng góp rất lớn vào kiến thức và sự hiểu biết trong giải phẫu học, thiên văn học, xây dựng dân dụng, quang học và nghiên cứu về thủy lực. Những sản phẩm lưu lại trong cuộc đời ông chỉ còn lại vài bức hoạ, cùng với một vài quyển sổ nháp tay (rơi vãi trong nhiều bộ sưu tập khác nhau các sáng tác của ông), bên trong chứa đựng các ký hoạ, minh hoạ về khoa học và bút ký.<br>
-                            Leonardo là người thuận cả hai tay trái và phải, trong cuốn sổ tay của mình ông luôn viết ngược, nghĩa là sử dụng tay trái viết từ phải qua trái, người ta muốn đọc thì phải sử dụng gương để phản chiếu lại theo chiều thuận, ông làm vậy có thể là do ông không muốn người khác đọc được những gì trong sổ tay.<br>
-                            Trong các cuốn sổ tay của ông có ghi lại các hình ảnh về giải phẫu, kiến trúc, các ý tưởng về thiết bị bay thử nghiệm, mô tả hoạt động bay của chim, nghiên cứu các hệ thống cấp nước, thiết kế tượng đài, thủy lực học, các phác họa cho bức Bữa tối cuối cùng, các nghiên cứu hình học cho bài toán cầu phương hình tròn, thiết kế nhà thờ hình bát giác và các đoạn viết tay theo kiểu chữ gương.
-                        </p>
-                    </div>  
-                    <div class="art-img">
-                        <img src="{% static 'image/image_painting/hoa_hong/hoa_hong_02.jpg' %}" alt="">
-                    </div>   
-                </li>
+                            Tranh phong cảnh là một thể loại tranh mà các họa sĩ sử dụng để tái hiện và truyền tải vẻ đẹp của tự nhiên, các địa danh và môi trường xung quanh chúng ta. Tranh phong cảnh thường bao gồm các yếu tố như đồng cỏ, núi non, sông suối, biển cả, cây cối và bầu trời. Loại tranh này mang lại cho người xem cảm giác bình yên, tĩnh lặng và thúc đẩy sự kỳ vọng về sự tồn tại và hiện diện của vẻ đẹp tự nhiên.
 
+                            Tranh phong cảnh có xuất phát từ rất sớm trong lịch sử nghệ thuật, và đã phát triển qua nhiều thời kỳ và trường phái nghệ thuật khác nhau. Từ tranh phong cảnh thực tế chân thực của Trung Quốc và Nhật Bản, đến các phong cách biểu tượng và ấn tượng của châu Âu và Mỹ, tranh phong cảnh đã mang lại những tác phẩm nghệ thuật đa dạng và đẹp mắt.
+                            
+                            Trong tranh phong cảnh, các họa sĩ thường sử dụng các kỹ thuật và phương pháp vẽ để tạo ra các hiệu ứng ánh sáng, màu sắc và chi tiết để tạo nên vẻ đẹp của cảnh vật. Họ cũng có thể sử dụng các kỹ thuật khác nhau như tranh dầu, tranh nước, tranh acrylic hoặc tranh pastel để biểu đạt ý tưởng và cảm xúc của họ về phong cảnh.
+                        </p>
+                    </div> 
+                </li>
             </ul>
         </div>
         <div class="home-pictures">
             <h2>NHỮNG BỨC TRANH ĐẠT TOP DOANH THU</h2>
             <ul class="list-top">
                 <li class="top3 top-pic">
-                    <img src="{% static 'image/image_painting/thu_phap/thu_phap_02.jpg' %}" alt="">
+                    <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_08.jpg' %}" alt="">
                     <div class="top-show">
                         <p>Bán được 300+ trong tháng đầu</p>
                         <button>Xem chi tiết</button>
@@ -166,7 +124,7 @@
                     </div>
                 </li>
                 <li class="top1 top-pic">
-                    <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_02.jpg' %}" alt="">
+                    <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_09.jpg' %}" alt="">
                     <div class="top-show">
                         <p>Đã bán được 1000+ trong tháng đầu tiên</p>
                         <button>Xem chi tiết</button>
@@ -531,7 +489,7 @@
                             <p class="content-detail">Tranh tĩnh vật</p>
                         </li>
                         <li class="shop-col">
-                            <img src="{% static 'image/image_painting/phong_canh/phong_canh_02.jpg' %}" alt="">
+                            <img src="{% static 'image/image_painting/phong_canh/quat_canh_02.jpg' %}" alt="">
                             <p class="content-detail">Tranh tôn giáo</p>
                         </li>
                     </ul>
