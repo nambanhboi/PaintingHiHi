@@ -28,17 +28,18 @@
         </div>
         <div class="header-content">
             <div class="hd-top">
-                <div class="hd-search">
+                <div class="hd-search hd-search-web">
                     <form action="{% url 'search'%}" method="get">
                         <input type="search" placeholder=" Search" name ="query" >
                         <button type="submit"class="fa-solid fa-magnifying-glass"></button>
                     </form>
                 </div>
-
+                <i class="fa-solid fa-bars"></i>
                 <div class="hd-sign">
                     <a href="{% url 'register' %}"><button >Đăng ký</button></a> /
                     <a href="{% url 'loginPage' %}"><button >Đăng nhập</button></a>
                 </div>
+
                 <div class="hd-sign-loggedIn" style="display:grid;justify-items: center;">
                     <i class="fa-regular fa-user icon-user-home"></i>
                     {% comment %} <div class="loggedIn_hidden"> {% endcomment %}
@@ -56,6 +57,12 @@
                     <li><a href="{%url 'contact' %}">LIÊN HỆ </a></li>
                     <li><a href="{%url 'blog' %}">BLOG </a></li>
                 </ul>
+            </div>
+            <div class="hd-search hd-search-moblie">
+                <form action="{% url 'search'%}" method="get">
+                    <input type="search" placeholder=" Search" name ="query" >
+                    <button type="submit"class="fa-solid fa-magnifying-glass"></button>
+                </form>
             </div>
         </div>
     </div>
