@@ -11,7 +11,12 @@
 
 {% block content %} 
     <div class="home">
-        
+        <div class="home_video">
+            <i class="fa-solid fa-x exit_video"></i>
+            <video controls autoplay>
+                <source src="{% static 'video/vdhome.mp4' %}" type="video/mp4">
+            </video>
+        </div>
         <div class="home-slides">
             <a class="slide_truoc" onclick="next()"><i class="fa-solid fa-chevron-left"></i></i></a>
             <a class="slide_sau" onclick="prev()"><i class="fa-solid fa-chevron-right"></i></a>

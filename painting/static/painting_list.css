@@ -48,6 +48,10 @@ ul{
     width: 100%;
 }
 
+.list-pictures i:hover {
+    cursor: pointer;
+}
+
 .img-contain{
     height: 350px;
     overflow: hidden;
