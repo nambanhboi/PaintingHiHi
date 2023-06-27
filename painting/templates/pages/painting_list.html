@@ -5,25 +5,30 @@
 {% endblock %}
 
 {% block link %} 
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC" crossorigin="anonymous">
     <link rel="stylesheet" href="{% static 'painting_list.css' %}" > 
-{% endblock %}
+{% endblock %}2
 
 
 {% block content %} 
-    <h2 class="title-list">Khám phá</h2>
-    <div class="list">  
-        <!-- row 1 -->
-        <div class="list-pictures">
-            {% for painting in paintings %}
-            <div class="row ">
-                <div class="col col-third picture-overview">
-                    <div class="image-detail">
-                        <div class="img-contain">
-                            <a href="{% url 'detail' pk=painting.id %}" ><img src="{{ painting.image.url }}" class="over-img" alt=""></a>
+    <div class="container">
+        <h2 class="title-list">Khám phá</h2>
+    <hr>
+    {% comment %} <div class="list-content">
+        <div class="list_left">
+            {% for painting in paintings  %}
+                <div class="row">
+                    <div class="list-img">
+                            <a href="{% url 'detail' pk=painting.id %}" ><img src="{{ painting.image.url }}" class="over-img" alt="" width=100%></a>
+                    </div>
+                    <div class="img-description">
+                        <div class="img-des1">
+                            <p><b>Name: </b> {{ painting.name }}</p>
+                            <p><b>Upload date: </b> {{ painting.upload_date }}</p>
                         </div>
-                        <ul class="function-pictures">
-                            <li>
-                                {% if user %}
+                        <div class="img-des2">
+                            <div class="img-like">
+                                {% if user.is_authenticated %}
                                     <i class="fa-solid fa-heart icon_like{{painting.id}} 
                                         `{% for ptl in paintings_like %}          
                                             {% if painting.id == ptl.painting.id %}
@@ -33,23 +38,79 @@
                                         onclick="like_pain('{{ painting.id }}')">
                                     </i>
                                 {% else %}
-                                    <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
-                                {% endif %}
-                            </li>
-                            <li><i class="fa-regular fa-comment"></i></li>
-                            <li><i class="fa-solid fa-share"></i></li>
-                        </ul>
+                                        <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                                {% endif %}                            
+                            </div>
+                            <div class="img-detail">
+                                <a href="{% url 'detail' pk=painting.id %}" class="over-click">Chi tiết</a>
+                            </div>
+                        </div>
                     </div>
-
-                    <div class="over-des">
-                        <p> Name: {{ painting.name }}</p>
-                        <p> Date upload: {{ painting.upload_date }}</p>
-                    </div>
-                    <a href="{% url 'detail' pk=painting.id %}" class="over-click">Xem chi tiết<i class="fa-solid fa-caret-right"></i></a>   
                 </div>
-            </div>
             {% endfor %}
         </div>
+        <div class="list_right">
+        {% for ptlq in paintinglqs %}
+                <div class="rowlq">
+                    <a href=""><img src="{{ ptlq.image.url }}" alt="" width=100%></a>
+                </div>
+        {% endfor %}
+        </div>
+    </div> {% endcomment %}
+    <div class="list-painting">
+        <h2 class="title-list-painting">TRANH VẼ</h2>
+        {% for painting in paintings %}
+            <div class="colum">
+                <div class="img-container">
+                    <a href="{% url 'detail' pk=painting.id %}"><img src="{{ painting.image.url }}" alt="" ></a>
+                </div>
+                <div class="img-des">
+                    <div class="des-left">
+                        <p style="font-size:40px;font-weight: bold; margin:0;">{{ painting.name }}</p>
+                        <p>{{ painting.upload_date }}</p>
+                    </div>
+                    <div class="des-right">
+                        <div class="like">
+                            {% if user.is_authenticated %}
+                                    <i class="fa-solid fa-heart icon_like{{painting.id}} 
+                                        `{% for ptl in paintings_like %}          
+                                            {% if painting.id == ptl.painting.id %}
+                                                active_like
+                                            {% endif %}
+                                        {% endfor %} `" 
+                                        onclick="like_pain('{{ painting.id }}')">
+                                    </i>
+                            {% else %}
+                                    <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                            {% endif %}
+                        </div>
+                        <div class="detail"><a href="">Chi tiết</a></div>
+                    </div>
+                </div>
+            </div>
+        {% endfor %}
     </div>
+    <div class="ads">
+    <h3>quảng cáo</h3>
+        <img src="{% static 'image/list/ads-list.jpg' %}" alt="">
+    </div>
+    <div class="list-paintinglq">
+    
+        <h2 class="title-list-painting" style="margin-top: 4rem;">TRANH VẼ TRÊN ĐỒ VẬT</h2>
+         <div class="grid-container">
+            {% for paintinglq in paintinglqs %}
+                <div class="grid-item">
+                    <a href=""><img src="{{ paintinglq.image.url }}" alt=""></a>
+                </div>
+            {% endfor %}
+        </div>
+        
+    </div>
+    </div>
+
     <script src="{% static 'js/painting_list.js' %}"></script>
 {% endblock %}
+
+{% block link_js %}
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+{% endblock link_js %}
