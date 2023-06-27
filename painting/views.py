@@ -30,11 +30,12 @@ def contact(request):
 
 def painting_list(request):
     paintings = Painting.objects.all()
+    paintinglqs = PaintingLq.objects.all()
     if request.user.is_authenticated:
         paintings_like = Like.objects.filter(user=request.user)
         print(paintings_like)
-        return render(request,'pages/painting_list.html',{'paintings':paintings, "paintings_like": paintings_like, 'user': request.user})
-    return render(request,'pages/painting_list.html',{'paintings':paintings})
+        return render(request,'pages/painting_list.html',{'paintings':paintings, "paintings_like": paintings_like, 'user': request.user, 'paintinglqs': paintinglqs})
+    return render(request,'pages/painting_list.html',{'paintings':paintings,'paintinglqs': paintinglqs})
 
 @login_required
 @user_passes_test(lambda a: a.is_staff)
