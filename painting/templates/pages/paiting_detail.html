@@ -9,15 +9,42 @@
 {% endblock %}
 
 {% block content %}
-<div class="detail">
-    <div class="detail-content">
-            <img src="{{ painting.image.url }}" class="detail-img" alt="">
-            <h3>{{ painting.name }}</h3>
-            <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
-        
-        <p> Mô tả: {{ painting.description }}</p>
+ 
+<div class="content">
+    <div class="content_left">
+        <div class="container_img">
+            <img src="{{ painting.image.url }}" class="detail-img" alt="" style="width: 98%; margin-left: 1%;">
+        </div>
+        <div class="list-update">
+            <div class="painting_lqs" >
+                {% for painting_item in paintinglq %}
+                    <img src="{{ painting_item.image.url}}" alt="" width=100% class="painting_lq">
+                {% endfor %}
+            </div>
+        </div>
+        <p class="description_text"> <span style="font-size: 140%; font-weight: bold;">Mô tả:</span> {{ painting.description }}</p> 
 
-        <ul class="function-pictures">
+        
+    </div>
+
+    <div class="content_right">
+        <h3>{{ painting.name }}</h3>
+        <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
+        <span>
+            {% if is_user %}
+                <i class="fa-regular fa-heart icon_like{{painting.id}} 
+                    `{% if painting_like %} 
+                    active_like
+                    {% endif %}`"
+                    onclick="like_pain(`{{ painting.id }}`)"
+                ></i>
+            {% else %}
+        </span>
+        <i class="fa-regular fa-heart" onclick="likeNoUser()"></i>
+        {% endif %}
+        <hr>
+
+        {% comment %} <ul class="function-pictures">
             <li>
                 {% if is_user %}
                     <i class="fa-solid fa-heart icon_like{{painting.id}} 
@@ -26,10 +53,9 @@
                         {% endif %}`"
                         onclick="like_pain(`{{ painting.id }}`)"
                     ></i>
-                {% else %}
-                <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                
                 {% endif %}
-            </li>
+            </li> {% endcomment %}
 
         </ul>
 
@@ -42,41 +68,33 @@
                 <button onclick="commentNoUser()" class="btn btn-outline-secondary" type="button" id="button-addon2">Bình luận</button>
             {% endif %}
         </div>
-        
 
         <div class="comments">
             <h2>Các bình luận</h2>
             <ul class="list-group">
                 <li class="cmt cmt_tam"></li>
                 {% for comment in comments %}
-                    {% if comment.painting.id == painting.id %}
-                        <li class="cmt">
-                            <div class="cmt-par">
-                                <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
-                                <div class="cmt-detail">
-                                    <h4>{{ comment.user }}</h4> 
-                                    <p>{{ comment.cmt }}</p>
-                                </div>
-                                <i class="bi bi-three-dots-vertical"></i>
+                    {% if comment.painting.id == painting.id %}<li class="cmt">
+                        <div class="cmt-par">
+                            <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
+                            <div class="cmt-detail">
+                                <h4>{{ comment.user }}</h4> 
+                                <p>{{ comment.cmt }}</p>
                             </div>
-                            <div class="cmt-add">
-                                <span>Thích</span>
-                                <span>Trả lời</span>
-                                <span>5 giờ</span>
-                            </div>
-                        </li>
-                    {% endif %}
-                {% endfor %}
-            </ul>
-        </div>  
-    </div>
-    <div class="list-update">
-        <div class="painting_lq" >
-            {% for painting_item in paintinglq %}
-                <img src="{{ painting_item.image.url}}" alt="" width=100%>
+                            <i class="bi bi-three-dots-vertical"></i>
+                        </div>
+                        <div class="cmt-add">
+                            <span>Thích</span>
+                            <span>Trả lời</span>
+                            <span>5 giờ</span>
+                        </div>
+                    </li>
+                {% endif %}
             {% endfor %}
-        </div>
-    </div>
+        </ul>
+    </div>  
 </div>
+</div>
+
 <script src="{% static 'js/painting_detail.js' %}"></script>
 {% endblock %}

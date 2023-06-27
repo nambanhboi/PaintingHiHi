@@ -10,26 +10,31 @@
 
 {% block content %} 
     <div class="home">
-        
+        <div class="home_video">
+            <i class="fa-solid fa-x exit_video"></i>
+            <video controls autoplay>
+                <source src="{% static 'video/vdhome.mp4' %}" type="video/mp4">
+            </video>
+        </div>
         <div class="home-slides">
             <a class="slide_truoc" onclick="next()"><i class="fa-solid fa-chevron-left"></i></i></a>
             <a class="slide_sau" onclick="prev()"><i class="fa-solid fa-chevron-right"></i></a>
             <div class="slide">
-                <img src="{% static 'image/slider1.jpg' %}" alt="">
+                <img src="{% static 'image/image_painting/thu_phap/thu_phap_02.jpg' %}" alt="">
                 <div class="slide-content">
                     <h3>Triển lãm "nhóm Tháng 11 và các bạn"</h3>
                     <span>Hội Mỹ thuật TP.HCM (quận 3)</span>
                 </div>
             </div>
             <div class="slide">
-                <img src="{% static 'image/slider2.jpg' %}" alt="">
+                <img src="{% static 'image/image_painting/cay_tre/quat_tre_04.jpg' %}" alt="">
                 <div class="slide-content">
                     <h3>Triển lãm tranh lụa “Kén”</h3>
                     <span>Hội Mỹ thuật TP.HCM (quận 3)</span>
                 </div>
             </div>
             <div class="slide">
-                <img src="{% static 'image/slider3.jpg' %}" alt="">
+                <img src="{% static 'image/image_painting/con_cong/con_cong_01.jpg' %}" alt="">
                 <div class="slide-content">
                     <h3>Triển lãm tranh “Mây”</h3>
                     <span>Bảo tàng Mỹ thuật Việt Nam
@@ -37,14 +42,14 @@
                 </div>
             </div>
             <div class="slide">
-                <img src="{% static 'image/slider4.jpg' %}" alt="">
+                <img src="{% static 'image/image_painting/hoa_hong/hoa_hong_01.jpg' %}" alt="">
                 <div class="slide-content">
                     <h3>Triển lãm tranh "Ngẫu nhiên"</h3>
                     <span> Nhà triển lãm Mỹ thuật Việt Nam, phố Ngô Quyền, quận Hoàn Kiếm, Hà Nội</span>
                 </div>
             </div>
             <div class="slide">
-                <img src="{% static 'image/slider5.png' %}" alt="">
+                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_05.jpg' %}" alt="">
                 <div class="slide-content">
                     <h3>Hanoi Studio Gallery </h3>
                     <span>Phố Mạc Đĩnh Chi, Ba Đình, Hà Nội</span>
@@ -56,7 +61,7 @@
             <ul class="art-list">
                 <li>
                     <div class="art-img">
-                        <img src="{% static 'image/home/Vincent.webp' %}" alt="">
+                        <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_10.jpg' %}" alt="">
                     </div>
                     <div class="art-infor">
                         <h3>Vincent van Gogh</h3>
@@ -99,13 +104,13 @@
                         </p>
                     </div>
                     <div class="art-img">
-                        <img src="{% static 'image/home/rembrandt.jpg' %}" alt="">
+                        <img src="{% static 'image/image_painting/phong_canh/phong_canh_02.jpg' %}" alt="">
                     </div>
                 </li>
                 <hr>
                 <li>
                     <div class="art-img">
-                        <img src="{% static 'image/home/edgar.jpg' %}" alt="">
+                        <img src="{% static 'image/image_painting/hoa_mai/hoa_mai_01.jpg' %}" alt="">
                     </div>
                     <div class="art-infor">
                         <h3>Edgar Degas </h3>
@@ -142,7 +147,7 @@
                         </p>
                     </div>  
                     <div class="art-img">
-                        <img src="{% static 'image/home/leonardo.jpeg' %}" alt="">
+                        <img src="{% static 'image/image_painting/hoa_hong/hoa_hong_02.jpg' %}" alt="">
                     </div>   
                 </li>
 
@@ -152,35 +157,35 @@
             <h2>NHỮNG BỨC TRANH ĐẠT TOP DOANH THU</h2>
             <ul class="list-top">
                 <li class="top3 top-pic">
-                    <img src="{% static 'image/home/tranh_chap.jpg' %}" alt="">
+                    <img src="{% static 'image/image_painting/thu_phap/thu_phap_02.jpg' %}" alt="">
                     <div class="top-show">
                         <p>Bán được 300+ trong tháng đầu</p>
                         <button>Xem chi tiết</button>
                     </div>
                 </li>
                 <li class="top2 top-pic">
-                    <img src="{% static 'image/home/thieu_nu_ben_hoa_hue.jpg' %}" alt="">
+                    <img src="{% static 'image/image_painting/phong_canh/phong_canh_01.jpg' %}" alt="">
                     <div class="top-show">
                         <p>Đã bán được 500+ trong tháng đầu tiên</p>
                         <button>Xem chi tiết</button>
                     </div>
                 </li>
                 <li class="top1 top-pic">
-                    <img src="{% static 'image/home/dem_day_sao.jpg' %}" alt="">
+                    <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_02.jpg' %}" alt="">
                     <div class="top-show">
                         <p>Đã bán được 1000+ trong tháng đầu tiên</p>
                         <button>Xem chi tiết</button>
                     </div>
                 </li>
                 <li class="top2 top-pic">
-                    <img src="{% static 'image/home/monalisa.webp' %}" alt="">
+                    <img src="{% static 'image/image_painting/hoa_mai/hoa_mai_02.jpg' %}" alt="">
                     <div class="top-show">
                         <p>Đã bán được 500+ trong tháng đầu tiên</p>
                         <button>Xem chi tiết</button>
                     </div>
                 </li>
                 <li class="top3 top-pic">
-                    <img src="{% static 'image/home/top3.jpg' %}" alt="">
+                    <img src="{% static 'image/image_painting/hoa_mai/hoa_mai_03.jpg' %}" alt="">
                     <div class="top-show">
                         <p>Bán được 300+ trong tháng đầu </p>
                         <button>Xem chi tiết</button>
@@ -196,7 +201,7 @@
                     <ul>
                         <li style="width: 100%;" class="new-detail">
                             <div class="news-dt-img">
-                                <img src="{% static 'image/home/news/new1.jpg' %}" alt="" width="100%">
+                                <img src="{% static 'image/image_painting/hoa_hong/hoa_hong_01.jpg' %}" alt="" width="100%">
                             </div>       
                             <h4>Bức tranh tường tuyệt đẹp ở Belfast kể câu chuyện tái sinh</h4>
                             <p style="width: 100%;">Bộ đôi người Hà Lan Studio Giftig đã lên đường đến Belfast để tham 
@@ -211,7 +216,7 @@
                         <hr>
                         <li style="width: 100%;" class="new-detail">
                             <div class="news-dt-img">
-                                <img src="{% static 'image/home/news/new2.jpg' %}" alt="" width="100%">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_09.jpg' %}" alt="" width="100%">
                             </div> 
                             <h4>Nghệ sĩ biến chiếc đồng hồ ông nội tiết kiệm bằng cách vẽ hoàn toàn nó thành một tác phẩm vũ trụ</h4>
                             <p style="width: 100%;">Tìm thấy cửa hàng tiết kiệm có đầy đủ các khả năng. 
@@ -228,7 +233,7 @@
                         <hr>
                         <li style="width: 100%;" class="new-detail">
                             <div class="news-dt-img">
-                                <img src="{% static 'image/home/news/new3.jpg' %}" alt="" width="100%">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_08.jpg' %}" alt="" width="100%">
                             </div> 
                             <h4>Bản vẽ kiến ​​trúc tinh tế nắm bắt những ngóc ngách đặc biệt của thành phố và thị trấn</h4>
                             <p style="width: 100%;">Khi đi bộ qua một thị trấn, có nhiều chi tiết không 
@@ -246,7 +251,7 @@
                         <hr>
                         <li style="width: 100%;" class="new-detail">
                             <div class="news-dt-img">
-                                <img src="{% static 'image/home/news/new4.jpg' %}" alt="" width="100%">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_07.jpg' %}" alt="" width="100%">
                             </div> 
                             <h4>Nghệ sĩ tạo áo giáp kim loại phức tạp cho mèo và chuột lấy cảm hứng từ lịch sử thế giới</h4>
                             <p style="width: 100%;">Sự cạnh tranh giữa mèo và chuột xưa như thời gian. Bạn có thể hình dung
@@ -261,7 +266,7 @@
                         <hr>
                         <li style="width: 100%;" class="new-detail">
                             <div class="news-dt-img">
-                                <img src="{% static 'image/home/news/new5.jpg' %}" alt="" width="100%">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_06.jpg' %}" alt="" width="100%">
                             </div> 
                             <h4>Nghệ thuật đường phố thanh tao của một người phụ nữ đội vương miện hoa xuất hiện ở đường hầm London</h4>
                             <p style="width: 100%;">Sau hai năm tạm dừng sáng tạo tác phẩm ngoài trời ở Vương quốc Anh, bộ đôi 
@@ -396,7 +401,7 @@
             <div class="blog-content">
                 <div class="blog-main">
                     <div class="main-img">
-                        <img src="{% static 'image/home/blog/main.png' %}" alt="">
+                        <img src="{% static 'image/image_painting/hoa_sen/quat_sen_02.jpg' %}" alt="">
                     </div>
                     <div class="blog-main-content">
                         <span>Ngày xuất bản: 17 tháng 5 năm 2023</span>
@@ -421,7 +426,7 @@
                     <div class="blog-row ">
                         <div class="blog-col">
                             <div class="add-img">
-                                <img src="{% static 'image/home/blog/blog-add1.jpg' %}" alt="">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_04.jpg' %}" alt="">
                             </div>
                             <div class="blog-main-content">
                                 <span>Ngày xuất bản: 3 tháng 5 năm 2023</span>
@@ -435,7 +440,7 @@
                         </div>
                         <div class="blog-col">
                             <div class="add-img">
-                                <img src="{% static 'image/home/blog/blog-add2.jpg' %}" alt="">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_03.jpg' %}" alt="">
                             </div>
                             <div class="blog-main-content">
                                 <span>Ngày xuất bản: 28 tháng 2 năm 2023</span>
@@ -448,7 +453,7 @@
                         </div>
                         <div class="blog-col">
                             <div class="add-img">
-                                <img src="{% static 'image/home/blog/blog-add3.jpg' %}" alt="">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_02.jpg' %}" alt="">
                             </div>
                             <div class="blog-main-content">
                                 <span>Ngày xuất bản: 19 tháng 1 năm 2023</span>
@@ -463,7 +468,7 @@
                     <div class="blog-row">
                         <div class="blog-col">
                             <div class="add-img">
-                                <img src="{% static 'image/home/blog/blog-add4.jpg' %}" alt="">
+                                <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_01.jpg' %}" alt="">
                             </div>
                             <div class="blog-main-content">
                                 <span>Ngày xuất bản: 12 tháng 1 năm 2023</span>
@@ -477,7 +482,7 @@
                         </div>
                         <div class="blog-col">
                             <div class="add-img">
-                                <img src="{% static 'image/home/blog/blog-add5.jpg' %}" alt="">
+                                <img src="{% static 'image/image_painting/cay_tre/quat_tre_01.jpg' %}" alt="">
                             </div>
                             <div class="blog-main-content">
                                 <span>Ngày xuất bản: 11 tháng 10 năm 2022</span>
@@ -491,7 +496,7 @@
                         </div>
                         <div class="blog-col">
                             <div class="add-img">
-                                <img src="{% static 'image/home/blog/blog-add6.jpg' %}" alt="">
+                                <img src="{% static 'image/image_painting/cay_tre/quat_tre_02.jpg' %}" alt="">
                             </div>
                             <div class="blog-main-content">
                                 <span>Ngày xuất bản: 4 tháng 11 năm 2022</span>
@@ -515,23 +520,23 @@
                     <button>Khám phá tất cả <i class="fa-solid fa-arrow-right"></i></button>
                     <ul class="shop-row">
                         <li class="shop-col">
-                            <img src="{% static 'image/home/shop/chandung.jpg' %}" alt="">
+                            <img src="{% static 'image/image_painting/hoa_mai/hoa_mai_01.jpg' %}" alt="">
                             <p class="content-detail">Tranh chân dung</p>
                         </li>
                         <li class="shop-col">
-                            <img src="{% static 'image/home/shop/dangian.jpg' %}" alt="">
+                            <img src="{% static 'image/image_painting/hoa_sen/tranh_sen_03.jpg' %}" alt="">
                             <p class="content-detail">Tranh dân gian</p>
                         </li>
                         <li class="shop-col">
-                            <img src="{% static 'image/home/shop/phongcanh.jpeg' %}" alt="">
+                            <img src="{% static 'image/image_painting/cay_tre/quat_tre_02.jpg' %}" alt="">
                             <p class="content-detail">Tranh phong cảnh</p>
                         </li>
                         <li class="shop-col">
-                            <img src="{% static 'image/home/shop/tinhvat.jpg' %}" alt="">
+                            <img src="{% static 'image/image_painting/hoa_hong/hoa_hong_02.jpg' %}" alt="">
                             <p class="content-detail">Tranh tĩnh vật</p>
                         </li>
                         <li class="shop-col">
-                            <img src="{% static 'image/home/shop/tongiao.jpg' %}" alt="">
+                            <img src="{% static 'image/image_painting/phong_canh/phong_canh_02.jpg' %}" alt="">
                             <p class="content-detail">Tranh tôn giáo</p>
                         </li>
                     </ul>

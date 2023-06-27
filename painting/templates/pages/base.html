@@ -37,7 +37,7 @@
                     <a href="{% url 'register' %}"><button >Đăng ký</button></a> /
                     <a href="{% url 'loginPage' %}"><button >Đăng nhập</button></a>
                 </div>
-                <div class="hd-sign-loggedIn">
+                <div class="hd-sign-loggedIn" style="display:grid;justify-items: center;">
                     <i class="fa-regular fa-user icon-user-home"></i>
                     {% comment %} <div class="loggedIn_hidden"> {% endcomment %}
                         <p>{{ user.username }}</p>

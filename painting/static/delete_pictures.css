@@ -3,12 +3,12 @@
     position: relative;
 }
 
-.delete_pictures .delete-question{
-    border: 2px solid;
+.delete-question{
+    border: 1px solid;
     margin: 35px 10px;
     padding: 20px 15px;
     background: #ccc;
-    position: fixed;
+    text-align: center;
 }
 
 .delete_pictures .delete-question .delete-control{

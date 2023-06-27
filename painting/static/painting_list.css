@@ -48,6 +48,10 @@ ul{
     width: 100%;
 }
 
+.list-pictures i:hover {
+    cursor: pointer;
+}
+
 .img-contain{
     height: 350px;
     overflow: hidden;
@@ -58,7 +62,7 @@ ul{
 }
 
 .picture-overview .function-pictures{
-    left: 33%;
+    left: 40%;
     position: absolute;
     display: flex;
     bottom: 4px;
