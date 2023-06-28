@@ -11,7 +11,9 @@ from django.contrib import messages
 from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.core import serializers
 # from .forms import PaintingSearchForm
+
 def home(request):
     paintings = Painting.objects.all()
     return render(request,'pages/home.html',{'paintings':paintings})
