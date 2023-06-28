@@ -203,6 +203,10 @@ body {
     line-height: 32px;
   }
 
+  button#submit {
+    width: 100%;
+}
+
   /* Begin Media Queries*/
   @media screen and (max-width: 850px) {
     .contact-wrapper {
@@ -226,6 +230,14 @@ body {
       width: 60px;
       height: 60px;
       line-height: 60px;
+    }
+
+    .form-horizontal {
+      max-width: 375px;
+    }
+
+    button#submit{
+      max-width: 375px;
     }
   }
   

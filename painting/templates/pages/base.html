@@ -21,8 +21,8 @@
     
 </head>
 <body>
-<<<<<<< HEAD
-    <div class="container-fluid">
+
+    {% comment %} <div class="container-fluid">
     <!-- header -->
     <div id="header">
         <div class="logo">
@@ -44,11 +44,11 @@
 
                 <div class="hd-sign-loggedIn" style="display:grid;justify-items: center;">
                     <i class="fa-regular fa-user icon-user-home"></i>
-                    {% comment %} <div class="loggedIn_hidden"> {% endcomment %}
+                    {% comment %} <div class="loggedIn_hidden"> 
                         <p>{{ user.username }}</p>
                         <a href="{% url 'profile' %}">Trang cá nhân</a>
                         <a href="{% url 'logoutPage' %}">đăng xuất</a>
-                    {% comment %} </div> {% endcomment %}
+                    </div> 
                 </div>
             </div>
             <div class="hd-bottom">
@@ -57,8 +57,8 @@
                     <li><a href="{% url 'list' %}">KHÁM PHÁ <i class="fa-solid fa-caret-down"></i></a></li>
                     <li><a href="{%url 'news' %}">TIN TỨC </a></li>
                     <li><a href="{%url 'contact' %}">LIÊN HỆ </a></li>
-                    <li><a href="{%url 'blog' %}">BLOG </a></li>
-=======
+                    <li><a href="{%url 'blog' %}">BLOG </a></li> {% endcomment %}
+
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
         <div class="container-fluid">
@@ -110,7 +110,7 @@
                     <li>
                     <a class="dropdown-item" href="#">Something else here</a>
                     </li>
->>>>>>> c8be164a8d2ad1a94ea2aa8aefb44ab34b1e8b9e
+
                 </ul>
                 </li>
                 <li class="nav-item me-3 me-lg-0 dropdown">
@@ -125,31 +125,18 @@
                 </li>
             </ul>
             </div>
-            <div class="hd-search hd-search-moblie">
+            {% comment %} <div class="hd-search hd-search-moblie">
                 <form action="{% url 'search'%}" method="get">
                     <input type="search" placeholder=" Search" name ="query" >
                     <button type="submit"class="fa-solid fa-magnifying-glass"></button>
                 </form>
-            </div>
+            </div> {% endcomment %}
         </div>
     </nav>
     <!-- Navbar -->
     {% block content %}
 
     {% endblock %}
-    <!-- footer -->
-    <!-- Footer -->
-<<<<<<< HEAD
-
-<!-- Section: Links -->
-
-<!-- Grid container -->
-
-<!-- Copyright -->
-
-<!-- Copyright -->
-</footer>
-=======
   <footer
   class="text-center text-lg-start text-white"
   style="background-color: #929fba"
@@ -282,7 +269,7 @@
 <!-- Copyright -->
 </footer>
 
->>>>>>> c8be164a8d2ad1a94ea2aa8aefb44ab34b1e8b9e
+
 </body>
 
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>

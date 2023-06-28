@@ -129,3 +129,49 @@
     transition: 1s;
 }
 
+h1.section-header{
+    text-align: center;
+    margin: 2rem 0;
+    color: #aba6a6;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 35px;
+}
+
+ol, ul {
+    padding-left: 0 !important;
+}
+
+@media (max-width: 740px){
+    .blog-bottom .blog-two .blog-shared,
+    #blog .blog-main{
+        display: block;
+    }
+
+    .blog-shared .img-top{
+        height: auto;
+    }
+
+    #blog .blog-main .bl-adver{
+        display: none;
+    }
+
+    #blog .blog-main .bl-list{
+        width: 97%;
+    }
+
+    .blog-shared button{
+        width: 97%;
+    }
+
+    ol, ul {
+        padding-left: 0 !important;
+    }
+
+    .blog-content,
+    .blog-shared .img-bottom{
+        width: 100% !important;
+    }
+}
+
+

@@ -205,3 +205,67 @@
 .description-detail{
     padding: 0 10px;
 }
+
+.content-mobile{
+    display: none;
+    padding: 10px;
+}
+
+.content-mobile h3{
+    text-transform: uppercase;
+    font-size: 25px;
+    font-weight: 600;
+}
+
+p.dt-ct-date{
+    margin-bottom: 0;
+}
+
+.description-detail p{
+    text-align: justify;
+}
+
+li{
+    list-style: none;
+}
+@media (max-width: 740px){
+    .content{
+        display: block;
+    }
+
+    .content_right,
+    .content_left {
+        width: 100%;
+    }
+
+    .painting_lq{
+        width: 19%;
+    }
+
+    .cmt-detail{
+        min-width: 340px
+    }
+
+    .content-web,
+    li.cmt.cmt_tam{
+        display: none;
+    }
+
+    .cmt-par .user-image{
+        margin-top: 17px;
+        width: 13%;
+    }
+
+    .user-image{
+        width: 13%;
+    }
+
+    button#button-addon2{
+        width: 49px
+    }
+
+    .content-mobile{
+        display: block;
+    }
+
+}

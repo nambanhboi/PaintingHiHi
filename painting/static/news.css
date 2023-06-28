@@ -39,3 +39,30 @@
     background-color: #ccc;
     cursor: pointer;
 }
+
+h1.section-header{
+    text-align: center;
+    margin: 2rem 0;
+    color: #aba6a6;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 35px;
+}
+
+@media (max-width: 740px){
+    #blog .blog-main{
+        display: none;
+    }
+
+    .blog-main .blog-adver{
+        width: 100%;
+    }
+
+    .news-hot-list li{
+        padding-left: 10px;
+    }
+
+    .blog-adver .news-hot-list img {
+        width: 100%;
+    }
+}
