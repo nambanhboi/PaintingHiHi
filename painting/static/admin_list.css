@@ -1,5 +1,6 @@
 table, tr, td{
     border:1px solid black;
+
 }
 
 table{
@@ -36,10 +37,14 @@ table{
     background: #ccc;
     padding: 10px;
     font-weight: 600;
+    border: 2px solid;
+    
 }
 
 .upload-table tr td{
     padding: 10px;
+    border: 2px solid;
+
 }
 
 .upload-table .tb-td-name a{
@@ -83,4 +88,20 @@ table{
 
 .notification-delete ul{
     display: flex;
+}
+
+@media (max-width: 740px){
+    td.tb-td-description{
+        display: none;
+    }
+
+    dl, ol, ul {
+        margin-bottom: 0 !important;
+    }
+
+    .control-pictures li:first-child{
+        padding-bottom: 10px;
+    }
+
+    
 }

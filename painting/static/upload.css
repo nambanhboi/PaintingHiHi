@@ -49,7 +49,7 @@
 }
 
 .upload-content .image_pictures_lq{
-    margin-left: 20px;
+    margin-left: 8px !important
 }
 
 .upload-content #id_image:hover{
@@ -58,7 +58,7 @@
 }
 
 .upload-content  button{
-    padding: 10px 29px;
+    padding: 0px 29px;
     display: flex;
     margin-left: 812px;
     font-weight: 600;
@@ -93,4 +93,57 @@
     FONT-SIZE: 18px;
     text-align: center;
     font-weight: 600;
+}
+
+.django-ckeditor-widget {
+    margin-left: 105px;
+}
+
+input#id_image {
+    margin-left: 60px;
+}
+
+@media (max-width: 740px){
+    .upload .upload-main{
+        display: block;
+    }
+
+    .upload-content{
+        padding-left: 0;
+    }
+
+    .upload .upload-a{
+        width: 100%;
+    }
+
+    .upload-content #id_name {
+        width: 330px;
+        margin-left: 0;
+    }
+    
+    div#cke_id_description{
+        margin-right: 10px;
+        width: 95% !important;
+    }
+
+    .upload-a label {
+        margin-right: 28px;
+    }
+
+    .django-ckeditor-widget{
+        margin: 0;
+    }
+
+    input#id_image {
+        margin-left: 10px;
+    }
+
+    .upload-content button{
+        margin-left: 111px;
+        margin-bottom: 10px
+    }
+
+    .upload .list-update{
+        margin-top: 10px;
+    }
 }

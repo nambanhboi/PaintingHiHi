@@ -22,6 +22,10 @@
                 {% endfor %}
             </div>
         </div>
+        <div class="content-title content-mobile">
+            <h3>{{ painting.name }}</h3>
+            <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
+        </div>
         <p class="description_text"> <span style="font-size: 140%; font-weight: bold;"></span> 
             <div class="description-detail">{{ painting.description|safe }}</div>
                 </p> 
@@ -30,9 +34,11 @@
         
     </div>
 
-    <div class="content_right">
-        <h3>{{ painting.name }}</h3>
-        <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
+    <div class="content_right ">
+        <div class="content-title content-web">
+            <h3>{{ painting.name }}</h3>
+            <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
+        </div>
         <span>
             {% if is_user %}
                 <i class="fa-regular fa-heart icon_like{{painting.id}} 
