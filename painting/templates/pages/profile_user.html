@@ -26,7 +26,7 @@ Profile User
                             </div>
                             <button type="button" class="btn btn-outline-dark" data-mdb-ripple-color="dark"
                                 style="z-index: 1;">
-                                <a href="{% url 'upload_avt' %}">Edit profile</a>
+                                <a href="{% url 'upload_avt' %}">Sửa ảnh đại diện</a>
                             </button>
                         </div>
                         <div class="ms-3" style="margin-top: 130px;">
@@ -38,30 +38,30 @@ Profile User
                         <div class="d-flex justify-content-end text-center py-1">
                             <div>
                                 <p class="mb-1 h5">253</p>
-                                <p class="small text-muted mb-0">Photos</p>
+                                <p class="small text-muted mb-0">Ảnh</p>
                             </div>
                             <div class="px-3">
                                 <p class="mb-1 h5">1026</p>
-                                <p class="small text-muted mb-0">Followers</p>
+                                <p class="small text-muted mb-0">Người theo dõi</p>
                             </div>
                             <div>
                                 <p class="mb-1 h5">478</p>
-                                <p class="small text-muted mb-0">Following</p>
+                                <p class="small text-muted mb-0">Đang theo dõi</p>
                             </div>
                         </div>
                     </div>
                     <div class="card-body p-4 text-black">
                         <div class="mb-5">
-                            <p class="lead fw-normal mb-1">About</p>
+                            <p class="lead fw-normal mb-1">Thông tin cá nhân</p>
                             <div class="p-4" style="background-color: #f8f9fa;">
-                                <p class="font-italic mb-1">Web Developer</p>
-                                <p class="font-italic mb-1">Lives in New York</p>
-                                <p class="font-italic mb-0">Photographer</p>
+                                <p class="font-italic mb-1">Lập trình viên</p>
+                                <p class="font-italic mb-1">Sống ở Hà Nội</p>
+                                <p class="font-italic mb-0">Chụp ảnh</p>
                             </div>
                         </div>
                         <div class="d-flex justify-content-between align-items-center mb-4">
-                            <p class="lead fw-normal mb-0">Recent photos</p>
-                            <p class="mb-0"><a href="#!" class="text-muted">Show all</a></p>
+                            {% comment %} <p class="lead fw-normal mb-0">Recent photos</p> {% endcomment %}
+                            <p class="mb-0"><a href="#!" class="text-muted">Hiển thị ảnh đã like</a></p>
                         </div>
                         <div class="img_favor">
                             {% for painting_like in painting_likes %}

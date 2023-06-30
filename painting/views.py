@@ -70,24 +70,6 @@ def upload_avt(request):
         form = avatar_user()
     return render (request,'pages/upload_Avt.html', {'form':form} )
 
-# def painting_search(request):
-#     form = PaintingSearchForm(request.GET)
-#     if form.is_valid():
-#         query = form.cleaned_data['query']
-#         name = form.cleaned_data['name']
-#         if name:
-#             paintings = Painting.objects.filter(
-#                 name__icontains=query,
-#                 name=name
-#             )
-#         else:
-#             paintings = Painting.objects.filter(
-#                 name__icontains=query
-#             )
-#         return render(request, 'pages/painting_search.html', {'paintings': paintings})
-#     else:
-#         return render(request, 'pages/painting_search.html')
-#     form = PaintingSearchForm(request.GET)
 def painting_search(request):
     # form = PaintingSearchForm(request.GET)
     if 'query' in request.GET:

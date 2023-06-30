@@ -61,10 +61,14 @@
 
     <!-- Navbar -->
     <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="{% url 'home' %}">
-                <img src="{% static 'image/logo.png' %}" alt="" class="">
-            </a>
+        <div class="container-fluid header" >
+          <div class="logo-header">
+            <a class="navbar-brand logo" href="{% url 'home' %}" >
+              <img src="{% static 'image/logo.png' %}" alt="" class="">
+              <h2>The &nbsp Art &nbsp Painting</h2>
+          </a>
+          </div>
+            
             <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
             data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
             aria-label="Toggle navigation">
@@ -150,13 +154,11 @@
 <div class="row">
   <!-- Grid column -->
   <div class="col-md-3 col-lg-3 col-xl-3 mx-auto mt-3">
-    <h6 class="text-uppercase mb-4 font-weight-bold">
-      Pitech Lab
+    <h6 class="text-uppercase mb-4 font-weight-bold logo_thu_phap">
+      The &nbsp Art &nbsp Painting
     </h6>
     <p>
-      Here you can use rows and columns to organize your footer
-      content. Lorem ipsum dolor sit amet, consectetur adipisicing
-      elit.
+      Bạn có thể xem và thưởng thức những bức tranh nghệ thuật được các họa sĩ phác họa thành bức tranh.
     </p>
   </div>
   <!-- Grid column -->
@@ -165,18 +167,20 @@
 
   <!-- Grid column -->
   <div class="col-md-2 col-lg-2 col-xl-2 mx-auto mt-3">
-    <h6 class="text-uppercase mb-4 font-weight-bold">Products</h6>
     <p>
-      <a class="text-white">MDBootstrap</a>
+      <a class="text-white" href="{% url 'home' %}" >Trang chủ</a>
     </p>
     <p>
-      <a class="text-white">MDWordPress</a>
+      <a class="text-white" href="{% url 'list' %}" >Khám phá</a>
     </p>
     <p>
-      <a class="text-white">BrandFlow</a>
+      <a class="text-white" href="{% url 'contact' %}" >Liên hệ</a>
     </p>
     <p>
-      <a class="text-white">Bootstrap Angular</a>
+      <a class="text-white" href="{% url 'news' %}" >Tin tức</a>
+    </p>
+    <p>
+      <a class="text-white" href="{% url 'blog' %}" >Blog</a>
     </p>
   </div>
   <!-- Grid column -->
@@ -188,9 +192,9 @@
 
   <!-- Grid column -->
   <div class="col-md-4 col-lg-3 col-xl-3 mx-auto mt-3">
-    <h6 class="text-uppercase mb-4 font-weight-bold">Contact</h6>
-    <p><i class="fas fa-home mr-3"></i> New York, NY 10012, US</p>
-    <p><i class="fas fa-envelope mr-3"></i> info@gmail.com</p>
+    <h6 class="text-uppercase mb-4 font-weight-bold">Liên Hệ</h6>
+    <p><i class="fas fa-home mr-3"></i> Số 25 ngõ 24 Hoàng Quốc Việt, Cổ Nhuế, HÀ Nội</p>
+    <p><i class="fas fa-envelope mr-3"></i> abcd@gmail.com</p>
     <p><i class="fas fa-phone mr-3"></i> + 01 234 567 88</p>
     <p><i class="fas fa-print mr-3"></i> + 01 234 567 89</p>
   </div>
@@ -198,7 +202,7 @@
 
   <!-- Grid column -->
   <div class="col-md-3 col-lg-2 col-xl-2 mx-auto mt-3">
-    <h6 class="text-uppercase mb-4 font-weight-bold">Follow us</h6>
+    <h6 class="text-uppercase mb-4 font-weight-bold">Các trang tương tác</h6>
 
     <!-- Facebook -->
     <a
@@ -263,14 +267,9 @@
   style="background-color: rgba(0, 0, 0, 0.2)"
   >
 © 2023 Copyright:
-<<<<<<< HEAD
+
 <a class="text-white" href="https://mdbootstrap.com/"
-  >PitechLab</a
-=======
-<a class="text-white" href=""
-  >MDBootstrap.com</a
->>>>>>> 6b7a085e855296a80e0b9a5985fb6086526c6e19
- >
+  >PitechLab</a>
 </div>
 <!-- Copyright -->
 </footer>
