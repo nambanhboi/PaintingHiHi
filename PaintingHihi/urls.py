@@ -20,7 +20,7 @@ from django.conf import settings
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('painting/', include('painting.urls')),
+    path('', include('painting.urls')),
     re_path(r'^ckeditor/', include('ckeditor_uploader.urls'))
 ]
 

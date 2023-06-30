@@ -109,7 +109,7 @@ hr{
   display: flex;
   grid-gap: 10px;
   flex-wrap: wrap;
-  justify-content: space-around;
+  /* justify-content: space-around; */
 }
 
 .grid-item {
