@@ -58,5 +58,3 @@ document.querySelector('.exit_video').addEventListener('click', function() {
   console.log('sds')
   document.querySelector('.home_video').style.display = 'none'
 })
-
-

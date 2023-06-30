@@ -115,6 +115,7 @@ i{
         margin-top: 20px;
         margin-bottom: 40px;
         color: #ccc;
+        border: 1px solid;
     }
 
     .home-artists .art-list li{
@@ -285,6 +286,7 @@ i{
 
     .news-content hr{
         margin: 20px 0;
+        border: 1px solid;
     }
 
     ul .new-detail .news-dt-img{
@@ -602,6 +604,10 @@ i{
         filter: brightness(50%);
         cursor: pointer;
     }
+
+    .home_video{
+        right: 8px;
+    }
 /* end: home-shop */
 
 
@@ -718,7 +724,7 @@ i{
         height: 1px;
         margin-top: 10px;
         margin-bottom: 0px;
-
+        border: 1px solid;
     }
 
     .blog-col,
