@@ -32,11 +32,12 @@ def contact(request):
 
 def painting_list(request):
     paintings = Painting.objects.all()
+    paintinglqs = PaintingLq.objects.all()
     if request.user.is_authenticated:
         paintings_like = Like.objects.filter(user=request.user)
         print(paintings_like)
-        return render(request,'pages/painting_list.html',{'paintings':paintings, "paintings_like": paintings_like, 'user': request.user})
-    return render(request,'pages/painting_list.html',{'paintings':paintings})
+        return render(request,'pages/painting_list.html',{'paintings':paintings, "paintings_like": paintings_like, 'user': request.user, 'paintinglqs': paintinglqs})
+    return render(request,'pages/painting_list.html',{'paintings':paintings,'paintinglqs': paintinglqs})
 
 @login_required
 @user_passes_test(lambda a: a.is_staff)
@@ -44,6 +45,25 @@ def admin_list(request):
     paintings = Painting.objects.all()
     return render(request,'pages/admin_list.html',{'paintings':paintings})
 
+@login_required
+@user_passes_test(lambda u: u.is_staff)
+def upload_painting(request):
+    paintings = Painting.objects.all()
+    if request.method == 'POST':
+        form = PaintingUploadForm(request.POST, request.FILES)
+        if form.is_valid():
+            painting = form.save()  # Lưu ảnh gốc vào model Painting và nhận lại đối tượng đã lưu
+
+            imagelqs = request.FILES.getlist('imagelq')  # Lấy danh sách các tệp tin ảnh liên quan từ trường 'imagelq'
+
+            for imagelq in imagelqs:
+                PaintingLq.objects.create(painting=painting, image=imagelq)  # Lưu từng ảnh liên quan với painting đã lưu
+
+            return redirect('list')
+    else:
+        form = PaintingUploadForm()
+    
+    return render(request, 'pages/upload.html', {'form': form, 'paintings': paintings})
 
 
 def edit_pictures(request,pk):
@@ -85,25 +105,6 @@ def delete_pictures(request,pk):
         return render(request,'pages/admin_list.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
     else:
         return render(request,'pages/delete_pictures.html',{'painting':painting,'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
-@login_required
-@user_passes_test(lambda u: u.is_staff)
-def upload_painting(request):
-    paintings = Painting.objects.all()
-    if request.method == 'POST':
-        form = PaintingUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            painting = form.save()  # Lưu ảnh gốc vào model Painting và nhận lại đối tượng đã lưu
-
-            imagelqs = request.FILES.getlist('imagelq')  # Lấy danh sách các tệp tin ảnh liên quan từ trường 'imagelq'
-
-            for imagelq in imagelqs:
-                PaintingLq.objects.create(painting=painting, image=imagelq)  # Lưu từng ảnh liên quan với painting đã lưu
-
-            return redirect('list')
-    else:
-        form = PaintingUploadForm()
-    
-    return render(request, 'pages/upload.html', {'form': form, 'paintings': paintings})
 
 @login_required
 def upload_avt(request):

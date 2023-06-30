@@ -1,7 +1,7 @@
 {% extends "pages/base.html" %}
 {% load static %}  
 {% block title %} 
-    chi tiết
+{{ painting.name }}
 {% endblock %}
 
 {% block link %} 
@@ -22,8 +22,11 @@
                 {% endfor %}
             </div>
         </div>
-        <p class="description_text"> <span style="font-size: 140%; font-weight: bold;">Mô tả:</span> {{ painting.description }}</p> 
+        <p class="description_text"> <span style="font-size: 140%; font-weight: bold;"></span> 
+            <div class="description-detail">{{ painting.description|safe }}</div>
+                </p> 
 
+        {% comment %} {{painting.description|safe}}s {% endcomment %}
         
     </div>
 
