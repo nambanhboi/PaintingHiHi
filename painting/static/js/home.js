@@ -54,14 +54,11 @@ Hien_thi_slide();
 //   }
 // });
 
+
 document.querySelector('.exit_video').addEventListener('click', function() {
-  console.log('sds')
+  console.log("hihiclick")
   document.querySelector('.home_video').style.display = 'none'
 })
 
-document.querySelector('.navbar-toggler').addEventListener('click', function() {
-  console.log("hihi")
-  document.querySelector('.navbar-nav').style.display = 'flex'
-})
 
-
+  
