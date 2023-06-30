@@ -1,8 +1,7 @@
 from django.shortcuts import render, get_object_or_404,redirect
 from .models import Painting, CreateUserForm, Like, Comment,avatar, PaintingLq
 from django.contrib.auth.decorators import login_required, user_passes_test
-from .forms import PaintingUploadForm
-from .forms import PaintingUpdateForm, avatar_user
+from .forms import avatar_user
 from django.contrib import messages
 from django.db.models import Q
 from django.contrib.auth.forms import UserCreationForm
@@ -11,7 +10,9 @@ from django.contrib import messages
 from django.http import JsonResponse
 import json
 from django.views.decorators.csrf import csrf_exempt
+from django.core import serializers
 # from .forms import PaintingSearchForm
+
 def home(request):
     paintings = Painting.objects.all()
     return render(request,'pages/home.html',{'paintings':paintings})
@@ -37,49 +38,6 @@ def painting_list(request):
         return render(request,'pages/painting_list.html',{'paintings':paintings, "paintings_like": paintings_like, 'user': request.user, 'paintinglqs': paintinglqs})
     return render(request,'pages/painting_list.html',{'paintings':paintings,'paintinglqs': paintinglqs})
 
-@login_required
-@user_passes_test(lambda a: a.is_staff)
-def admin_list(request):
-    paintings = Painting.objects.all()
-    return render(request,'pages/admin_list.html',{'paintings':paintings})
-
-@login_required
-@user_passes_test(lambda u: u.is_staff)
-def upload_painting(request):
-    paintings = Painting.objects.all()
-    if request.method == 'POST':
-        form = PaintingUploadForm(request.POST, request.FILES)
-        if form.is_valid():
-            painting = form.save()  # Lưu ảnh gốc vào model Painting và nhận lại đối tượng đã lưu
-
-            imagelqs = request.FILES.getlist('imagelq')  # Lấy danh sách các tệp tin ảnh liên quan từ trường 'imagelq'
-
-            for imagelq in imagelqs:
-                PaintingLq.objects.create(painting=painting, image=imagelq)  # Lưu từng ảnh liên quan với painting đã lưu
-
-            return redirect('list')
-    else:
-        form = PaintingUploadForm()
-    
-    return render(request, 'pages/upload.html', {'form': form, 'paintings': paintings})
-
-
-def edit_pictures(request,pk):
-    painting = get_object_or_404(Painting,pk=pk)
-    paintings = Painting.objects.all()
-    paintinglq = PaintingLq.objects.filter(painting=painting)
-    return render(request,'pages/edit_pictures.html',{'painting':painting, 'paintings':paintings, 'paintinglq': paintinglq})
-
-def update_pictures(request,pk):
-    painting = get_object_or_404(Painting,pk=pk)
-    paintinglq = PaintingLq.objects.filter(painting=painting)
-    form = PaintingUpdateForm(request.POST,instance=painting)
-    if form.is_valid:
-        form.save()
-        messages.success(request,"Sửa thành công")
-        return redirect('list')
-    return render(request,'pages/edit_pictures.html',{ 'painting':painting, 'paintinglq': paintinglq})
-
 
 def painting_detail(request,pk):
     painting = get_object_or_404(Painting,pk=pk)
@@ -91,18 +49,6 @@ def painting_detail(request,pk):
         painting_like = Like.objects.filter(user=request.user, painting=painting)
         return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'is_user': is_user, 'paintinglq': paintinglq, 'painting_like': painting_like })
     return render(request,'pages/paiting_detail.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
-
-
-def delete_pictures(request,pk):
-    painting = get_object_or_404(Painting,pk=pk)
-    comments = reversed(Comment.objects.all())
-    paintings = Painting.objects.all()
-    paintinglq = PaintingLq.objects.filter(painting=painting)
-    if request.method == 'POST':
-        painting.delete()
-        return render(request,'pages/admin_list.html',{'painting':painting, 'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
-    else:
-        return render(request,'pages/delete_pictures.html',{'painting':painting,'paintings':paintings, 'comments': comments, 'paintinglq': paintinglq})
 
 @login_required
 def upload_avt(request):

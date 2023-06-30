@@ -74,10 +74,6 @@ plus_btn.addEventListener('click', function () {
   }
 })
 
-user_btn.addEventListener('click', function () {
-  console.log('running...')
-  this.isShow1 = !this.isShow1;
-  this.isShow2 = false;
 
   if(this.isShow1 == true){
     document.querySelector('.logout_btn').style.display = "block";
