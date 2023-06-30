@@ -11,58 +11,46 @@
 
 
 {% block content %} 
-    <div class="container">
-    <div class="list-painting">
-        <h2 class="title-list-painting">TRANH VẼ</h2>
-        {% for painting in paintings %}
-            <div class="colum">
-                <div class="img-container">
-                    <a href="{% url 'detail' pk=painting.id %}"><img src="{{ painting.image.url }}" alt="" ></a>
-                </div>
-                <div class="img-des">
-                    <div class="des-left">
-                        <p style="font-size:40px;font-weight: bold; margin:0;">{{ painting.name }}</p>
-                        <p>{{ painting.upload_date }}</p>
-                    </div>
-                    <div class="des-right">
-                        <div class="like">
-                            {% if user.is_authenticated %}
-                                    <i class="fa-solid fa-heart icon_like{{painting.id}} 
-                                        `{% for ptl in paintings_like %}          
-                                            {% if painting.id == ptl.painting.id %}
-                                                active_like
-                                            {% endif %}
-                                        {% endfor %} `" 
-                                        onclick="like_pain('{{ painting.id }}')">
-                                    </i>
-                            {% else %}
-                                    <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
-                            {% endif %}
-                        </div>
-                        <div class="detail"><a href="">Chi tiết</a></div>
-                    </div>
-                </div>
-            </div>
-        {% endfor %}
-    </div>
-    <div class="ads">
-    <h3>quảng cáo</h3>
-        <img src="{% static 'image/list/ads-list.jpg' %}" alt="">
-    </div>
-    <div class="list-paintinglq">
     
-        <h2 class="title-list-painting" style="margin-top: 4rem;">TRANH VẼ TRÊN ĐỒ VẬT</h2>
-         <div class="grid-container">
-            {% for paintinglq in paintinglqs %}
-                <div class="grid-item">
-                    <a href=""><img src="{{ paintinglq.image.url }}" alt=""></a>
-                </div>
+    <div class="container">
+        <div class="paintinglq-list">
+        <div class="list-title">TRANH VẼ</div>
+        <div class="masonry-container">
+            {% for painting in paintings %}
+                    <div class="grid-item">
+                        <div class="item-content">
+                            <a href="{% url 'detail' pk=painting.id %}"><img src="{{ painting.image.url }}" alt="" ></a>
+                        </div>
+                        <div class="item-des">
+                                <h2>{{ painting.name }}</h2>
+                                <p>{{ painting.upload_date }}</p>
+                            
+                        </div>
+                    </div>
             {% endfor %}
         </div>
-        
-    </div>
-    </div>
+        </div>
 
+        <div class="ads">
+            <h3>quảng cáo</h3>
+                <img src="{% static 'image/list/ads-list.jpg' %}" alt="">
+        </div>
+           
+        <div class="list-paintinglq">
+            <h2 class="list-title" style="margin-top: 4rem;">TRANH VẼ TRÊN ĐỒ VẬT</h2>
+            <div class="masonry-container">
+                {% for paintinglq in paintinglqs %}
+                    <div class="grid-item">
+                        <div class="item-content">
+                            <img src="{{ paintinglq.image.url }}" alt="" >
+                        </div>                    
+                    </div>
+                {% endfor %}
+            </div>     
+        </div>
+
+    </div>
+  
     <script src="{% static 'js/painting_list.js' %}"></script>
 {% endblock %}
 
