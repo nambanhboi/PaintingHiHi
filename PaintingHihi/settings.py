@@ -43,7 +43,8 @@ INSTALLED_APPS = [
     'django.contrib.staticfiles',
     'painting',
     'ckeditor',
-    'ckeditor_uploader'
+    'ckeditor_uploader',
+    'adminPage'
 ]
 
 MIDDLEWARE = [

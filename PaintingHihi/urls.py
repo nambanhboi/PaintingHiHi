@@ -21,7 +21,8 @@ from django.conf import settings
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('painting/', include('painting.urls')),
-    re_path(r'^ckeditor/', include('ckeditor_uploader.urls'))
+    re_path(r'^ckeditor/', include('ckeditor_uploader.urls')),
+    path('adminPage/', include('adminPage.urls'))
 ]
 
 

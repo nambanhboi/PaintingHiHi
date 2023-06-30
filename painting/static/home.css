@@ -629,3 +629,130 @@ i{
     cursor: pointer;
     opacity: 0.7;
 }
+
+@media (max-width: 740px){
+    .home .home-slides .slide{
+        min-width: 415px;
+    }
+
+    .home .home-slides {
+        height: 400px
+    }
+
+    .home-slides .slide img{
+        height: 415px;
+    }
+
+    .home-artists .art-list li{
+        display: block;
+    }
+
+    ol, ul{
+        padding-left: 0 !important;
+    }
+
+    .art-list li .art-infor,
+    .art-list li .art-img{
+        width: 100%;
+    }
+
+    .home-artists .art-list .art-content{
+        padding: 10px 0;
+    }
+
+    .home-artists .art-list h3{
+        padding-top: 10px;
+    }
+
+    .shop-content .shop-row,
+    .blog-row,
+    .home-blog .blog-content .blog-main,
+    .home-news .news-content,
+    .home-pictures .list-top{
+        display: block;
+    }
+
+    .list-top .top1 img {
+        width: 400px;
+        height: 300px;
+    }
+
+    .list-top .top2 img {
+        width: 335px;
+        height: 300px;
+    }
+
+    .list-top .top3{
+        margin-top: 0;
+    }
+
+    .list-top .top2 {
+        margin-top: 0px;
+    }
+
+    .news-hot{
+        width: 100%;
+        margin-left: 0;
+    }
+
+    .shop-content .shop-row .shop-col,
+    ul .new-detail button,
+    .news-new {
+        width: 100%;
+    }
+
+    .news-bottom span{
+        color: #ccc;
+    }
+
+    ul .new-detail p{
+        text-align: justify;
+    }
+
+    .news-hot-list li{
+        padding-left: 10px;
+    }
+
+    .news-content hr {
+        color: #fff;
+        height: 1px;
+        margin-top: 10px;
+        margin-bottom: 0px;
+
+    }
+
+    .blog-col,
+    .blog-content .blog-main .main-img {
+        width: 100%;
+    }
+
+    .blog-content .blog-main img{
+        margin: 0px;
+    }
+
+    .home-blog .blog-content .blog-main{
+        padding-bottom: 5px;
+    }
+    
+    .blog-col{
+        margin: 5px 0;
+    }
+
+    .shop-main .shop-content button{
+        top: -5%;
+        width: 92%;
+        margin: 0px 15px
+    }
+
+    .home-shop .shop-main .shop-back{
+        height: 1635px
+    }
+
+    .shop-content .shop-row .shop-col{
+        margin-bottom: 5px
+    }
+
+    .home-shop .shop-main .shop-content {
+        bottom: 1%;
+    }
+}

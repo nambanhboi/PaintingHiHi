@@ -10,3 +10,14 @@
     margin-top: 10px;
 }
 
+@media (max-width: 740px){
+    .upload-content #id_description{
+        margin-left: 0 !important;
+        width: 94% !important;
+    }
+
+    .edit_pictures{
+        margin-bottom: 10px;
+    }
+}
+

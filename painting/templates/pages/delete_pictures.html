@@ -15,27 +15,33 @@
   <form method="post" enctype="multipart/form-data" class="upload-content">
     {% csrf_token %}
     <div class="content">
-      <div class="content_left">
-          <div class="container_img">
-              <img src="{{ painting.image.url }}" class="detail-img" alt="" style="width: 98%; margin-left: 1%;">
-          </div>
-          <div class="list-update">
-              <div class="painting_lqs" >
-                  {% for painting_item in paintinglq %}
-                      <img src="{{ painting_item.image.url}}" alt="" width=100% class="painting_lq">
-                  {% endfor %}
-              </div>
-          </div>
-          <p class="description_text"> <span style="font-size: 140%; font-weight: bold;">Mô tả:</span> 
+        <div class="content_left">
+            <div class="container_img">
+                <img src="{{ painting.image.url }}" class="detail-img" alt="" style="width: 98%; margin-left: 1%;">
+            </div>
+            <div class="list-update">
+                <div class="painting_lqs" >
+                    {% for painting_item in paintinglq %}
+                        <img src="{{ painting_item.image.url}}" alt="" width=100% class="painting_lq">
+                    {% endfor %}
+                </div>
+            </div>
+            <div class="content-title content-mobile">
+                <h3>{{ painting.name }}</h3>
+                <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
+            </div>
+                <p class="description_text"> <span style="font-size: 140%; font-weight: bold;">Mô tả:</span> 
             <div class="description-detail">{{ painting.description|safe }}</div>
                 </p>   
           
       </div>
   
-      <div class="content_right">
-          <h3>{{ painting.name }}</h3>
-          <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
-          <span>
+        <div class="content_right">
+            <div class="content-title content-web">
+                <h3>{{ painting.name }}</h3>
+                <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
+            </div>
+            <span>
               {% if is_user %}
                   <i class="fa-regular fa-heart icon_like{{painting.id}} 
                       `{% if painting_like %} 
