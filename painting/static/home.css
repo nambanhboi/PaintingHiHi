@@ -97,10 +97,10 @@ i{
 
     .home-artists .art-list h3{
         color: #fff;
-        font-size: 20px;
-        font-style: italic;
-        text-align: center;
-        font-weight: 100;
+        font-size: 25px;
+        font-weight: 600;
+        text-transform: uppercase;
+        padding-top: 20px;
     }
 
     .home-artists .art-list .art-content{
@@ -108,7 +108,8 @@ i{
         padding: 10px;
         text-align: justify;
         line-height: 1.6;
-        font-size: 18px;
+        font-size: 16px;
+        font-style: italic;
     }
 
     .home-artists .art-list hr{
@@ -118,22 +119,18 @@ i{
         border: 1px solid;
     }
 
-    .home-artists .art-list li{
-        display: flex;
-    }
-
     .art-list li .art-img{
-        width: 60%;
-
+        width: 98%;
     }
 
     .art-list li .art-infor{
-        width: 40%;
+        width:  98%;
     }
 
     .art-list li img{
         width: 100%;
         height: 600px;
+        border-radius: 10px;
     }
 /* end: home-artists */
 
@@ -356,18 +353,28 @@ i{
         color: #fff;
     }
 
-    .news-content .news-hot button{
-        padding: 7px 12px;
-        border: none;
-        border-radius: 2px;
-        background-color: #8d8a8a;
-        color: #fff;
+    .news-bottom a{
+        color: #fff !important;
+        font-size: 18px;
+        text-decoration: underline!important;
     }
 
-    .news-content .news-hot button:hover{
-        text-decoration: underline;
-        background-color: #ccc;
+    .news-bottom a:hover{
         cursor: pointer;
+        font-weight: 600;
+    }
+
+    .news-bottom span{
+        color: #ccc;
+        padding-left: 15px;
+    }
+
+    .shop-content .shop-col .shop_title{
+        color: #fff;
+       padding-top: 10px;
+        text-align: center;
+        font-size: 18px;
+        text-transform: uppercase;
     }
 /* end: home-news */
 
@@ -534,7 +541,7 @@ i{
 
     .home-shop .shop-main .shop-content{
         position: absolute;
-        bottom: 12%;
+        bottom: 7%;
     }
 
     .shop-main .shop-content button{

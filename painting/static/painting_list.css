@@ -24,3 +24,31 @@
 .grid-item:first-child .item-content {
     margin-top: 0;
   }
+
+  .grid-item .item-des h2{
+    text-transform: uppercase;
+    font-weight: 600;
+  }
+
+  .list-title,
+  h2.list-title {
+    text-align: center;
+    margin: 0 auto;
+    padding: 40px 0 20px 0;
+    color: #aba6a6;
+    text-transform: uppercase;
+    letter-spacing: 6px;
+    font-size: 35px;
+}
+
+.item-des{
+    display: flex;
+}
+
+.item-des .list-title-name{
+    width: 90%;
+}
+
+.item-des i{
+    font-size: 30px;
+}
