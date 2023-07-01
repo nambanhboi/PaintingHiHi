@@ -99,7 +99,7 @@
                     <li class="nav-item me-3 me-lg-0 dropdown">
                         <a class="nav-link dropdown-toggle" href="#" id="navbarDropdown" role="button" data-mdb-toggle="dropdown"
                             aria-expanded="false">
-                            <i class="fas fa-plus plus-btn"></i>
+                            <i class="fas fa-plus plus-btn plus_btn"></i>
                         </a>
                         
                         <ul class="dropdown-menu dropdown-menu-end login_btn" aria-labelledby="navbarDropdown">
@@ -263,13 +263,8 @@
   style="background-color: rgba(0, 0, 0, 0.2)"
   >
 © 2023 Copyright:
-<<<<<<< HEAD
 <a class="text-white" href="https://mdbootstrap.com/"
   >PitechLab</a
-=======
-<a class="text-white" href=""
-  >MDBootstrap.com</a
->>>>>>> 6b7a085e855296a80e0b9a5985fb6086526c6e19
  >
 </div>
 <!-- Copyright -->
@@ -282,8 +277,8 @@
 {% comment %} <script> 
     var isLoggedIn = {{ request.user.is_authenticated|lower }} 
 </script> 
-
-<script src="{% static 'js/login.js' %}"></script>  {% endcomment %}
+{% endcomment %}
+<script src="{% static 'js/home.js' %}"></script>  
 
 {% block link_js %} {% endblock %}
 </html>

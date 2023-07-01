@@ -54,7 +54,7 @@ Hien_thi_slide();
 //   }
 // });
 
-let plus_btn = document.querySelector(".plus-btn");
+let plus_btn = document.querySelector(".plus_btn");
 let user_btn = document.querySelector(".user_button");
 let isShow1 = false;
 let isShow2 = false;
@@ -63,7 +63,6 @@ let isShow2 = false;
 plus_btn.addEventListener('click', function () {
   console.log('running...')
   this.isShow2 = !this.isShow2;
-  this.isShow1 = false;
 
   if(this.isShow2 == true){
     document.querySelector('.login_btn').style.display = "block";
@@ -74,6 +73,9 @@ plus_btn.addEventListener('click', function () {
   }
 })
 
+user_btn.addEventListener('click', function () {
+  console.log('running...')
+  this.isShow1 = !this.isShow1;
 
   if(this.isShow1 == true){
     document.querySelector('.logout_btn').style.display = "block";
@@ -84,3 +86,4 @@ plus_btn.addEventListener('click', function () {
   }
 })
 
+  
