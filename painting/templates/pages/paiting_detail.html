@@ -1,109 +1,107 @@
-{% extends "pages/base.html" %}
-{% load static %}  
-{% block title %} 
-{{ painting.name }}
-{% endblock %}
 
-{% block link %} 
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    {% load static %}
+    <link rel="stylesheet" href="{% static 'fontawesome-free-6.2.1-web/css/all.min.css' %}" >
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>{{ painting.name }}</title>
     <link rel="stylesheet" href="{% static 'painting_detail.css' %}" > 
-{% endblock %}
+    <link rel="stylesheet" href="{% static 'main.css' %}" > 
+</head>
+<body>
+    <div class="container">
+        <div class="content">
+            <div class="content-left">
+                <div class="row1">
+                    <a href="{% url 'list' %}"><i class="fa-solid fa-xmark iconLeft"></i></a>
+                </div>
 
-{% block content %}
- 
-<div class="content">
-    <div class="content_left">
-        <div class="container_img">
-            <img src="{{ painting.image.url }}" class="detail-img" alt="" style="width: 98%; margin-left: 1%;">
-        </div>
-        <div class="list-update">
-            <div class="painting_lqs" >
-                {% for painting_item in paintinglq %}
-                    <img src="{{ painting_item.image.url}}" alt="" width=100% class="painting_lq">
-                {% endfor %}
-            </div>
-        </div>
-        <div class="content-title content-mobile">
-            <h3>{{ painting.name }}</h3>
-            <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
-        </div>
-        <p class="description_text"> <span style="font-size: 140%; font-weight: bold;"></span> 
-            <div class="description-detail">{{ painting.description|safe }}</div>
-                </p> 
+                <div class="row2">
+                    <div class="container_img">
+                    <div class="img-wrap">  
+                        <img src="{{ painting.image.url }}" alt="">
+                    </div>
+                </div>
+                </div>
 
-        {% comment %} {{painting.description|safe}}s {% endcomment %}
-        
-    </div>
-
-    <div class="content_right ">
-        <div class="content-title content-web">
-            <h3>{{ painting.name }}</h3>
-            <p class="dt-ct-date">Ngày đăng tải: {{ painting.upload_date }}</p>
-        </div>
-        <span>
-            {% if is_user %}
-                <i class="fa-regular fa-heart icon_like{{painting.id}} 
-                    `{% if painting_like %} 
-                    active_like
-                    {% endif %}`"
-                    onclick="like_pain(`{{ painting.id }}`)"
-                ></i>
-            {% else %}
-        </span>
-        <i class="fa-regular fa-heart" onclick="likeNoUser()"></i>
-        {% endif %}
-        <hr>
-
-        {% comment %} <ul class="function-pictures">
-            <li>
-                {% if is_user %}
-                    <i class="fa-solid fa-heart icon_like{{painting.id}} 
-                        `{% if painting_like %} 
-                            active_like
-                        {% endif %}`"
-                        onclick="like_pain(`{{ painting.id }}`)"
-                    ></i>
-                
-                {% endif %}
-            </li> {% endcomment %}
-
-        </ul>
-
-        <div class="input-group mb-3">
-            <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
-            <input id="comment" type="text" class="form-control" placeholder="Nhập bình luận" aria-label="Recipient's username" aria-describedby="button-addon2">
-            {% if is_user %}
-                <button onclick="addComment('{{ painting.id }}')" class="btn btn-outline-secondary" type="button" id="button-addon2">Bình luận</button>
-            {% else %}
-                <button onclick="commentNoUser()" class="btn btn-outline-secondary" type="button" id="button-addon2">Bình luận</button>
-            {% endif %}
-        </div>
-
-        <div class="comments">
-            <h2>Các bình luận</h2>
-            <ul class="list-group">
-                <li class="cmt cmt_tam"></li>
-                {% for comment in comments %}
-                    {% if comment.painting.id == painting.id %}<li class="cmt">
-                        <div class="cmt-par">
-                            <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
-                            <div class="cmt-detail">
-                                <h4>{{ comment.user }}</h4> 
-                                <p>{{ comment.cmt }}</p>
+                <div class="row3">
+                    <a href="" target="_blank"><i class="fa-solid fa-up-right-and-down-left-from-center iconRight"></i></a>
+                </div>
+                <div class="row4">
+                    <div class="container-paintinglq">
+                        {% for painting_item in paintinglq %}
+                            <div class="imglq">
+                                <img src="{{ painting_item.image.url}}" alt="" width=100% class="painting_lq">
                             </div>
-                            <i class="bi bi-three-dots-vertical"></i>
-                        </div>
-                        <div class="cmt-add">
-                            <span>Thích</span>
-                            <span>Trả lời</span>
-                            <span>5 giờ</span>
-                        </div>
-                    </li>
-                {% endif %}
-            {% endfor %}
-        </ul>
-    </div>  
-</div>
-</div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
 
+            <div class="content-right">
+                <div class="painting-title">
+                    <h2 class="painting-name">{{ painting.name }}</h2>
+                    <p class="painting-upload-date">{{ painting.upload_date }}</p>
+                    <span>
+                    {% if is_user %}
+                        <i class="fa-solid fa-heart icon_like{{painting.id}} 
+                            `{% if painting_like %} 
+                                active_like
+                            {% endif %}`"
+                            onclick="like_pain(`{{ painting.id }}`)"
+                        ></i>
+                    {% else %}
+                        <i class="fa-solid fa-heart" onclick="likeNoUser()"></i>
+                    {% endif %}
+                    </span>
+                    
+                </div>
+                <div class="painting_des">
+                    {{ painting.description|safe }}
+                </div>
+                <hr style="color:black; margin:0 1rem;">
+                <div class="comment">
+                    <div class="input-group mb-3 cmt-input">
+                        <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
+                        <input id="comment" type="text" class="form-control" placeholder="Nhập bình luận" aria-label="Recipient's username" aria-describedby="button-addon2">
+                        {% if is_user %}
+                            <button onclick="addComment('{{ painting.id }}')" class="btn btn-outline-secondary" type="button" id="button-addon2">Bình luận</button>
+                        {% else %}
+                            <button onclick="commentNoUser()" class="btn btn-outline-secondary" type="button" id="button-addon2">Bình luận</button>
+                        {% endif %}
+                    </div>
+                
+                <div class="comments">
+                <h2>Các bình luận:</h2>
+                <ul class="list-group">
+                    <li class="cmt cmt_tam"></li>
+                    {% for comment in comments %}
+                        {% if comment.painting.id == painting.id %}<li class="cmt">
+                            <div class="cmt-par">
+                                <img src="{% static 'image/logo.png' %}" alt="" class="user-image">
+                                <div class="cmt-detail">
+                                    <h4>{{ comment.user }}</h4> 
+                                    <p>{{ comment.cmt }}</p>
+                                </div>
+                                <i class="bi bi-three-dots-vertical"></i>
+                            </div>
+                            <div class="cmt-add">
+                                <span>Thích</span>
+                                <span>Trả lời</span>
+                                <span>5 giờ</span>
+                            </div>
+                        </li>
+                    {% endif %}
+                {% endfor %}
+                </ul>
+                </div> 
+                </div>
+            </div>
+            
+        </div>
+    </div>
+</body>
 <script src="{% static 'js/painting_detail.js' %}"></script>
-{% endblock %}
+</html>

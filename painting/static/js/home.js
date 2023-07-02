@@ -54,11 +54,36 @@ Hien_thi_slide();
 //   }
 // });
 
+let plus_btn = document.querySelector(".plus_btn");
+let user_btn = document.querySelector(".user_button");
+let isShow1 = false;
+let isShow2 = false;
 
-document.querySelector('.exit_video').addEventListener('click', function() {
-  console.log("hihiclick")
-  document.querySelector('.home_video').style.display = 'none'
+
+plus_btn.addEventListener('click', function () {
+  console.log('running...')
+  this.isShow2 = !this.isShow2;
+
+  if(this.isShow2 == true){
+    document.querySelector('.login_btn').style.display = "block";
+    document.querySelector('.logout_btn').style.display = "none";
+  }
+  else {
+    document.querySelector('.login_btn').style.display = "none";
+  }
 })
 
+user_btn.addEventListener('click', function () {
+  console.log('running...')
+  this.isShow1 = !this.isShow1;
+
+  if(this.isShow1 == true){
+    document.querySelector('.logout_btn').style.display = "block";
+    document.querySelector('.login_btn').style.display = "none";
+  }
+  else {
+    document.querySelector('.logout_btn').style.display = "none";
+  }
+})
 
   

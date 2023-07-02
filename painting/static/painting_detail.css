@@ -1,4 +1,4 @@
-/* .detail{
+/* /* .detail{
     background-color:  #fff;
     margin-left: 20px;
     min-height: 560px;
@@ -75,7 +75,7 @@
     text-decoration: underline;
 }
 
-} */
+} 
 
 .cmt {
     margin-bottom: 20px;
@@ -136,7 +136,7 @@
 .content{
     width:100% ;
     background-color:  #fff;
-    /* margin-left: 20px; */
+    margin-left: 20px; 
     min-height: 560px;
     padding-top: 20px;
     display: flex;
@@ -164,7 +164,6 @@
     width: 98%; 
     margin-left: 1%;
     margin-top: 1rem;
-    /* background-image: url("../static/image/background_detail.jpg"); */
 }
 .icon_like,.fa-heart{
     font-size: 2rem;
@@ -186,7 +185,6 @@
 }
 .active_like {
     color: red;
-    /* background-color: red; */
 }
 
 .painting_lqs{
@@ -268,4 +266,170 @@ li{
         display: block;
     }
 
+} */
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+.container{
+    width: 100%;
+}
+
+.content{
+    width: 100%;
+    display: flex;
+}
+
+.content-left{
+    width: 74%;
+    background-color: rgb(22, 22, 22);
+    height: 100vh;
+    display: flex;
+    position: fixed;
+}
+.content-right{
+    width: 26%;
+    margin-left: 74%;
+}
+
+.row1{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+.row1 i{
+    font-size: 25px;
+    color: white;
+    margin-top: 1rem;
+}
+.row2{
+    width: 70%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.row2 img{
+    max-width: 100%;
+    max-height: 100vh;
+}
+.row3{
+    width: 5%;
+    display: flex;
+    justify-content: center;
+}
+.row3 i{
+    font-size: 25px;
+    color: white;
+    margin-top: 1rem;
+}
+.row4{
+    width: 20%;
+}
+
+.container-paintinglq{
+    height: 100%;
+    display: grid;
+    align-content: center;
+    border-left: 1px solid rgba(182, 182, 182, 0.514);
+}
+
+.imglq{
+    margin-top: 10px;
+    width: 80%;
+    margin-left: 10%;
+    overflow: hidden;
+    border-radius: 10%;
+}
+
+.painting-name{
+    font-size: 3rem;
+}
+.painting-title{
+    margin-top: 1rem;
+    display: grid;
+    justify-content: center;
+    justify-items: center;
+}
+.painting-title .fa-heart{
+    font-size: 25px;
+    margin: 0.5rem 0;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: black;
+    color: aliceblue;
+    cursor: pointer;
+}
+
+.active_like{
+    font-size: 25px;
+    margin: 0.5rem 0;
+    padding: 10px;
+    border-radius: 30px;
+    background-color: black;
+    /* color: aliceblue; */
+    cursor: pointer;
+    color: red;
+}
+
+.painting_des{
+    padding: 1rem 10px;
+}
+
+.comment{
+    padding: 1rem 10px;
+
+}
+
+.cmt-input img{
+    width: 10%;
+}
+.cmt-input input{
+    width: 60%;
+    height: 2.5rem;
+}
+.cmt-input button{
+    width: 20%;
+    height: 2.5rem;
+}
+.comments h2 {
+    margin: 1rem 0;
+}
+
+.user-image {
+    width: 15%;
+    border-radius: 50%;
+}
+
+.cmt-detail {
+    background-color: rgb(190, 190, 190);
+    border-radius: 20px;
+    padding: 10px;
+    min-width: 60%;
+    min-height: 70px;
+    height: 80px;
+}
+
+.cmt-detail p {
+    font-size: 14px;
+    padding: 0;
+}
+
+.cmt-add span {
+    margin-left: 20px;
+}
+
+.cmt-add span:first-child {
+    margin-left: 40px;
+}
+.cmt {
+    margin-bottom: 20px;
+}
+.cmt-par {
+    display: flex;
+    margin-bottom: 1rem;
+}
+
+.cmt_tam{
+    margin: 0;
 }
