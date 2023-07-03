@@ -16,6 +16,7 @@ from pathlib import Path
 BASE_DIR = Path(__file__).resolve().parent.parent
 
 import os
+import dj_database_url
 # Build paths inside the project like this: BASE_DIR / 'subdir'.
 BASE_DIRR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 
@@ -29,7 +30,7 @@ SECRET_KEY = 'django-insecure-a(4gp(4^c9bwq7x_n#=)gwwop%-f)7huxj1&#bxhz&b!g0+=7s
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1']
+ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 
 
 # Application definition
@@ -123,6 +124,7 @@ USE_TZ = True
 
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/4.1/howto/static-files/
+STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
 STATIC_URL = 'static/'
 
@@ -147,6 +149,10 @@ CKEDITOR_CONFIGS = {
 
 STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
 
-import dj_database_url 
-prod_db  =  dj_database_url.config(conn_max_age=500)
-DATABASES['default'].update(prod_db)
+# import dj_database_url 
+# prod_db  =  dj_database_url.config(conn_max_age=500)
+# DATABASES['default'].update(prod_db)
+if 'RENDER' in os.environ:
+    DATABASES['default'] = dj_database_url.parse(os.environ['DATABASE_URL'])
+
+print(os.environ.get('DATABASE_URL'))
