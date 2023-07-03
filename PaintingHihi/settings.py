@@ -36,6 +36,7 @@ ALLOWED_HOSTS = ['127.0.0.1', 'localhost']
 # Application definition
 
 INSTALLED_APPS = [
+    'render.apps.RenderConfig',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
@@ -83,11 +84,18 @@ WSGI_APPLICATION = 'PaintingHihi.wsgi.application'
 # Database
 # https://docs.djangoproject.com/en/4.1/ref/settings/#databases
 
+# DATABASES = {
+#     'default': {
+#         'ENGINE': 'django.db.backends.sqlite3',
+#         'NAME': BASE_DIR / 'db.sqlite3',
+#     }
+# }
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.sqlite3',
-        'NAME': BASE_DIR / 'db.sqlite3',
-    }
+    'default': dj_database_url.config(
+        # Feel free to alter this value to suit your needs.
+        default='postgresql://postgres:postgres@localhost:5432/PaintingHihi',
+        conn_max_age=600
+    )
 }
 
 
@@ -136,7 +144,7 @@ DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
 
 
 MEDIA_URL = 'media/'
-MEDIA_ROOT = os.path.join(BASE_DIRR,'media')
+# MEDIA_ROOT = os.path.join(BASE_DIRR,'media')
 CKEDITOR_UPLOAD_PATH = 'media/'
 PROJECT_ROOT = os.path.join(os.path.abspath(__file__))
 CKEDITOR_CONFIGS = {
@@ -147,12 +155,18 @@ CKEDITOR_CONFIGS = {
     },
 }
 
-STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+# STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+if not DEBUG:
+    # Tell Django to copy statics to the `staticfiles` directory
+    # in your application directory on Render.
+    STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
 
-# import dj_database_url 
-# prod_db  =  dj_database_url.config(conn_max_age=500)
-# DATABASES['default'].update(prod_db)
-if 'RENDER' in os.environ:
-    DATABASES['default'] = dj_database_url.parse(os.environ['DATABASE_URL'])
+    # Turn on WhiteNoise storage backend that takes care of compressing static files
+    # and creating unique names for each version so they can safely be cached forever.
+    STATICFILES_STORAGE = 'whitenoise.storage.CompressedManifestStaticFilesStorage'
+
+import dj_database_url 
+prod_db  =  dj_database_url.config(conn_max_age=500)
+DATABASES['default'].update(prod_db)
 
 print(os.environ.get('DATABASE_URL'))
