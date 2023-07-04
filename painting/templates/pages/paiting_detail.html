@@ -20,14 +20,16 @@
 
                 <div class="row2">
                     <div class="container_img">
-                    <div class="img-wrap">  
-                        <img src="{{ painting.image.url }}" alt="">
+                    <div class="img-wrap"> 
+                        {% for painting in paintings %} 
+                        <a href="{%  'list' %}" target="_blank"><img src="{{ painting.image.url }}" alt=""></a>
+                        {% endfor %}
                     </div>
                 </div>
                 </div>
 
                 <div class="row3">
-                    <a href="" target="_blank"><i class="fa-solid fa-up-right-and-down-left-from-center iconRight"></i></a>
+                    <i class="fa-solid fa-up-right-and-down-left-from-center iconRight"></i>
                 </div>
                 <div class="row4">
                     <div class="container-paintinglq">
