@@ -369,7 +369,7 @@ li{
     background-color: black;
     /* color: aliceblue; */
     cursor: pointer;
-    color: red;
+    color: red !important;
 }
 
 .painting_des{
