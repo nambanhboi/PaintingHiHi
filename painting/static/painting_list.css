@@ -52,3 +52,6 @@
 .item-des i{
     font-size: 30px;
 }
+.active_like{
+    color: red;
+}

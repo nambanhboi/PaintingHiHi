@@ -28,14 +28,14 @@
                             </div>
                             <div class="list-like">
                                 <span>
-                                    {% if is_user %}
-                                        <i class="fa-regular fa-heart icon_like{{painting.id}} 
-                                            `{% if painting_like %} 
-                                            active_like
-                                            {% endif %}`"
-                                            onclick="like_pain(`{{ painting.id }}`)"
-                                        ></i>
-                                    {% else %}
+                                {% if user.is_authenticated %}
+                                    <i class="fa-regular fa-heart icon_like{{painting.id}} 
+                                        `{% if painting_like %} 
+                                        active_like
+                                        {% endif %}`"
+                                        onclick="like_pain(`{{ painting.id }}`)"
+                                    ></i>
+                                {% else %}
                                 </span>
                                 <i class="fa-regular fa-heart" onclick="likeNoUser()"></i>
                                 {% endif %}
