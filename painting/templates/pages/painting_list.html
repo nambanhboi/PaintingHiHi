@@ -28,7 +28,7 @@
                             </div>
                             <div class="list-like">
                                 <span>
-                                    {% if user %}
+                                    {% if user.is_authenticate %}
                                         <i class="fa-solid fa-heart icon_like{{painting.id}} 
                                             `{% for ptl in painting_likes %}          
                                                 {% if painting.id == ptl.painting.id %}

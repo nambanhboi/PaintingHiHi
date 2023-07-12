@@ -21,9 +21,9 @@
                 <div class="row2">
                     <div class="container_img">
                     <div class="img-wrap"> 
-                        {% for painting in paintings %} 
+                        {% comment %} {% for painting in paintings %}  {% endcomment %}
                             <img src="{{ painting.image.url }}" alt="">
-                        {% endfor %}
+                        {% comment %} {% endfor %} {% endcomment %}
                     </div>
                 </div>
                 </div>
